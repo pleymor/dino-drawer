@@ -1,0 +1,18 @@
+{
+  "query": {
+    "pages": {
+      "1": {
+        "title": "File:Trex_paleoart.jpg",
+        "imageinfo": [{
+          "url": "https://upload.wikimedia.org/.../Trex_paleoart.jpg",
+          "width": 1920,
+          "height": 1280,
+          "extmetadata": {
+            "Artist": {"value": "John Conway"},
+            "LicenseShortName": {"value": "CC BY-SA 4.0"}
+          }
+        }]
+      }
+    }
+  }
+}

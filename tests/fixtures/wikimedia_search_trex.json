@@ -1,0 +1,8 @@
+{
+  "query": {
+    "search": [
+      {"title": "File:Trex_paleoart.jpg"},
+      {"title": "File:Trex_skeleton_phylogeny_chart.png"}
+    ]
+  }
+}
