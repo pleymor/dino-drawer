@@ -32,6 +32,30 @@ def _load_refs(out_dir: Path) -> RefsFile | None:
     return RefsFile.model_validate_json(p.read_text())
 
 
+def _sanitize_source_ids(raw: dict) -> None:
+    """Drop or remap source_ids that don't exist in the references list.
+
+    LLMs occasionally hallucinate paper indices (e.g. citing ``paper:14``
+    when only ``paper:0..paper:9`` are in references). Rather than failing
+    validation, we replace unknown ids with a fallback ("wikipedia" if
+    present, otherwise the first known id). The dict is mutated in place.
+    """
+    known = {r["id"] for r in raw.get("references", [])}
+    fallback = "wikipedia" if "wikipedia" in known else (next(iter(known), None))
+    if fallback is None:
+        return  # no references at all — let validation surface that
+
+    def _fix(ids: list[str]) -> list[str]:
+        return [sid if sid in known else fallback for sid in ids]
+
+    for ann in raw.get("annotations", []):
+        ann["source_ids"] = _fix(ann.get("source_ids", []))
+    if "skull_view" in raw:
+        raw["skull_view"]["source_ids"] = _fix(raw["skull_view"].get("source_ids", []))
+    if "size" in raw:
+        raw["size"]["source_ids"] = _fix(raw["size"].get("source_ids", []))
+
+
 def _build_visual_references(refs: RefsFile | None) -> VisualReferences:
     """
     Convert classified images from a RefsFile into VisualReferences.
@@ -121,6 +145,8 @@ def synthesize(
 
     visual_references = _build_visual_references(refs)
     raw["visual_references"] = visual_references.model_dump()
+
+    _sanitize_source_ids(raw)
 
     fs = FactSheet.model_validate(raw)
     (out_dir / "factsheet.json").write_text(
