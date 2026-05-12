@@ -1,6 +1,10 @@
 """CLI entry point for dino-drawer."""
 import argparse
+import asyncio
 import sys
+from pathlib import Path
+
+from .agent import DinoDrawerAgent
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -33,7 +37,24 @@ def main(argv: list[str] | None = None) -> int:
     if not args.species:
         parser.print_help()
         return 0
-    print(f"[stub] would generate infographic for {args.species!r}")
+
+    agent = DinoDrawerAgent(
+        out_root=Path(args.out),
+        model_llm=args.model_llm,
+        model_vlm=args.model_vlm,
+        model_image=args.model_image,
+        max_refs=args.max_refs,
+        lang=args.lang,
+        force=args.force,
+        force_step=args.force_step,
+        skip_refs=args.skip_refs,
+    )
+    try:
+        out = asyncio.run(agent.run(args.species))
+    except Exception as exc:  # noqa: BLE001
+        print(f"[error] {exc}", file=sys.stderr)
+        return 2
+    print(f"Wrote {out}")
     return 0
 
 
