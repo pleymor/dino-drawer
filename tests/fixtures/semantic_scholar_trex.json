@@ -1,0 +1,12 @@
+{
+  "total": 1,
+  "data": [
+    {
+      "title": "Lipped Tyrannosaurs",
+      "abstract": "Evidence for extra-oral tissues...",
+      "year": 2023,
+      "authors": [{"name": "T. Cullen"}, {"name": "M. Frederickson"}],
+      "externalIds": {"DOI": "10.1126/science.abc1234"}
+    }
+  ]
+}
