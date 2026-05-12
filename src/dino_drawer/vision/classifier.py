@@ -57,19 +57,35 @@ def classify_and_select(
     refs_dir = out_dir / "refs"
     refs_dir.mkdir(parents=True, exist_ok=True)
 
+    cache_path = out_dir / "classifications_cache.json"
+    cache: dict[str, dict] = {}
+    if cache_path.exists():
+        cache = json.loads(cache_path.read_text())
+
     vlm = VLMClient(model=vlm_model)
     classified: list[ClassifiedImage] = []
     rejected = 0
-    for raw in raw_meta.images:
+    total = len(raw_meta.images)
+    for idx, raw in enumerate(raw_meta.images, 1):
         img_path = out_dir / raw.path
         if not img_path.exists():
+            print(f"[{idx}/{total}] skip (missing) id={raw.id}", flush=True)
             rejected += 1
             continue
-        try:
-            data = vlm.classify_image(img_path, species=species)
-        except VLMError:
-            rejected += 1
-            continue
+        cache_key = str(raw.id)
+        if cache_key in cache:
+            data = cache[cache_key]
+            print(f"[{idx}/{total}] cached id={raw.id} type={data.get('type', '?')}", flush=True)
+        else:
+            print(f"[{idx}/{total}] classifying id={raw.id} ({raw.path})", flush=True)
+            try:
+                data = vlm.classify_image(img_path, species=species)
+            except VLMError as exc:
+                print(f"[{idx}/{total}]   VLM error: {exc}", flush=True)
+                rejected += 1
+                continue
+            cache[cache_key] = data
+            cache_path.write_text(json.dumps(cache, indent=2, ensure_ascii=False))
         if data.get("type") in _REJECTED_TYPES:
             rejected += 1
             continue

@@ -1,11 +1,15 @@
 """Thin wrapper around Ollama's vision API with JSON validation + retry."""
 from __future__ import annotations
 
+import io
 import json
 import re
 from pathlib import Path
 
 import ollama
+from PIL import Image
+
+_MAX_SIDE_PX = 512
 
 
 class VLMError(RuntimeError):
@@ -26,6 +30,24 @@ Réponds en JSON strict, sans markdown :
   "quality_score": 0-10,
   "description_courte": "string"
 }}"""
+
+
+def _downscaled_bytes(image_path: Path, max_side: int = _MAX_SIDE_PX) -> bytes:
+    """Return JPEG bytes of the image, downscaled so longest side <= max_side.
+
+    Large images (1920×1280+) produce too many vision tokens for the
+    Ollama context window and slow inference dramatically. Downscaling
+    to ~512px gives the VLM enough detail for classification while
+    keeping inference fast.
+    """
+    img = Image.open(image_path).convert("RGB")
+    w, h = img.size
+    if max(w, h) > max_side:
+        scale = max_side / max(w, h)
+        img = img.resize((int(w * scale), int(h * scale)), Image.LANCZOS)
+    buf = io.BytesIO()
+    img.save(buf, format="JPEG", quality=85)
+    return buf.getvalue()
 
 
 def _extract_json(text: str) -> dict | None:
@@ -77,6 +99,7 @@ class VLMClient:
             VLMError: If VLM cannot produce valid JSON after max_retries.
         """
         prompt = _CLASSIFY_PROMPT.format(species=species)
+        small = _downscaled_bytes(Path(image_path))
         last_err = ""
         for attempt in range(self.max_retries + 1):
             user_content = prompt if attempt == 0 else (
@@ -84,7 +107,7 @@ class VLMClient:
             )
             resp = ollama.chat(
                 model=self.model,
-                messages=[{"role": "user", "content": user_content, "images": [str(image_path)]}],
+                messages=[{"role": "user", "content": user_content, "images": [small]}],
                 options={"temperature": 0.0},
             )
             content = resp.get("message", {}).get("content", "")
@@ -104,9 +127,10 @@ class VLMClient:
         Returns:
             Model response text.
         """
+        small = _downscaled_bytes(Path(image_path))
         resp = ollama.chat(
             model=self.model,
-            messages=[{"role": "user", "content": prompt, "images": [str(image_path)]}],
+            messages=[{"role": "user", "content": prompt, "images": [small]}],
             options={"temperature": 0.2},
         )
         return resp.get("message", {}).get("content", "").strip()
