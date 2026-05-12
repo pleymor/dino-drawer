@@ -1,0 +1,7 @@
+{
+  "species": "Tyrannosaurus rex",
+  "wikipedia": {"url": "https://en.wikipedia.org/wiki/Tyrannosaurus", "extract": "Tyrannosaurus is a genus of large theropod dinosaur. T. rex lived in late Maastrichtian."},
+  "papers": [
+    {"doi": "10.1126/x", "title": "Lipped Tyrannosaurs", "authors": ["T. Cullen"], "year": 2023, "abstract": "Lips covered the teeth.", "source": "semantic_scholar"}
+  ]
+}
