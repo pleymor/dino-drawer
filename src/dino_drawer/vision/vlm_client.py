@@ -1,19 +1,13 @@
-"""Thin wrapper around Ollama's vision API with JSON validation + retry."""
+"""Thin wrapper around Gemini for image classification and description."""
 from __future__ import annotations
 
-import io
-import json
-import re
 from pathlib import Path
 
-import ollama
-from PIL import Image
-
-_MAX_SIDE_PX = 512
+from dino_drawer.clients.gemini import GeminiClient, GeminiError
 
 
 class VLMError(RuntimeError):
-    """Raised when the VLM cannot produce valid JSON after retries."""
+    """Raised when the VLM cannot produce a usable result."""
 
 
 _CLASSIFY_PROMPT = """\
@@ -32,105 +26,72 @@ Réponds en JSON strict, sans markdown :
 }}"""
 
 
-def _downscaled_bytes(image_path: Path, max_side: int = _MAX_SIDE_PX) -> bytes:
-    """Return JPEG bytes of the image, downscaled so longest side <= max_side.
-
-    Large images (1920×1280+) produce too many vision tokens for the
-    Ollama context window and slow inference dramatically. Downscaling
-    to ~512px gives the VLM enough detail for classification while
-    keeping inference fast.
-    """
-    img = Image.open(image_path).convert("RGB")
-    w, h = img.size
-    if max(w, h) > max_side:
-        scale = max_side / max(w, h)
-        img = img.resize((int(w * scale), int(h * scale)), Image.LANCZOS)
-    buf = io.BytesIO()
-    img.save(buf, format="JPEG", quality=85)
-    return buf.getvalue()
-
-
-def _extract_json(text: str) -> dict | None:
-    """Try to parse JSON from a text that may contain markdown fences or prose.
-
-    Args:
-        text: Raw text potentially containing JSON.
-
-    Returns:
-        Parsed JSON dict, or None if parsing failed.
-    """
-    try:
-        return json.loads(text)
-    except json.JSONDecodeError:
-        pass
-    m = re.search(r"\{.*\}", text, re.DOTALL)
-    if not m:
-        return None
-    try:
-        return json.loads(m.group(0))
-    except json.JSONDecodeError:
-        return None
-
-
 class VLMClient:
-    """Ollama vision client with JSON validation and retry-on-invalid."""
+    """Gemini-backed vision client with JSON validation and retry-on-invalid."""
 
-    def __init__(self, model: str = "qwen2.5vl:7b", max_retries: int = 2) -> None:
-        """Initialize the VLM client.
+    def __init__(self, model: str | None = None, max_retries: int = 2) -> None:
+        """Initialize. `model` overrides GEMINI_TEXT_MODEL env default.
 
         Args:
-            model: Ollama model name (default qwen2.5vl:7b).
-            max_retries: Number of retries on invalid JSON (default 2).
+            model: Gemini model name. Defaults to None (uses GEMINI_TEXT_MODEL
+                env var or ``gemini-2.5-flash``).
+            max_retries: Number of retries on invalid JSON responses (default 2).
+                Network retries are handled internally by GeminiClient.
         """
         self.model = model
         self.max_retries = max_retries
+        self._client = GeminiClient()
 
     def classify_image(self, image_path: Path, species: str) -> dict:
-        """Classify a single image. Returns dict matching the JSON schema.
+        """Classify a single image. Returns the parsed JSON dict.
+
+        Sends the image to Gemini with a structured classification prompt and
+        retries if the response dict is missing the required ``type`` key.
 
         Args:
-            image_path: Path to image file.
-            species: Scientific name of the species.
+            image_path: Path to the image file.
+            species: Scientific name of the species being classified.
 
         Returns:
-            Parsed JSON dict with image classification metadata.
+            Parsed JSON dict matching the classification schema.
 
         Raises:
-            VLMError: If VLM cannot produce valid JSON after max_retries.
+            VLMError: If Gemini fails or returns invalid classification after
+                all retries are exhausted.
         """
         prompt = _CLASSIFY_PROMPT.format(species=species)
-        small = _downscaled_bytes(Path(image_path))
         last_err = ""
         for attempt in range(self.max_retries + 1):
-            user_content = prompt if attempt == 0 else (
-                f"{prompt}\n\nPrécédente tentative invalide ({last_err}). Renvoie uniquement le JSON."
-            )
-            resp = ollama.chat(
-                model=self.model,
-                messages=[{"role": "user", "content": user_content, "images": [small]}],
-                options={"temperature": 0.0},
-            )
-            content = resp.get("message", {}).get("content", "")
-            parsed = _extract_json(content)
-            if parsed is not None and "type" in parsed:
-                return parsed
-            last_err = "missing 'type' or non-JSON output"
-        raise VLMError(f"VLM failed to return valid JSON after {self.max_retries + 1} tries")
+            try:
+                if attempt == 0:
+                    data = self._client.chat_json(prompt, images=[image_path], model=self.model)
+                else:
+                    retry_prompt = (
+                        f"{prompt}\n\nPrécédente tentative invalide ({last_err}). "
+                        "Renvoie uniquement le JSON."
+                    )
+                    data = self._client.chat_json(retry_prompt, images=[image_path], model=self.model)
+            except GeminiError as exc:
+                raise VLMError(f"Gemini call failed: {exc}") from exc
+            if isinstance(data, dict) and "type" in data:
+                return data
+            last_err = "missing 'type' key"
+        raise VLMError(f"VLM failed to return valid classification after {self.max_retries + 1} tries")
 
     def describe_image(self, image_path: Path, prompt: str) -> str:
-        """Free-form description of an image for prompt-enrichment.
+        """Return free-form text description of the image.
 
         Args:
-            image_path: Path to image file.
-            prompt: Descriptive prompt for the model.
+            image_path: Path to the image file.
+            prompt: Descriptive instruction for the model.
 
         Returns:
-            Model response text.
+            Stripped text response from Gemini.
+
+        Raises:
+            VLMError: If the Gemini API call fails.
         """
-        small = _downscaled_bytes(Path(image_path))
-        resp = ollama.chat(
-            model=self.model,
-            messages=[{"role": "user", "content": prompt, "images": [small]}],
-            options={"temperature": 0.2},
-        )
-        return resp.get("message", {}).get("content", "").strip()
+        try:
+            return self._client.chat(prompt, images=[image_path], model=self.model).strip()
+        except GeminiError as exc:
+            raise VLMError(f"Gemini call failed: {exc}") from exc
