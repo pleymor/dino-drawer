@@ -34,12 +34,16 @@ def _hero_prompt(factsheet: FactSheet) -> str:
     """
     base = factsheet.image_prompt.strip().rstrip(".")
     return (
-        "Hyper-realistic wildlife documentary photograph, cinematic, shot on a "
-        "full-frame 35mm camera, shallow depth of field, sharp on the subject, "
-        "natural film grain. NOT an illustration, NOT a drawing, NOT paleoart. "
+        "Unedited DSLR wildlife photograph, RAW image, National Geographic style, "
+        "shot on full-frame 35mm prime lens, natural film grain, realistic skin pores. "
+        "ABSOLUTELY NOT an illustration, drawing, painting, render, CGI, 3D model, or paleoart. "
         f"{base}. "
-        "Aspect ratio 16:10, full-body, eye-level, environment fills the frame. "
-        "Absolutely no text, no captions, no watermark, no signature, no UI overlays."
+        "Framing: full body in frame, head AND tail fully visible, no cropping, "
+        "animal occupies 60-80% of the frame width, eye-level perspective, "
+        "16:10 landscape, environment fills the surroundings. "
+        "Anatomical accuracy: lips fully cover the teeth (no exposed teeth when mouth is closed), "
+        "scaly lip line clearly visible. "
+        "ABSOLUTELY NO TEXT anywhere — no captions, no watermark, no signature, no UI overlays, no logo, no labels."
     )
 
 

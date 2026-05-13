@@ -29,13 +29,15 @@ Contraintes générales :
 - Chaque source_id doit exister dans `references`.
 
 Contraintes STRICTES sur `image_prompt` (en anglais) :
-- Style : `wildlife documentary photograph`, `cinematic`, `hyper-realistic`, JAMAIS `illustration`, `drawing`, `painting`, `paleoart`, `artwork`.
-- Environnement OBLIGATOIRE : décrit un décor naturel spécifique au paléoenvironnement de l'espèce (forêt, plaine, marais, etc. avec contexte géologique : ex. "Late Cretaceous Laramidia conifer forest, misty undergrowth, dawn light, fallen log"). JAMAIS de fond uni / fond blanc / studio.
-- Posture OBLIGATOIRE : pose imposante et menaçante (`menacing predatory stance`, `head lowered`, `baring teeth`, `intense gaze`, `snarling`, `low growl`) cohérente avec l'écologie de l'espèce.
-- Détails anatomiques OBLIGATOIRES : reprend littéralement les faits du factsheet (lèvres recouvrant les dents, présence/répartition des plumes ou écailles, couleur de peau, longueur de queue, etc.). Cite-en au moins 5.
-- Camera : `eye-level`, `35mm lens`, `shallow depth of field`, `golden hour` ou `overcast`.
-- Termine TOUJOURS par : `no text, no captions, no watermark, no signature, no UI elements`.
-- Longueur : 60-120 mots.
+- Style : `unedited DSLR wildlife photograph`, `RAW image`, `national geographic style`, `hyper-realistic skin pores and feather texture`. JAMAIS `illustration`, `drawing`, `painting`, `paleoart`, `artwork`, `render`, `CGI`, `3D model`.
+- Framing OBLIGATOIRE : `full body in frame, head to tail visible, no cropping, the animal occupies 60-80% of the frame width`.
+- Environnement OBLIGATOIRE : décor naturel spécifique au paléoenvironnement (forêt, plaine, marais, etc. avec contexte géologique : ex. "Late Cretaceous Laramidia conifer forest at dawn"). JAMAIS de fond uni / fond blanc / studio.
+- Bouche et lèvres OBLIGATOIRES (si l'espèce a des lèvres scaleuses comme les théropodes non-aviens d'après les papiers récents) : `mouth closed, lips fully covering the teeth, scaly lip tissue clearly visible, no teeth showing`. Si la bouche doit être entrouverte, alors `lips partially covering teeth, lip line clearly visible`.
+- Posture OBLIGATOIRE : pose imposante et alerte (`menacing predatory stance`, `head lowered`, `intense gaze`, `low growl`, `tense muscles`) MAIS PAS gueule grande ouverte.
+- Détails anatomiques OBLIGATOIRES : reprend littéralement les faits du factsheet (répartition des plumes/écailles, couleur de peau, longueur de queue, posture, etc.). Cite-en au moins 6.
+- Camera : `eye-level`, `35mm prime lens`, `shallow depth of field`, `golden hour` ou `overcast soft light`.
+- Termine TOUJOURS par : `absolutely no text, no captions, no watermark, no signature, no UI overlays, no logo`.
+- Longueur : 80-150 mots.
 """
 
 

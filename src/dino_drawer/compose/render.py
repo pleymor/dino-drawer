@@ -1,10 +1,17 @@
-"""Render the infographic HTML and screenshot it with Playwright."""
+"""Render the final image: just the hero photograph at the target resolution.
+
+The factsheet text and visual references stay in ``factsheet.json`` for any
+downstream consumer; the rendered output is a clean PNG with no annotations,
+panels, or text overlays.
+"""
 from __future__ import annotations
 
 import base64
+import shutil
 from pathlib import Path
 
 from jinja2 import Template
+from PIL import Image
 
 from dino_drawer.models import FactSheet
 
@@ -66,32 +73,42 @@ def screenshot(
     width: int = 2000,
     height: int = 1200,
 ) -> Path:
-    """Render HTML and use Playwright to screenshot it to ``final.png``.
+    """Produce ``final.png`` from the hero image, with no text or panels.
 
-    Writes an intermediate ``_infographic.html`` file to *out_dir*, then
-    opens it in a headless Chromium browser and captures a full-viewport
-    screenshot at the requested dimensions.
+    Resizes the Gemini-generated hero to the target width while preserving
+    aspect ratio, then centers it on a black canvas of *width* × *height* if
+    the aspect ratios differ. No text, no annotations, no overlays.
 
     Args:
-        fs: The :class:`~dino_drawer.models.FactSheet` containing all content.
-        out_dir: Directory containing source assets and where ``final.png`` is written.
-        width: Viewport and output image width in pixels (default 2000).
-        height: Viewport and output image height in pixels (default 1200).
+        fs: The factsheet (kept in signature for back-compat; not rendered).
+        out_dir: Directory containing ``hero.png``. ``final.png`` is written here.
+        width: Output width in pixels.
+        height: Output height in pixels.
 
     Returns:
-        Path to the written ``final.png`` file.
+        Path to the written ``final.png``.
     """
-    from playwright.sync_api import sync_playwright
+    del fs  # factsheet text no longer rendered into the image
+    out_dir = Path(out_dir)
+    src = out_dir / "hero.png"
+    dst = (out_dir / "final.png").resolve()
 
-    html = render_html(fs, out_dir)
-    html_path = (Path(out_dir) / "_infographic.html").resolve()
-    html_path.write_text(html)
+    hero = Image.open(src).convert("RGB")
+    src_w, src_h = hero.size
+    scale = min(width / src_w, height / src_h)
+    new_w, new_h = int(src_w * scale), int(src_h * scale)
+    resized = hero.resize((new_w, new_h), Image.LANCZOS)
 
-    out = (Path(out_dir) / "final.png").resolve()
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
-        page = browser.new_page(viewport={"width": width, "height": height})
-        page.goto(html_path.as_uri())
-        page.screenshot(path=str(out), clip={"x": 0, "y": 0, "width": width, "height": height})
-        browser.close()
-    return out
+    canvas = Image.new("RGB", (width, height), "#000000")
+    canvas.paste(resized, ((width - new_w) // 2, (height - new_h) // 2))
+    canvas.save(dst, "PNG")
+    return dst
+
+
+def render_legacy_html(fs: FactSheet, out_dir: Path, lang: str = "fr") -> str:
+    """Render the old annotated-infographic HTML.
+
+    Kept for callers that still want the annotated layout. Not used by the
+    default pipeline anymore (see :func:`screenshot`).
+    """
+    return render_html(fs, out_dir, lang=lang)
