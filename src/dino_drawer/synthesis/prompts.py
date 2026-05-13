@@ -21,13 +21,21 @@ Tu réponds en JSON strict avec EXACTEMENT ces champs et types :
   "size": {"length_m": [min, max], "hip_height_m": [min, max], "source_ids": ["paper:N" | "wikipedia"]},
   "conclusion": "string",
   "references": [{"id": "paper:0" | "wikipedia", "citation_short": "string", "doi": "string|null", "title": "string"}],
-  "image_prompt": "string en anglais, photoréaliste, mentionnant >= 3 éléments visuels observés, finit par 'no text'"
+  "image_prompt": "string en anglais — voir contraintes strictes ci-dessous"
 }
 
-Contraintes :
+Contraintes générales :
 - Inclure TOUTES les régions anatomiques ci-dessus. Si tu n'as pas d'info, écris un fait baseline et cite "wikipedia".
 - Chaque source_id doit exister dans `references`.
-- `image_prompt` doit être en anglais et doit mentionner au moins 3 éléments visuels du visual_brief.
+
+Contraintes STRICTES sur `image_prompt` (en anglais) :
+- Style : `wildlife documentary photograph`, `cinematic`, `hyper-realistic`, JAMAIS `illustration`, `drawing`, `painting`, `paleoart`, `artwork`.
+- Environnement OBLIGATOIRE : décrit un décor naturel spécifique au paléoenvironnement de l'espèce (forêt, plaine, marais, etc. avec contexte géologique : ex. "Late Cretaceous Laramidia conifer forest, misty undergrowth, dawn light, fallen log"). JAMAIS de fond uni / fond blanc / studio.
+- Posture OBLIGATOIRE : pose imposante et menaçante (`menacing predatory stance`, `head lowered`, `baring teeth`, `intense gaze`, `snarling`, `low growl`) cohérente avec l'écologie de l'espèce.
+- Détails anatomiques OBLIGATOIRES : reprend littéralement les faits du factsheet (lèvres recouvrant les dents, présence/répartition des plumes ou écailles, couleur de peau, longueur de queue, etc.). Cite-en au moins 5.
+- Camera : `eye-level`, `35mm lens`, `shallow depth of field`, `golden hour` ou `overcast`.
+- Termine TOUJOURS par : `no text, no captions, no watermark, no signature, no UI elements`.
+- Longueur : 60-120 mots.
 """
 
 

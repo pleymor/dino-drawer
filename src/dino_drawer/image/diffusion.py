@@ -29,21 +29,17 @@ def _load_ref_paths(out_dir: Path, paths: list[str]) -> list[Path]:
 def _hero_prompt(factsheet: FactSheet) -> str:
     """Return the prompt for the hero illustration.
 
-    Wraps the LLM-generated image_prompt with strong paleoart-style guidance.
-
-    Args:
-        factsheet: Species factsheet containing the base image prompt.
-
-    Returns:
-        Full prompt string for the hero generation call.
+    Wraps the LLM-generated image_prompt with photographic-realism cues
+    and explicit no-text directives.
     """
     base = factsheet.image_prompt.strip().rstrip(".")
     return (
-        "Scientific paleoart illustration in the style of John Conway and Mark Witton. "
-        "Photorealistic, naturalistic lighting, scientifically accurate anatomy. "
-        f"Subject: {base}. "
-        "Aspect ratio: 16:10. Wide landscape, full-body lateral view, environment visible. "
-        "Absolutely no text, no captions, no watermark."
+        "Hyper-realistic wildlife documentary photograph, cinematic, shot on a "
+        "full-frame 35mm camera, shallow depth of field, sharp on the subject, "
+        "natural film grain. NOT an illustration, NOT a drawing, NOT paleoart. "
+        f"{base}. "
+        "Aspect ratio 16:10, full-body, eye-level, environment fills the frame. "
+        "Absolutely no text, no captions, no watermark, no signature, no UI overlays."
     )
 
 
@@ -57,9 +53,10 @@ def _skull_prompt(factsheet: FactSheet) -> str:
         Full prompt string for the skull generation call.
     """
     return (
-        f"Detailed lateral view of a {factsheet.species} skull, scientific illustration, "
-        "neutral dark background, anatomically accurate, soft museum lighting, "
-        "no text, no captions, no watermark."
+        f"Hyper-realistic museum photograph of a {factsheet.species} skull fossil, "
+        "lateral profile, soft directional lighting, neutral dark background, "
+        "fine detail on bone texture, anatomically accurate, shot on 50mm prime lens. "
+        "No text, no captions, no labels, no watermark, no signature."
     )
 
 
