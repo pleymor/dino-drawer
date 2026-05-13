@@ -26,7 +26,7 @@ from google.genai import types
 # ---------------------------------------------------------------------------
 
 _DEFAULT_TEXT_MODEL = "gemini-2.5-flash"
-_DEFAULT_IMAGE_MODEL = "gemini-3-pro-image-preview"
+_DEFAULT_IMAGE_MODEL = "gemini-2.5-flash-image"
 _MAX_RETRIES = 8
 _MAX_DELAY_SECONDS = 60
 
