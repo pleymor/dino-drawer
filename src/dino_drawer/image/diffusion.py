@@ -32,6 +32,7 @@ def _load_pipeline(model: str):
         "h94/IP-Adapter",
         subfolder="sdxl_models",
         weight_name="ip-adapter-plus_sdxl_vit-h.safetensors",
+        image_encoder_folder="models/image_encoder",
     )
     pipe.set_ip_adapter_scale(0.6)
     return pipe
