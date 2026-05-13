@@ -22,9 +22,12 @@ def build_parser() -> argparse.ArgumentParser:
         help="Re-run this step and everything after",
     )
     parser.add_argument("--skip-refs", action="store_true", help="Skip image scraping + VLM filtering")
-    parser.add_argument("--model-llm", default="qwen2.5:14b-instruct")
-    parser.add_argument("--model-vlm", default="qwen2.5vl:7b")
-    parser.add_argument("--model-image", default="stabilityai/stable-diffusion-xl-base-1.0")
+    parser.add_argument("--model-llm", default=None,
+                        help="Gemini text model (default: $GEMINI_TEXT_MODEL or gemini-2.5-flash)")
+    parser.add_argument("--model-vlm", default=None,
+                        help="Gemini multimodal model (default: same as --model-llm)")
+    parser.add_argument("--model-image", default=None,
+                        help="Gemini image model (default: $GEMINI_IMAGE_MODEL or gemini-3-pro-image-preview)")
     parser.add_argument("--max-refs", type=int, default=50)
     parser.add_argument("--lang", choices=["fr", "en"], default="fr")
     return parser

@@ -62,9 +62,9 @@ class DinoDrawerAgent:
     """
 
     out_root: Path = field(default_factory=lambda: Path("out"))
-    model_llm: str = "qwen2.5:14b-instruct"
-    model_vlm: str = "qwen2.5vl:7b"
-    model_image: str = "stabilityai/stable-diffusion-xl-base-1.0"
+    model_llm: str | None = None
+    model_vlm: str | None = None
+    model_image: str | None = None
     max_refs: int = 50
     lang: str = "fr"
     force: bool = False
