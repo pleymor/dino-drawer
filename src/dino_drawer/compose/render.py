@@ -84,10 +84,10 @@ def screenshot(
     from playwright.sync_api import sync_playwright
 
     html = render_html(fs, out_dir)
-    html_path = out_dir / "_infographic.html"
+    html_path = (Path(out_dir) / "_infographic.html").resolve()
     html_path.write_text(html)
 
-    out = out_dir / "final.png"
+    out = (Path(out_dir) / "final.png").resolve()
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page(viewport={"width": width, "height": height})
