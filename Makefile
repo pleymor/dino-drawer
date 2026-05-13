@@ -1,0 +1,59 @@
+PY := .venv/bin/python
+SPECIES ?= Tyrannosaurus rex
+SLUG := $(shell echo "$(SPECIES)" | tr '[:upper:] ' '[:lower:]-')
+OUT := out/$(SLUG)
+
+.PHONY: help install test run papers images vision synthesis image compose clean clean-cache
+
+help:
+	@echo "Targets:"
+	@echo "  install        — uv venv + pip install -e .[dev] + playwright chromium"
+	@echo "  test           — pytest"
+	@echo "  run            — full pipeline for SPECIES (default: 'Tyrannosaurus rex')"
+	@echo "  papers         — only fetch papers"
+	@echo "  images         — only scrape reference images"
+	@echo "  vision         — only VLM filtering"
+	@echo "  synthesis      — only LLM synthesis"
+	@echo "  image          — only diffusion (hero + skull + silhouette)"
+	@echo "  compose        — only final HTML→PNG render"
+	@echo "  clean          — remove out/<slug>/ artifacts (keeps papers + raw refs)"
+	@echo "  clean-cache    — also remove HF cache (~14 GB)"
+	@echo ""
+	@echo "Example:  make run SPECIES='Triceratops horridus'"
+
+install:
+	uv venv
+	$(PY) -m pip install --upgrade pip
+	uv pip install -e ".[dev]"
+	$(PY) -m playwright install chromium
+
+test:
+	$(PY) -m pytest
+
+run:
+	$(PY) -m dino_drawer "$(SPECIES)"
+
+papers:
+	$(PY) -m dino_drawer.research.papers "$(SPECIES)"
+
+images:
+	$(PY) -m dino_drawer.research.images "$(SPECIES)"
+
+vision:
+	$(PY) -m dino_drawer.vision "$(OUT)"
+
+synthesis:
+	$(PY) -m dino_drawer.synthesis "$(OUT)"
+
+image:
+	$(PY) -m dino_drawer.image "$(OUT)"
+
+compose:
+	$(PY) -m dino_drawer.compose "$(OUT)"
+
+clean:
+	rm -f $(OUT)/hero.png $(OUT)/skull.png $(OUT)/silhouette.svg $(OUT)/final.png $(OUT)/_infographic.html $(OUT)/factsheet.json $(OUT)/refs.json $(OUT)/classifications_cache.json
+	rm -rf $(OUT)/refs
+
+clean-cache:
+	rm -rf ~/.cache/huggingface
