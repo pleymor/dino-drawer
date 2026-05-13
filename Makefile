@@ -2,6 +2,7 @@ PY := .venv/bin/python
 SPECIES ?= Tyrannosaurus rex
 SLUG := $(shell echo "$(SPECIES)" | tr '[:upper:] ' '[:lower:]-')
 OUT := out/$(SLUG)
+ARGS ?=
 
 .PHONY: help install test run papers images vision synthesis image compose clean clean-cache
 
@@ -19,7 +20,10 @@ help:
 	@echo "  clean          — remove out/<slug>/ artifacts (keeps papers + raw refs)"
 	@echo "  clean-cache    — also remove HF cache (~14 GB)"
 	@echo ""
-	@echo "Example:  make run SPECIES='Triceratops horridus'"
+	@echo "Examples:"
+	@echo "  make run SPECIES='Triceratops horridus'"
+	@echo "  make run ARGS='--force-step synthesis'"
+	@echo "  make run SPECIES='Smilodon fatalis' ARGS='--skip-refs --lang en'"
 
 install:
 	uv venv
@@ -31,7 +35,7 @@ test:
 	$(PY) -m pytest
 
 run:
-	$(PY) -m dino_drawer "$(SPECIES)"
+	$(PY) -m dino_drawer "$(SPECIES)" $(ARGS)
 
 papers:
 	$(PY) -m dino_drawer.research.papers "$(SPECIES)"
