@@ -18,6 +18,7 @@ from pathlib import Path
 
 from google import genai
 from google.api_core import exceptions as gexc
+from google.genai import errors as genai_errors
 from google.genai import types
 
 # ---------------------------------------------------------------------------
@@ -112,7 +113,25 @@ def _call_with_retry(fn, *args, **kwargs):
             last_exc = exc
             if attempt == _MAX_RETRIES:
                 break
-            # Prefer the server's own retry hint when present (429 with RetryInfo).
+            wait = min(_extract_retry_delay(exc) or delay, _MAX_DELAY_SECONDS)
+            time.sleep(wait)
+            delay = min(delay * 2, _MAX_DELAY_SECONDS)
+        except genai_errors.ClientError as exc:
+            # google-genai raises this for 4xx; treat 429 as retryable, others permanent.
+            if exc.code == 429:
+                last_exc = exc
+                if attempt == _MAX_RETRIES:
+                    break
+                wait = min(_extract_retry_delay(exc) or delay, _MAX_DELAY_SECONDS)
+                time.sleep(wait)
+                delay = min(delay * 2, _MAX_DELAY_SECONDS)
+            else:
+                _raise_permanent(exc)
+        except genai_errors.ServerError as exc:
+            # 5xx: always retryable.
+            last_exc = exc
+            if attempt == _MAX_RETRIES:
+                break
             wait = min(_extract_retry_delay(exc) or delay, _MAX_DELAY_SECONDS)
             time.sleep(wait)
             delay = min(delay * 2, _MAX_DELAY_SECONDS)
