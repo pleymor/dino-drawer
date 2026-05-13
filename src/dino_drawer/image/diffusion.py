@@ -1,149 +1,105 @@
-"""SDXL + IP-Adapter pipeline. Generates hero.png, skull.png, silhouette.svg."""
+"""Gemini-backed image generation. Produces hero.png, skull.png, silhouette.svg."""
 from __future__ import annotations
 
 from pathlib import Path
 
-from PIL import Image
-
+from dino_drawer.clients.gemini import GeminiClient
 from dino_drawer.models import FactSheet
 from .silhouette import build_scale_svg
 
-_NEGATIVE = "text, watermark, captions, signature, logo, multiple animals, deformed anatomy"
 
-
-def _load_pipeline(model: str):
-    """Lazy-load the SDXL pipeline with IP-Adapter weights on MPS.
-
-    Separated so tests can monkey-patch it.
-
-    Args:
-        model: HuggingFace model identifier for the SDXL base checkpoint.
-
-    Returns:
-        A loaded StableDiffusionXLPipeline with IP-Adapter weights attached.
-    """
-    import torch
-    from diffusers import StableDiffusionXLPipeline
-
-    device = "mps" if torch.backends.mps.is_available() else "cpu"
-    pipe = StableDiffusionXLPipeline.from_pretrained(model, torch_dtype=torch.float16)
-    pipe = pipe.to(device)
-    pipe.load_ip_adapter(
-        "h94/IP-Adapter",
-        subfolder="sdxl_models",
-        weight_name="ip-adapter-plus_sdxl_vit-h.safetensors",
-        image_encoder_folder="models/image_encoder",
-    )
-    pipe.set_ip_adapter_scale(0.6)
-    return pipe
-
-
-def _load_ref_images(out_dir: Path, paths: list[str]) -> list[Image.Image]:
-    """Load reference images from disk relative to out_dir.
+def _load_ref_paths(out_dir: Path, paths: list[str]) -> list[Path]:
+    """Resolve relative ref paths against out_dir; skip any missing files.
 
     Args:
         out_dir: Base directory that paths are relative to.
-        paths: List of relative file paths to load.
+        paths: List of relative file paths.
 
     Returns:
-        List of RGB PIL images.
+        List of absolute Path objects for files that exist on disk.
     """
-    return [Image.open(out_dir / p).convert("RGB") for p in paths]
+    out: list[Path] = []
+    for p in paths:
+        full = out_dir / p
+        if full.exists():
+            out.append(full)
+    return out
 
 
-def _build_hero_kwargs(
-    factsheet: FactSheet,
-    body_refs: list[Image.Image],
-    steps: int,
-) -> dict:
-    """Assemble keyword arguments for the hero image pipeline call.
+def _hero_prompt(factsheet: FactSheet) -> str:
+    """Return the prompt for the hero illustration.
+
+    Wraps the LLM-generated image_prompt with strong paleoart-style guidance.
 
     Args:
-        factsheet: Species factsheet containing the image prompt.
-        body_refs: Loaded body reference images; may be empty.
-        steps: Number of diffusion inference steps.
+        factsheet: Species factsheet containing the base image prompt.
 
     Returns:
-        Keyword argument dict ready to unpack into the pipeline.
+        Full prompt string for the hero generation call.
     """
-    kwargs: dict = dict(
-        prompt=factsheet.image_prompt,
-        negative_prompt=_NEGATIVE,
-        num_inference_steps=steps,
-        width=1024,
-        height=640,
+    base = factsheet.image_prompt.strip().rstrip(".")
+    return (
+        "Scientific paleoart illustration in the style of John Conway and Mark Witton. "
+        "Photorealistic, naturalistic lighting, scientifically accurate anatomy. "
+        f"Subject: {base}. "
+        "Aspect ratio: 16:10. Wide landscape, full-body lateral view, environment visible. "
+        "Absolutely no text, no captions, no watermark."
     )
-    if body_refs:
-        # Wrap as list-of-lists: outer length = number of loaded IP-Adapters (1),
-        # inner length = number of reference images for that adapter.
-        kwargs["ip_adapter_image"] = [body_refs]
-    return kwargs
 
 
-def _build_skull_kwargs(
-    factsheet: FactSheet,
-    skull_refs: list[Image.Image],
-    steps: int,
-) -> dict:
-    """Assemble keyword arguments for the skull image pipeline call.
+def _skull_prompt(factsheet: FactSheet) -> str:
+    """Return the prompt for the skull side-view.
 
     Args:
-        factsheet: Species factsheet used to build the skull prompt.
-        skull_refs: Loaded skull reference images; may be empty.
-        steps: Number of diffusion inference steps.
+        factsheet: Species factsheet providing the species name.
 
     Returns:
-        Keyword argument dict ready to unpack into the pipeline.
+        Full prompt string for the skull generation call.
     """
-    skull_prompt = (
-        f"detailed lateral view of {factsheet.species} skull, scientific illustration style, "
-        "neutral background, no text"
+    return (
+        f"Detailed lateral view of a {factsheet.species} skull, scientific illustration, "
+        "neutral dark background, anatomically accurate, soft museum lighting, "
+        "no text, no captions, no watermark."
     )
-    kwargs: dict = dict(
-        prompt=skull_prompt,
-        negative_prompt=_NEGATIVE,
-        num_inference_steps=steps,
-        width=640,
-        height=480,
-    )
-    if skull_refs:
-        kwargs["ip_adapter_image"] = [skull_refs]
-    return kwargs
 
 
 def generate_assets(
     factsheet: FactSheet,
     out_dir: Path,
     *,
-    model: str = "stabilityai/stable-diffusion-xl-base-1.0",
-    steps: int = 30,
+    model: str | None = None,
+    steps: int | None = None,
 ) -> None:
-    """Produce hero.png, skull.png, silhouette.svg in out_dir.
-
-    Loads the SDXL pipeline (via :func:`_load_pipeline`) and runs two
-    inference passes — hero and skull — each optionally conditioned on
-    visual reference images via IP-Adapter when refs are available.
-    The silhouette SVG is generated from size data without GPU work.
+    """Produce hero.png, skull.png, silhouette.svg in out_dir via Gemini.
 
     Args:
-        factsheet: Fully validated :class:`~dino_drawer.models.FactSheet`.
-        out_dir: Directory where output files are written.
-        model: HuggingFace model ID for the SDXL base checkpoint.
-        steps: Number of diffusion inference steps (lower = faster, lower quality).
+        factsheet: Fully validated FactSheet with image_prompt and visual_references.
+        out_dir: Directory where outputs are written.
+        model: Gemini image model name. None uses GEMINI_IMAGE_MODEL env default.
+        steps: Ignored — kept for signature compatibility.
     """
+    del steps  # unused with Gemini backend
     out_dir = Path(out_dir)
-    pipe = _load_pipeline(model)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    client = GeminiClient()
 
-    body_refs = _load_ref_images(out_dir, [r.path for r in factsheet.visual_references.body])
-    skull_refs = _load_ref_images(out_dir, [r.path for r in factsheet.visual_references.skull])
+    body_refs = _load_ref_paths(out_dir, [r.path for r in factsheet.visual_references.body])
+    skull_refs = _load_ref_paths(out_dir, [r.path for r in factsheet.visual_references.skull])
 
-    skull_out = pipe(**_build_skull_kwargs(factsheet, skull_refs, steps))
-    skull_out.images[0].save(out_dir / "skull.png")
+    hero_bytes = client.generate_image(
+        _hero_prompt(factsheet),
+        refs=body_refs,
+        model=model,
+    )
+    (out_dir / "hero.png").write_bytes(hero_bytes)
 
-    hero_out = pipe(**_build_hero_kwargs(factsheet, body_refs, steps))
-    hero_out.images[0].save(out_dir / "hero.png")
+    skull_bytes = client.generate_image(
+        _skull_prompt(factsheet),
+        refs=skull_refs,
+        model=model,
+    )
+    (out_dir / "skull.png").write_bytes(skull_bytes)
 
     length = sum(factsheet.size.length_m) / len(factsheet.size.length_m)
     hip = sum(factsheet.size.hip_height_m) / len(factsheet.size.hip_height_m)
-    svg = build_scale_svg(length_m=length, hip_height_m=hip)
-    (out_dir / "silhouette.svg").write_text(svg)
+    (out_dir / "silhouette.svg").write_text(build_scale_svg(length_m=length, hip_height_m=hip))
