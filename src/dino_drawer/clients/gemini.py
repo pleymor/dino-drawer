@@ -26,7 +26,8 @@ from google.genai import types
 
 _DEFAULT_TEXT_MODEL = "gemini-2.5-flash"
 _DEFAULT_IMAGE_MODEL = "gemini-3-pro-image-preview"
-_MAX_RETRIES = 4
+_MAX_RETRIES = 8
+_MAX_DELAY_SECONDS = 60
 
 # Errors that warrant a retry (rate-limit / transient server errors).
 _RETRYABLE = (
@@ -111,8 +112,10 @@ def _call_with_retry(fn, *args, **kwargs):
             last_exc = exc
             if attempt == _MAX_RETRIES:
                 break
-            time.sleep(delay)
-            delay *= 2
+            # Prefer the server's own retry hint when present (429 with RetryInfo).
+            wait = min(_extract_retry_delay(exc) or delay, _MAX_DELAY_SECONDS)
+            time.sleep(wait)
+            delay = min(delay * 2, _MAX_DELAY_SECONDS)
         except Exception as exc:
             raise GeminiError(f"Unexpected Gemini API error: {exc}", cause=exc) from exc
 
@@ -120,6 +123,31 @@ def _call_with_retry(fn, *args, **kwargs):
         f"Gemini rate-limit / ResourceExhausted after {_MAX_RETRIES} retries: {last_exc}",
         cause=last_exc,
     ) from last_exc
+
+
+def _extract_retry_delay(exc: Exception) -> float | None:
+    """Parse `Please retry in Xs` or RetryInfo.retry_delay from a Gemini error.
+
+    Gemini's 429 / 503 responses often include a precise server-side hint about
+    how long to wait. Honouring it converges faster than blind exponential
+    backoff. Returns *None* when no hint is available.
+    """
+    import re
+
+    msg = str(exc)
+    m = re.search(r"retry in ([0-9]+(?:\.[0-9]+)?)\s*s", msg)
+    if m:
+        try:
+            return float(m.group(1))
+        except ValueError:
+            pass
+    m = re.search(r"'retryDelay':\s*'([0-9]+(?:\.[0-9]+)?)s'", msg)
+    if m:
+        try:
+            return float(m.group(1))
+        except ValueError:
+            pass
+    return None
 
 
 def _raise_permanent(exc: Exception) -> None:
