@@ -41,8 +41,10 @@ def _hero_prompt(factsheet: FactSheet) -> str:
         "Framing: full body in frame, head AND tail fully visible, no cropping, "
         "animal occupies 60-80% of the frame width, eye-level perspective, "
         "16:10 landscape, environment fills the surroundings. "
-        "Anatomical accuracy: lips fully cover the teeth (no exposed teeth when mouth is closed), "
-        "scaly lip line clearly visible. "
+        "Anatomical accuracy: mouth firmly shut, lip line forms a continuous scaly seam "
+        "from the snout tip to the jaw corner — like a closed-mouth monitor lizard or "
+        "a resting Komodo dragon — with ABSOLUTELY ZERO teeth visible, not even a tip, "
+        "no fangs protruding, the upper lip overhangs and conceals the entire dental row. "
         "ABSOLUTELY NO TEXT anywhere — no captions, no watermark, no signature, no UI overlays, no logo, no labels."
     )
 
