@@ -1,43 +1,38 @@
 """CLI entry point for the publish pipeline.
 
-Usage
------
-Publish a species::
+Uploads the species' final image (as WebP) to Cloudflare R2 and refreshes the
+local ``published/catalog.json`` that the static site consumes.
+
+Usage::
 
     .venv/bin/python -m dino_drawer.publish <slug-or-out-path>
-
-Remove a species from R2 and the catalog::
-
     .venv/bin/python -m dino_drawer.publish <slug-or-out-path> --unpublish
 """
 from __future__ import annotations
 
 import argparse
 import json
-import sys
 from pathlib import Path
 
+from PIL import Image
+
 from dino_drawer.models import FactSheet
-from dino_drawer.publish.manifest import build_meta, remove_from_catalog, upsert_catalog
-from dino_drawer.publish.optimize import optimize_image
+from dino_drawer.publish.manifest import (
+    build_species_entry,
+    remove_from_catalog,
+    upsert_catalog,
+)
 from dino_drawer.publish.r2 import R2Client, R2Error
 
-_CATALOG_KEY = "catalog.json"
+_CATALOG_PATH = Path("published/catalog.json")
+_WEBP_QUALITY = 85
 
 
 def _resolve_out_dir(target: str) -> tuple[Path, str]:
-    """Return ``(out_dir, slug)`` from a slug string or an ``out/<slug>`` path.
-
-    Parameters
-    ----------
-    target:
-        Either a slug such as ``tyrannosaurus-rex`` or a path like
-        ``out/tyrannosaurus-rex``.
-    """
+    """Return ``(out_dir, slug)`` from a slug string or an ``out/<slug>`` path."""
     p = Path(target)
     if p.exists() and p.is_dir():
         return p, p.name
-    # Treat as raw slug — look relative to current working directory
     candidate = Path("out") / target
     if candidate.exists():
         return candidate, target
@@ -45,125 +40,70 @@ def _resolve_out_dir(target: str) -> tuple[Path, str]:
 
 
 def _load_factsheet(out_dir: Path) -> FactSheet:
-    """Load and parse ``factsheet.json`` from *out_dir*.
-
-    Parameters
-    ----------
-    out_dir:
-        The species output directory containing ``factsheet.json``.
-    """
+    """Load and parse ``factsheet.json`` from *out_dir*."""
     path = out_dir / "factsheet.json"
     if not path.exists():
         raise SystemExit(f"factsheet.json not found in {out_dir}")
     return FactSheet.model_validate_json(path.read_text())
 
 
-def _fetch_catalog(client: R2Client) -> dict | None:
-    """Fetch the current ``catalog.json`` from R2, or ``None`` if absent.
+def _png_to_webp(src_png: Path, dst_webp: Path) -> None:
+    """Convert *src_png* to WebP at its native resolution, quality 85."""
+    img = Image.open(src_png).convert("RGB")
+    dst_webp.parent.mkdir(parents=True, exist_ok=True)
+    img.save(dst_webp, "WEBP", quality=_WEBP_QUALITY, method=6)
 
-    Parameters
-    ----------
-    client:
-        Authenticated :class:`~dino_drawer.publish.r2.R2Client` instance.
-    """
-    raw = client.get_bytes(_CATALOG_KEY)
-    if raw is None:
+
+def _load_local_catalog() -> dict | None:
+    """Read the local ``published/catalog.json`` if it exists."""
+    if not _CATALOG_PATH.exists():
         return None
-    return json.loads(raw)
+    return json.loads(_CATALOG_PATH.read_text())
 
 
-def _push_catalog(client: R2Client, catalog: dict) -> str:
-    """Serialise and upload the catalog dict to R2.
-
-    Parameters
-    ----------
-    client:
-        Authenticated :class:`~dino_drawer.publish.r2.R2Client` instance.
-    catalog:
-        Catalog dict to upload.
-
-    Returns
-    -------
-    str
-        Public URL of the uploaded ``catalog.json``.
-    """
-    return client.upload_bytes(
-        json.dumps(catalog, ensure_ascii=False, indent=2).encode(),
-        _CATALOG_KEY,
-        content_type="application/json",
-    )
+def _write_local_catalog(catalog: dict) -> None:
+    """Write the catalog dict to ``published/catalog.json``."""
+    _CATALOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    _CATALOG_PATH.write_text(json.dumps(catalog, ensure_ascii=False, indent=2))
 
 
 def _publish(out_dir: Path, slug: str, client: R2Client) -> None:
-    """Optimise images, upload all assets to R2, and refresh the catalog.
-
-    Parameters
-    ----------
-    out_dir:
-        Species output directory (must contain ``hero.png`` and ``skull.png``).
-    slug:
-        URL-safe species identifier, e.g. ``tyrannosaurus-rex``.
-    client:
-        Authenticated :class:`~dino_drawer.publish.r2.R2Client` instance.
-    """
-    for name in ("hero.png", "skull.png"):
-        if not (out_dir / name).exists():
-            raise SystemExit(f"Required file missing: {out_dir / name}")
+    """Optimise the final image, upload to R2, refresh the local catalog."""
+    final_png = out_dir / "final.png"
+    if not final_png.exists():
+        raise SystemExit(f"Required file missing: {final_png}")
 
     factsheet = _load_factsheet(out_dir)
-    publish_dir = out_dir / "_publish"
 
-    image_urls: dict[str, dict[int, str]] = {}
-    for kind in ("hero", "skull"):
-        src = out_dir / f"{kind}.png"
-        print(f"  Optimising {src.name} …")
-        webp_paths = optimize_image(src, publish_dir, kind)
-        urls: dict[int, str] = {}
-        for w, webp_path in webp_paths.items():
-            key = f"{slug}/{kind}@{w}.webp"
-            print(f"  Uploading {key} …")
-            url = client.upload_file(webp_path, key, content_type="image/webp")
-            urls[w] = url
-            print(f"    → {url}")
-        image_urls[kind] = urls
+    webp = out_dir / "_publish" / f"{slug}.webp"
+    print(f"  Converting {final_png.name} → {webp.name} …")
+    _png_to_webp(final_png, webp)
 
-    meta = build_meta(factsheet, image_urls)
-    meta_key = f"{slug}/meta.json"
-    meta_url = client.upload_bytes(
-        json.dumps(meta, ensure_ascii=False, indent=2).encode(),
-        meta_key,
-        content_type="application/json",
-    )
-    print(f"  Uploaded meta → {meta_url}")
+    key = f"{slug}.webp"
+    print(f"  Uploading {key} → R2 …")
+    image_url = client.upload_file(webp, key, content_type="image/webp")
+    print(f"    → {image_url}")
 
-    catalog = _fetch_catalog(client)
-    catalog = upsert_catalog(catalog, meta)
-    catalog_url = _push_catalog(client, catalog)
-    print(f"  Catalog updated → {catalog_url}")
+    entry = build_species_entry(factsheet, image_url)
+    catalog = upsert_catalog(_load_local_catalog(), entry)
+    _write_local_catalog(catalog)
+    print(f"  Catalog updated → {_CATALOG_PATH} ({catalog['count']} species)")
 
 
 def _unpublish(slug: str, client: R2Client) -> None:
-    """Delete all R2 objects for *slug* and remove it from the catalog.
-
-    Parameters
-    ----------
-    slug:
-        URL-safe species identifier, e.g. ``tyrannosaurus-rex``.
-    client:
-        Authenticated :class:`~dino_drawer.publish.r2.R2Client` instance.
-    """
-    prefix = f"{slug}/"
-    print(f"  Deleting R2 objects under {prefix!r} …")
-    count = client.delete_prefix(prefix)
+    """Delete the slug's image from R2 and remove it from the local catalog."""
+    key = f"{slug}.webp"
+    print(f"  Deleting {key} from R2 …")
+    count = client.delete_prefix(key)
     print(f"  Deleted {count} object(s).")
 
-    catalog = _fetch_catalog(client)
-    if catalog is not None:
-        catalog = remove_from_catalog(catalog, slug)
-        catalog_url = _push_catalog(client, catalog)
-        print(f"  Catalog updated → {catalog_url}")
-    else:
-        print("  No catalog found; nothing to update.")
+    catalog = _load_local_catalog()
+    if catalog is None:
+        print("  No local catalog found; nothing to update.")
+        return
+    catalog = remove_from_catalog(catalog, slug)
+    _write_local_catalog(catalog)
+    print(f"  Catalog updated → {_CATALOG_PATH} ({catalog['count']} species)")
 
 
 def main() -> None:
@@ -180,7 +120,7 @@ def main() -> None:
         "--unpublish",
         action="store_true",
         default=False,
-        help="Remove the species from R2 and the catalog.",
+        help="Remove the species from R2 and the local catalog.",
     )
     args = parser.parse_args()
 
