@@ -73,7 +73,9 @@ def _build_hero_kwargs(
         height=640,
     )
     if body_refs:
-        kwargs["ip_adapter_image"] = body_refs
+        # Wrap as list-of-lists: outer length = number of loaded IP-Adapters (1),
+        # inner length = number of reference images for that adapter.
+        kwargs["ip_adapter_image"] = [body_refs]
     return kwargs
 
 
@@ -104,7 +106,7 @@ def _build_skull_kwargs(
         height=480,
     )
     if skull_refs:
-        kwargs["ip_adapter_image"] = skull_refs
+        kwargs["ip_adapter_image"] = [skull_refs]
     return kwargs
 
 
