@@ -165,6 +165,8 @@ class DinoDrawerAgent:
             generate_assets(factsheet=fs, out_dir=out_dir, model=self.model_image)
 
         # Step 6: render final infographic.
+        # Playwright's sync API doesn't tolerate a running asyncio loop, so we
+        # run the screenshot call in a worker thread.
         if self._step_should_run("compose", out_dir / "final.png"):
-            return screenshot(fs, out_dir)
+            return await asyncio.to_thread(screenshot, fs, out_dir)
         return out_dir / "final.png"
