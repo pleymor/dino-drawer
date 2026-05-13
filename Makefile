@@ -4,7 +4,7 @@ SLUG := $(shell echo "$(SPECIES)" | tr '[:upper:] ' '[:lower:]-')
 OUT := out/$(SLUG)
 ARGS ?=
 
-.PHONY: help install test run papers images vision synthesis image compose clean clean-cache
+.PHONY: help install test run papers images vision synthesis image compose publish publish-all unpublish clean clean-cache
 
 help:
 	@echo "Targets:"
@@ -19,6 +19,10 @@ help:
 	@echo "  compose        — only final HTML→PNG render"
 	@echo "  clean          — remove out/<slug>/ artifacts (keeps papers + raw refs)"
 	@echo "  clean-cache    — also remove HF cache (~14 GB)"
+	@echo ""
+	@echo "  publish        — optimise + upload species to R2 (SPECIES=…)"
+	@echo "  publish-all    — publish every species under out/*/"
+	@echo "  unpublish      — remove species from R2 and catalog (SPECIES=…)"
 	@echo ""
 	@echo "Examples:"
 	@echo "  make run SPECIES='Triceratops horridus'"
@@ -54,6 +58,19 @@ image:
 
 compose:
 	$(PY) -m dino_drawer.compose "$(OUT)"
+
+publish:
+	$(PY) -m dino_drawer.publish "$(OUT)"
+
+publish-all:
+	@for d in out/*/; do \
+		slug=$$(basename $$d); \
+		echo "==> Publishing $$slug"; \
+		$(PY) -m dino_drawer.publish "out/$$slug" || exit 1; \
+	done
+
+unpublish:
+	$(PY) -m dino_drawer.publish "$(OUT)" --unpublish
 
 clean:
 	rm -f $(OUT)/hero.png $(OUT)/skull.png $(OUT)/silhouette.svg $(OUT)/final.png $(OUT)/_infographic.html $(OUT)/factsheet.json $(OUT)/refs.json $(OUT)/classifications_cache.json
