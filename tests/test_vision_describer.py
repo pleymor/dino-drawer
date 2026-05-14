@@ -14,7 +14,6 @@ def _classified(i: int) -> ClassifiedImage:
         type="paleoart_realiste",
         view="profil_corps",
         usable_for_body_generation=True,
-        usable_for_skull_generation=False,
         realism_score=8,
         quality_score=8,
         description_courte="",
@@ -31,17 +30,16 @@ def test_describer_returns_concatenated_brief(tmp_path):
     refs = RefsFile(
         species="X",
         body=[_classified(0), _classified(1), _classified(2)],
-        skull=[],
     )
 
     with patch("dino_drawer.vision.describer.VLMClient") as MockVLM:
         MockVLM.return_value.describe_image.side_effect = [
-            "Peau verte avec rayures sombres. Plumes éparses sur le cou.",
-            "Posture en S, gueule entrouverte.",
-            "Forêt humide, lumière oblique.",
+            "Green skin with dark stripes. Sparse feathers on the neck.",
+            "S-shaped posture, mouth slightly ajar.",
+            "Humid forest, slanted light.",
         ]
         brief = describe_body_refs(refs=refs, out_dir=tmp_path)
 
-    assert "peau verte" in brief.lower() or "Peau verte" in brief
-    assert "plumes" in brief.lower()
-    assert "forêt" in brief.lower() or "forêt" in brief
+    assert "green skin" in brief.lower()
+    assert "feathers" in brief.lower()
+    assert "forest" in brief.lower()

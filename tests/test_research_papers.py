@@ -16,11 +16,12 @@ FIXTURES = Path(__file__).parent / "fixtures"
 @respx.mock
 async def test_wikipedia_returns_extract():
     payload = json.loads((FIXTURES / "wikipedia_trex.json").read_text())
-    respx.get(url__regex=r"https://en\.wikipedia\.org/api/rest_v1/page/summary/.+").mock(
+    respx.get(url__regex=r"https://en\.wikipedia\.org/w/api\.php.*").mock(
         return_value=httpx.Response(200, json=payload)
     )
     ctx = await wikipedia.fetch("Tyrannosaurus rex")
     assert "Tyrannosaurus" in ctx.extract
+    assert "Description" in ctx.extract  # full article, not just lead
     assert ctx.url.startswith("https://en.wikipedia.org/")
 
 

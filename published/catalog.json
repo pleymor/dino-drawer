@@ -1,358 +1,167 @@
 {
-  "generated_at": "2026-05-13T16:59:24Z",
+  "generated_at": "2026-05-14T20:01:13Z",
   "count": 2,
   "species": [
     {
       "slug": "tyrannosaurus-rex",
       "species": "Tyrannosaurus rex",
-      "subtitle": "Un théropode géant du Crétacé supérieur d'Amérique du Nord",
-      "annotations": [
-        {
-          "region": "tête",
-          "facts": [
-            "Le crâne du Tyrannosaurus rex subit une transformation ontogénétique extrême, passant d'une forme peu profonde chez les juvéniles à une forme profonde chez les adultes, avec une réduction du nombre de dents.",
-            "Le système neurovasculaire rostral (canaux nasaux, maxillaires et mandibulaires) a été étudié par tomodensitométrie, révélant un schéma classique pour un théropode non avien.",
-            "Des études ont détaillé les os crâniens du spécimen type et évalué les caractères homologues entre adultes et juvéniles.",
-            "La force de morsure des jeunes Tyrannosaurus rex a été estimée en simulant des marques de perforation sur des os."
-          ],
-          "source_ids": [
-            "paper:0",
-            "paper:1",
-            "paper:10",
-            "paper:14"
-          ]
-        },
-        {
-          "region": "peau_et_couverture",
-          "facts": [
-            "La couverture tégumentaire de Tyrannosaurus rex est souvent représentée comme écailleuse, bien que des interprétations artistiques aient parfois inclus des protoplumes ou du duvet, notamment chez les juvéniles."
-          ],
-          "source_ids": [
-            "wikipedia"
-          ]
-        },
-        {
-          "region": "membres_anterieurs",
-          "facts": [
-            "Le Tyrannosaurus rex possédait des membres antérieurs très courts par rapport à sa taille corporelle."
-          ],
-          "source_ids": [
-            "wikipedia"
-          ]
-        },
-        {
-          "region": "membres_posterieurs",
-          "facts": [
-            "Les membres postérieurs étaient puissants et bien développés, supportant l'animal dans sa posture bipède et lui permettant une locomotion efficace."
-          ],
-          "source_ids": [
-            "wikipedia"
-          ]
-        },
-        {
-          "region": "queue",
-          "facts": [
-            "La longue queue musclée agissait comme un contrepoids pour l'équilibre et la stabilisation lors des mouvements.",
-            "La vitesse de marche préférée a été estimée entre 0,80 et 1,64 m/s, en se basant sur la fréquence naturelle de la queue, une méthode qui ne dépend pas des hypothèses sur la musculature."
-          ],
-          "source_ids": [
-            "wikipedia",
-            "paper:7"
-          ]
-        }
-      ],
-      "skull_view": {
-        "facts": [
-          "Le crâne du spécimen type de Tyrannosaurus rex a été étudié pour en décrire les os, évaluer l'homologie des caractères entre adultes et juvéniles, et détailler la dentition.",
-          "Le crâne des jeunes Tyrannosaurus rex est peu profond, mais il devient beaucoup plus profond chez les adultes.",
-          "Le système neurovasculaire rostral (canaux nasaux, maxillaires et mandibulaires) de Tyrannosaurus rex a été détaillé par tomodensitométrie."
-        ],
-        "scale_cm": 150.0,
+      "subtitle": "Grand dinosaure théropode",
+      "dimensions": {
+        "body_length": "no data in corpus",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "~8 800 kg (pour le plus grand spécimen connu); estimé à potentiellement 15 000 kg pour les plus grands individus [paper:9]",
         "source_ids": [
-          "paper:0",
-          "paper:1",
+          "paper:9"
+        ]
+      },
+      "integument": {
+        "integument_type": "no data in corpus",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "no data in corpus",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": []
+      },
+      "posture": {
+        "stance": "Bipède [wikipedia]",
+        "typical_posture": "no data in corpus",
+        "locomotion_mode": "Vitesse de marche préférée estimée entre 0,80 et 1,64 m/s [paper:7]",
+        "source_ids": [
+          "wikipedia",
+          "paper:7"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Période du Crétacé supérieur (Maastrichtien supérieur), il y a 69 à 66 millions d'années [wikipedia]",
+        "biome": "Continent insulaire connu sous le nom de Laramidia [wikipedia]",
+        "region_or_formation": "Ouest de l'Amérique du Nord (Laramidia) [wikipedia]; écosystèmes de Hell Creek et équivalents [paper:10]",
+        "source_ids": [
+          "wikipedia",
           "paper:10"
         ]
       },
-      "size": {
-        "length_m": [
-          12.0,
-          13.0
-        ],
-        "hip_height_m": [
-          3.5,
-          4.0
-        ],
+      "signature_traits": {
+        "text": "Un grand dinosaure théropode, l'une des espèces les mieux représentées de son genre [wikipedia]. Il est le plus grand prédateur de son écosystème, avec une morsure puissante [paper:12]. Sa série de croissance montre une transformation extrême des crânes peu profonds chez les juvéniles aux crânes profonds chez les adultes, avec une réduction du nombre de dents, et un taux de croissance élevé [paper:0]. C'était l'un des derniers membres connus des tyrannosauridés et parmi les derniers dinosaures non aviaires avant l'événement d'extinction du Crétacé-Paléogène [wikipedia]. Des structures neurovasculaires rostrales ont été étudiées, montrant un schéma typique pour un théropode non aviaire [paper:1].",
         "source_ids": [
-          "wikipedia"
+          "wikipedia",
+          "paper:0",
+          "paper:1",
+          "paper:12"
         ]
       },
-      "conclusion": "Tyrannosaurus rex est l'un des théropodes les mieux représentés, ayant dominé les écosystèmes de Laramidie à la fin du Crétacé. Son développement ontogénétique est marqué par des transformations crâniennes importantes et un taux de croissance rapide. Des études récentes ont estimé sa population totale à des milliards d'individus et ont fourni des preuves de préservation de la biochimie osseuse. Son rôle de prédateur ou charognard fait encore l'objet de débats, mais il est clair qu'il était le prédateur apical de son environnement.",
+      "conclusion": "Le Tyrannosaurus rex était un grand dinosaure théropode emblématique de la fin du Crétacé en Amérique du Nord. Connu pour sa taille impressionnante, sa morsure puissante et ses modifications morphologiques significatives au cours de sa croissance, il a été l'un des derniers dinosaures non aviaires. Sa prévalence dans les archives fossiles et l'étendue de sa distribution géographique en font une espèce clé pour comprendre la paléobiologie des grands prédateurs du Crétacé.",
       "references": [
         {
           "id": "wikipedia",
-          "citation_short": "Wikipédia - Tyrannosaurus",
+          "citation_short": "Wikipédia",
           "doi": null,
           "title": "Tyrannosaurus"
         },
         {
           "id": "paper:0",
-          "citation_short": "Carr, T.D. (2020)",
+          "citation_short": "Carr, T. D. (2020)",
           "doi": "10.7717/peerj.9192",
           "title": "A high-resolution growth series of Tyrannosaurus rex obtained from multiple lines of evidence"
         },
         {
           "id": "paper:1",
-          "citation_short": "Bouabdellah, F. et al. (2022)",
+          "citation_short": "Bouabdellah, F., Lessner, E. J., Benoît, J. (2022)",
           "doi": "10.26879/1178",
           "title": "The rostral neurovascular system of Tyrannosaurus rex"
         },
         {
-          "id": "paper:2",
-          "citation_short": "Woodward, H.N. et al. (2020)",
-          "doi": "10.1126/sciadv.aax6250",
-          "title": "Growing up Tyrannosaurus rex : Osteohistology refutes the pygmy “ Nanotyrannus ” and supports ontogenetic niche partitioning in juvenile Tyrannosaurus"
-        },
-        {
-          "id": "paper:3",
-          "citation_short": "Hultgren, A.K. (2020)",
-          "doi": "10.35360/njes.574",
-          "title": "Global English: From “Tyrannosaurus Rex” to “Red Herring”"
-        },
-        {
-          "id": "paper:4",
-          "citation_short": "Marshall, C.R. et al. (2021)",
-          "doi": "10.1126/science.abc8300",
-          "title": "Absolute abundance and preservation rate of Tyrannosaurus rex"
-        },
-        {
-          "id": "paper:5",
-          "citation_short": "Hamm, C.A. et al. (2020)",
-          "doi": "10.1038/s41598-020-75731-0",
-          "title": "A comprehensive diagnostic approach combining phylogenetic disease bracketing and CT imaging reveals osteomyelitis in a Tyrannosaurus rex"
-        },
-        {
-          "id": "paper:6",
-          "citation_short": "Woodward, H.N. et al. (2020)",
-          "doi": "10.15468/bwa3fs",
-          "title": "Growing up Tyrannosaurus rex: Osteohistology refutes the pygmy “ Nanotyrannus ” and supports ontogenetic niche partitioning in juvenile Tyrannosaurus"
-        },
-        {
           "id": "paper:7",
-          "citation_short": "van Bijlert, P.A. et al. (2021)",
+          "citation_short": "van Bijlert, P. A., van Soest, A. J., Schulp, A. S. (2021)",
           "doi": "10.1098/rsos.201441",
           "title": "Natural Frequency Method: estimating the preferred walking speed of Tyrannosaurus rex based on tail natural frequency"
         },
         {
-          "id": "paper:8",
-          "citation_short": "Ullmann, P.V. et al. (2021)",
-          "doi": "10.3390/biology10111193",
-          "title": "Taphonomic and Diagenetic Pathways to Protein Preservation, Part I: The Case of Tyrannosaurus rex Specimen MOR 1125"
-        },
-        {
           "id": "paper:9",
-          "citation_short": "Mallon, J.C. et Hone, D.W.E. (2024)",
+          "citation_short": "Mallon, J. C., Hone, D. W. E. (2024)",
           "doi": "10.1002/ece3.11658",
           "title": "Estimation of maximum body size in fossil species: A case study using Tyrannosaurus rex"
         },
         {
           "id": "paper:10",
-          "citation_short": "Carr, T.D. (2025)",
-          "doi": "10.1080/27669645.2025.2539638",
-          "title": "Observations on the skull of the type specimen of Tyrannosaurus rex Osborn, 1905"
-        },
-        {
-          "id": "paper:11",
-          "citation_short": "Wilkin, J. et Hone, D.W.E. (2020)",
-          "doi": "10.3389/frym.2020.00101",
-          "title": "Was Tyrannosaurus rex a Ferocious Predator or a Wimp?"
-        },
-        {
-          "id": "paper:12",
-          "citation_short": "Mitchell, J. et al. (2025)",
-          "doi": "10.1038/s41598-025-06981-z",
-          "title": "In situ analysis of vascular structures in fractured Tyrannosaurus rex rib"
-        },
-        {
-          "id": "paper:13",
-          "citation_short": "Griffin, C.T. et al. (2025)",
+          "citation_short": "Griffin, C. T., Bugos, J., Poust, A. W. (2025)",
           "doi": "10.1126/science.adx8706",
           "title": "A diminutive tyrannosaur lived alongside Tyrannosaurus rex"
         },
         {
-          "id": "paper:14",
-          "citation_short": "Peterson, J.E. et al. (2021)",
-          "doi": "10.7717/peerj.11450",
-          "title": "Bite force estimates in juvenile Tyrannosaurus rex based on simulated puncture marks"
-        },
-        {
-          "id": "paper:15",
-          "citation_short": "Anné, J. et al. (2023)",
-          "doi": "10.3390/biology12020264",
-          "title": "Independent Evidence for the Preservation of Endogenous Bone Biochemistry in a Specimen of Tyrannosaurus rex"
+          "id": "paper:12",
+          "citation_short": "Wilkin, J., Hone, D. W. E. (2020)",
+          "doi": "10.3389/frym.2020.00101",
+          "title": "Was Tyrannosaurus rex a Ferocious Predator or a Wimp?"
         }
       ],
-      "image_prompt": "unedited DSLR wildlife photograph, RAW image, national geographic style, hyper-realistic skin pores and feather texture, subtle ISO grain, natural lens distortion, slightly imperfect framing as if shot in the field. front-facing perspective, the animal is charging or lunging straight toward the camera, head pointed at the viewer, three-quarter front view or near head-on, the entire body visible — head, body, legs and most of the tail in frame, no cropping of the head or shoulders, animal occupies 60-80% of the frame. aggressive charge toward the viewer, head thrust forward, muscles bunched, claws splayed, body weight shifted to the front leg, low menacing glare directly at the camera, neck feathers raised. Late Cretaceous Laramidia conifer forest at dawn. mouth firmly shut, lip line forming a continuous scaly seam from snout tip to jaw corner, like a closed-mouth monitor lizard or a resting Komodo dragon, ABSOLUTELY ZERO teeth visible, not even a hint of a tooth tip, no fangs poking out, the upper lip overhangs and conceals the entire dental row from the outside. Dark grey scaled skin on its powerful hind legs and long, thick tail, dense grey and white downy feathers or protofeathers covering its head, neck, back, and very short forelimbs, a crest of filamentous structures adorning the back of its head and the top of its tail, powerful hind legs with robust feet, body tilted forward, balanced by its muscular tail. eye-level, 35mm prime lens, shallow depth of field, golden hour. absolutely no text, no captions, no watermark, no signature, no UI overlays, no logo.",
+      "image_prompt": "Late Cretaceous Laramidia, a lush island continent biome. The scene is set in a dense conifer forest at dusk, with soft, diffused light filtering onto a damp forest floor. Integument is predominantly scaly, with dense pebbly scales on flanks, belly, limbs and tail. A sparse, thin mane-like ridge of filamentous protofeathers runs along the dorsal midline from the nape to the upper tail base, but no full downy coat. Coloration is dark grayish-brown with subtle dorsal mottling, transitioning to a lighter yellowish underside and tones around the snout. Unique features include notably short forelimbs contrasting its powerful hind limbs and an extremely robust, deep skull, indicative of immense bite force. A thin glistening trail of saliva at the corner of the slightly parted lips and faint dark blood smudges on the lower lip and chin suggest a recent kill.",
       "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/tyrannosaurus-rex.webp",
-      "generated_at": "2026-05-13T16:59:23Z"
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/tyrannosaurus-rex_thumbnail.webp",
+      "generated_at": "2026-05-14T19:48:36Z"
     },
     {
       "slug": "velociraptor-mongoliensis",
       "species": "Velociraptor mongoliensis",
-      "subtitle": "Petit dromaeosauridé agile du Crétacé supérieur d'Asie",
-      "annotations": [
-        {
-          "region": "tête",
-          "facts": [
-            "Le crâne du Velociraptor mongoliensis présente une anatomie endocranienne détaillée, y compris le labyrinthe endo-osseux de l'oreille interne, qui fournit des indices sur son agilité et son équilibre [paper:0].",
-            "Les dromaeosauridés sont traditionnellement perçus comme des chasseurs carnivores agiles, et leur morphologie crânienne est diverse, influençant l'efficacité de la force de morsure [paper:1, paper:9].",
-            "Le museau est couvert d'écailles ou de peau nue et foncée, avec un système neurovasculaire adapté [VISUAL_BRIEF, paper:12].",
-            "La morphologie cérébrale de certains théropodes non-aviens, comme le Sinovenator, montre des caractéristiques similaires à celles des oiseaux, avec des lobes optiques élargis et des bulbes olfactifs proportionnellement plus petits [paper:16]."
-          ],
-          "source_ids": [
-            "paper:0",
-            "paper:1",
-            "paper:9",
-            "paper:12",
-            "paper:16"
-          ]
-        },
-        {
-          "region": "peau_et_couverture",
-          "facts": [
-            "Le corps du Velociraptor mongoliensis est majoritairement couvert de plumes [VISUAL_BRIEF, wikipedia].",
-            "Ces plumes affichent des teintes crème sur le ventre, le cou et la tête, et des motifs marron clair et grisâtres marbrés sur le dos [VISUAL_BRIEF].",
-            "Les plumes de vol et de la longue queue sont frappantes, avec des bandes ou motifs de gris foncé et d'orange vif ou rouge [VISUAL_BRIEF].",
-            "Seules les pattes inférieures robustes, les pieds et le museau sont recouverts d'écailles ou de peau nue et foncée [VISUAL_BRIEF]."
-          ],
-          "source_ids": [
-            "wikipedia"
-          ]
-        },
-        {
-          "region": "membres_anterieurs",
-          "facts": [
-            "Les membres antérieurs sont également couverts de plumes, affichant des teintes vives orange-rouge et gris foncé, conformément aux représentations visuelles [VISUAL_BRIEF].",
-            "Des études sur d'autres paraviens, tels que Rahonavis et Halszkaraptor, éclairent la transformation morphologique des membres antérieurs et de la ceinture pectorale au sein des théropodes apparentés aux oiseaux [paper:5, paper:11, paper:15]."
-          ],
-          "source_ids": [
-            "paper:5",
-            "paper:11",
-            "paper:15"
-          ]
-        },
-        {
-          "region": "membres_posterieurs",
-          "facts": [
-            "Les membres postérieurs sont robustes et adaptés à une posture bipède dynamique, suggérant une capacité de course ou de marche rapide [VISUAL_BRIEF].",
-            "Les pattes inférieures et les pieds sont recouverts d'écailles ou de peau nue et foncée [VISUAL_BRIEF].",
-            "L'analyse des surfaces articulaires des membres postérieurs permet de distinguer les poses de locomotion chez les dinosaures [paper:10]."
-          ],
-          "source_ids": [
-            "paper:10"
-          ]
-        },
-        {
-          "region": "queue",
-          "facts": [
-            "La queue du Velociraptor mongoliensis est longue et est tendue horizontalement vers l'arrière, servant à l'équilibre pendant le mouvement rapide [VISUAL_BRIEF].",
-            "Elle est ornée de plumes présentant des motifs ou bandes de gris foncé et d'orange vif ou rouge [VISUAL_BRIEF]."
-          ],
-          "source_ids": []
-        }
-      ],
-      "skull_view": {
-        "facts": [
-          "Le crâne des dromaeosauridés, comme le Velociraptor, est étudié pour comprendre l'écologie et l'histoire évolutive de ces théropodes, en se concentrant sur la disparité morphologique et la performance structurelle de la mâchoire [paper:1].",
-          "L'anatomie endocranienne du Velociraptor mongoliensis révèle des indices sur son agilité, son équilibre et sa capacité olfactive [paper:0].",
-          "La forme du museau chez les eudromaeosauridés est liée à leurs niches prédatrices respectives [paper:9]."
-        ],
-        "scale_cm": 25.0,
-        "source_ids": [
-          "paper:0",
-          "paper:1",
-          "paper:9"
-        ]
-      },
-      "size": {
-        "length_m": [
-          1.8,
-          2.0
-        ],
-        "hip_height_m": [
-          0.6,
-          0.75
-        ],
+      "subtitle": "Petit dinosaure droméosauridé agile du Crétacé supérieur",
+      "dimensions": {
+        "body_length": "1,5–2,07 m (4,9–6,8 pi) pour la plupart des adultes; certaines estimations suggèrent jusqu'à 2,5 m (8 pi) [wikipedia]",
+        "hip_height": "Environ 0,5 m (1,6 pi) aux hanches [wikipedia]",
+        "skull_length": "Jusqu'à 23 cm (9,1 po) [wikipedia]",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "Environ 14,1–19,7 kg (31–43 lb) pour la plupart des adultes; certaines estimations suggèrent jusqu'à 28 kg (60 lb) [wikipedia]",
         "source_ids": [
           "wikipedia"
         ]
       },
-      "conclusion": "Velociraptor mongoliensis était un dromaeosauridé agile et entièrement couvert de plumes, vivant en Asie durant le Crétacé supérieur. Ses études neuroanatomiques révèlent des sens affûtés et une grande agilité, tandis que sa morphologie crânienne indique une efficacité en tant que chasseur carnivore.",
+      "integument": {
+        "integument_type": "Plumes. Des protubérances d'attache de plumes (quill knobs) ont été rapportées sur l'ulna d'un spécimen (IGM 100/981, corrigé en IGM 100/3503), bien que son attribution puisse nécessiter une réévaluation. Des preuves phylogénétiques solides d'autres droméosauridés comme Daurlong, Microraptor ou Zhenyuanlong indiquent la présence de plumes chez Velociraptor [wikipedia].",
+        "coloration": "Plumage affichant des motifs tachetés de marron, beige et orange clair sur le corps, avec un cou et un dessous pâle crème. Les grandes plumes des bras et de la longue queue présentent des motifs distinctifs de gris-brun et d'orange vif, ou de gris-bleu avec des taches orange vif. Le museau et les pattes inférieures sont gris foncé et écailleux, ou verts et écailleux [visual references].",
+        "keratinous_structures": "Museau, pattes inférieures et griffes écailleux de couleur sombre [visual references].",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia",
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède [wikipedia]",
+        "typical_posture": "Dynamique, penchée en avant, comme en train de courir, la tête haute et la queue allongée horizontalement pour l'équilibre [visual references].",
+        "locomotion_mode": "Cursaure (rapide) [wikipedia]",
+        "source_ids": [
+          "wikipedia",
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé supérieur, il y a environ 75 à 71 millions d'années (Ma) [wikipedia]",
+        "biome": "no data in corpus",
+        "region_or_formation": "Formation de Djadochta (Mongolie) et Formation de Bayan Mandahu (Chine). Un enregistrement possible est connu de la Formation de Nemegt [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Un petit droméosauridé carnivore à plumes, reconnaissable par son crâne long et bas avec un museau retroussé. Il possédait une longue queue et une grande griffe en forme de faucille sur chaque patte arrière, probablement utilisée pour maîtriser les proies. Bien que célèbre grâce aux films 'Jurassic Park', sa taille réelle était considérablement plus petite que celle représentée à l'écran, étant plus proche de celle d'une dinde [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "Le Velociraptor mongoliensis était un prédateur agile et plumé de taille modeste du Crétacé supérieur d'Asie, dont la morphologie unique et la célébrité culturelle en font l'un des dinosaures les plus reconnaissables.",
       "references": [
         {
           "id": "wikipedia",
           "citation_short": "Wikipedia",
           "doi": null,
           "title": "Velociraptor"
-        },
-        {
-          "id": "paper:0",
-          "citation_short": "King et al. (2020)",
-          "doi": "10.1111/joa.13253",
-          "title": "The endocranium and trophic ecology of Velociraptor mongoliensis"
-        },
-        {
-          "id": "paper:1",
-          "citation_short": "Tse et al. (2024)",
-          "doi": "10.1186/s12862-024-02222-5",
-          "title": "Morphological disparity and structural performance of the dromaeosaurid skull informs ecology and evolutionary history"
-        },
-        {
-          "id": "paper:5",
-          "citation_short": "Poust et al. (2020)",
-          "doi": "10.1002/ar.24343",
-          "title": "A new microraptorine theropod from the Jehol Biota and growth in early dromaeosaurids"
-        },
-        {
-          "id": "paper:9",
-          "citation_short": "Powers (2020)",
-          "doi": "10.7939/r3-hz8e-5n76",
-          "title": "The Evolution of Snout Shape in Eudromaeosaurians and its Ecological Significance"
-        },
-        {
-          "id": "paper:10",
-          "citation_short": "Manafzadeh et al. (2024)",
-          "doi": "10.1038/s41467-024-44832-z",
-          "title": "Articular surface interactions distinguish dinosaurian locomotor joint poses"
-        },
-        {
-          "id": "paper:11",
-          "citation_short": "Forster et al. (2020)",
-          "doi": "10.26879/793",
-          "title": "The osteology of the Late Cretaceous paravian Rahonavis ostromi from Madagascar"
-        },
-        {
-          "id": "paper:12",
-          "citation_short": "Bouabdellah et al. (2022)",
-          "doi": "10.26879/1178",
-          "title": "The rostral neurovascular system of Tyrannosaurus rex"
-        },
-        {
-          "id": "paper:15",
-          "citation_short": "Cau et al. (2021)",
-          "doi": "10.1038/s41598-021-94285-3",
-          "title": "Unusual pectoral apparatus in a predatory dinosaur resolves avian wishbone homology"
-        },
-        {
-          "id": "paper:16",
-          "citation_short": "Yu et al. (2024)",
-          "doi": "10.1038/s42003-024-05832-3",
-          "title": "Avialan-like brain morphology in Sinovenator (Troodontidae, Theropoda)"
         }
       ],
-      "image_prompt": "unedited DSLR wildlife photograph, RAW image, national geographic style, hyper-realistic skin pores and feather texture, subtle ISO grain, natural lens distortion, slightly imperfect framing as if shot in the field. front-facing perspective, the animal is charging or lunging straight toward the camera, head pointed at the viewer, three-quarter front view or near head-on, the entire body visible — head, body, legs and most of the tail in frame, no cropping of the head or shoulders, animal occupies 60-80% of the frame. aggressive charge toward the viewer, head thrust forward, muscles bunched, claws splayed, body weight shifted to the front leg, low menacing glare directly at the camera, neck feathers raised. Late Cretaceous Djadochta Formation desert landscape at dawn, with sparse desert vegetation, rocky outcrops and sand dunes. mouth firmly shut, lip line forming a continuous scaly seam from snout tip to jaw corner, like a closed-mouth monitor lizard or a resting Komodo dragon, ABSOLUTELY ZERO teeth visible, not even a hint of a tooth tip, no fangs poking out, the upper lip overhangs and conceals the entire dental row from the outside. body covered mostly in feathers, creamy white on the belly, neck and head, light brown and grayish marbled patterns on the back, vivid orange-red and dark gray feathers on the long tail and forelimbs, forming striking patterns, robust lower legs and feet covered in dark, bare scaly skin, long tail extended horizontally for balance, head slightly raised. eye-level, 35mm prime lens, shallow depth of field, golden hour. absolutely no text, no captions, no watermark, no signature, no UI overlays, no logo.",
+      "image_prompt": "Late Cretaceous Djadochta Formation in Mongolia, an arid landscape with red rock formations at sunrise, casting long shadows. The animal is densely feathered, with pennaceous feathers on its arms and tail. Its body plumage is a mottled pattern of brown, tan, and light orange, contrasting with a pale cream neck and underbelly. The prominent arm and long tail feathers display distinctive greyish-brown and vibrant orange patterns. Its snout, lower legs, and sharp talons are dark grey. It has a distinctively long, low skull with an upturned snout and an enlarged sickle-shaped claw on each hindfoot. Its long tail provides balance. The creature is approximately 1.5 to 2.07 meters long. a thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin (NOT on the teeth), as if the animal just made a kill seconds ago.",
       "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/velociraptor-mongoliensis.webp",
-      "generated_at": "2026-05-13T16:59:24Z"
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/velociraptor-mongoliensis_thumbnail.webp",
+      "generated_at": "2026-05-14T20:01:13Z"
     }
   ]
 }

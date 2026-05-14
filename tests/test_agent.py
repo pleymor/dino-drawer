@@ -5,7 +5,10 @@ from unittest.mock import AsyncMock, patch, MagicMock
 import pytest
 
 from dino_drawer.agent import DinoDrawerAgent
-from dino_drawer.models import PapersFile, RawImagesFile, RefsFile, FactSheet, Annotation, SkullView, Size, Reference, VisualReferences
+from dino_drawer.models import (
+    PapersFile, RawImagesFile, RefsFile, FactSheet, Reference, VisualReferences,
+    Dimensions, Integument, Posture, Habitat, SignatureTraits,
+)
 
 
 def _papers() -> PapersFile:
@@ -17,18 +20,34 @@ def _refs_raw() -> RawImagesFile:
 
 
 def _refs() -> RefsFile:
-    return RefsFile(species="X", body=[], skull=[])
+    return RefsFile(species="X", body=[])
 
 
 def _factsheet() -> FactSheet:
     return FactSheet(
         species="X", subtitle="",
-        annotations=[Annotation(region="tête", facts=["x"], source_ids=["wikipedia"])],
-        skull_view=SkullView(facts=["x"], scale_cm=10, source_ids=["wikipedia"]),
-        size=Size(length_m=[1,2], hip_height_m=[1,2], source_ids=["wikipedia"]),
+        dimensions=Dimensions(
+            body_length="x", hip_height="x", skull_length="x",
+            forelimb_length="x", tail_length="x", body_mass="x",
+            source_ids=["wikipedia"],
+        ),
+        integument=Integument(
+            integument_type="x", coloration="x",
+            keratinous_structures="x", ontogenetic_variation="x",
+            source_ids=["wikipedia"],
+        ),
+        posture=Posture(
+            stance="x", typical_posture="x", locomotion_mode="x",
+            source_ids=["wikipedia"],
+        ),
+        habitat=Habitat(
+            geological_period="x", biome="x", region_or_formation="x",
+            source_ids=["wikipedia"],
+        ),
+        signature_traits=SignatureTraits(text="x", source_ids=["wikipedia"]),
         conclusion="",
         references=[Reference(id="wikipedia", citation_short="W", doi=None, title="t")],
-        visual_references=VisualReferences(body=[], skull=[]),
+        visual_references=VisualReferences(body=[]),
         image_prompt="..",
     )
 

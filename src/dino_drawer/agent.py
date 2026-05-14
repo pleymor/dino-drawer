@@ -104,7 +104,7 @@ class DinoDrawerAgent:
         3. **filter** — classify and select reference images.
         4. **synthesis** — build the fact-sheet from papers + descriptions.
         5. **diffusion** — generate the hero illustration.
-        6. **compose** — render the final infographic and take a screenshot.
+        6. **compose** — produce ``final.png`` from the hero image.
 
         Parameters
         ----------
@@ -164,9 +164,7 @@ class DinoDrawerAgent:
         if self._step_should_run("diffusion", out_dir / "hero.png"):
             generate_assets(factsheet=fs, out_dir=out_dir, model=self.model_image)
 
-        # Step 6: render final infographic.
-        # Playwright's sync API doesn't tolerate a running asyncio loop, so we
-        # run the screenshot call in a worker thread.
+        # Step 6: produce final.png from hero.png.
         if self._step_should_run("compose", out_dir / "final.png"):
-            return await asyncio.to_thread(screenshot, fs, out_dir)
+            return await asyncio.to_thread(screenshot, out_dir)
         return out_dir / "final.png"

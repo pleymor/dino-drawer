@@ -39,8 +39,8 @@ def call_llm_for_json(
                 data = client.chat_json(prompt, model=model)
             else:
                 retry_prompt = (
-                    f"{prompt}\n\nLa précédente sortie était invalide ({last_err}). "
-                    "Renvoie uniquement le JSON, sans markdown."
+                    f"{prompt}\n\nPrevious output was invalid ({last_err}). "
+                    "Return ONLY the JSON, no markdown."
                 )
                 data = client.chat_json(retry_prompt, model=model)
         except GeminiError as exc:

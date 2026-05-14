@@ -17,7 +17,7 @@ def test_classify_returns_parsed_json(tmp_path):
     img = tmp_path / "img.jpg"
     _write_jpeg(img)
     good = {"type": "paleoart_realiste", "view": "profil_corps",
-            "usable_for_body_generation": True, "usable_for_skull_generation": False,
+            "usable_for_body_generation": True,
             "realism_score": 8, "quality_score": 7, "description_courte": "x"}
     with patch("dino_drawer.vision.vlm_client.GeminiClient") as MockClient:
         MockClient.return_value.chat_json.return_value = good
@@ -30,7 +30,7 @@ def test_classify_retries_on_invalid_then_succeeds(tmp_path):
     _write_jpeg(img)
     bad = {"foo": "bar"}  # no 'type' key
     good = {"type": "autre", "view": "autre",
-            "usable_for_body_generation": False, "usable_for_skull_generation": False,
+            "usable_for_body_generation": False,
             "realism_score": 0, "quality_score": 0, "description_courte": ""}
     with patch("dino_drawer.vision.vlm_client.GeminiClient") as MockClient:
         MockClient.return_value.chat_json.side_effect = [bad, good]

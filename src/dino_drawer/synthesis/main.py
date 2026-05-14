@@ -48,17 +48,15 @@ def _sanitize_source_ids(raw: dict) -> None:
     def _fix(ids: list[str]) -> list[str]:
         return [sid if sid in known else fallback for sid in ids]
 
-    for ann in raw.get("annotations", []):
-        ann["source_ids"] = _fix(ann.get("source_ids", []))
-    if "skull_view" in raw:
-        raw["skull_view"]["source_ids"] = _fix(raw["skull_view"].get("source_ids", []))
-    if "size" in raw:
-        raw["size"]["source_ids"] = _fix(raw["size"].get("source_ids", []))
+    for block_name in ("dimensions", "integument", "posture", "habitat", "signature_traits"):
+        block = raw.get(block_name)
+        if isinstance(block, dict) and "source_ids" in block:
+            block["source_ids"] = _fix(block.get("source_ids", []))
 
 
 def _build_visual_references(refs: RefsFile | None) -> VisualReferences:
     """
-    Convert classified images from a RefsFile into VisualReferences.
+    Convert classified body images from a RefsFile into VisualReferences.
 
     Computes a composite score as realism_score * quality_score / 10 for
     each image.
@@ -67,10 +65,10 @@ def _build_visual_references(refs: RefsFile | None) -> VisualReferences:
         refs: Validated RefsFile, or None if no refs are available.
 
     Returns:
-        VisualReferences with body and skull lists populated (empty if refs is None).
+        VisualReferences with the body list populated (empty if refs is None).
     """
     if refs is None:
-        return VisualReferences(body=[], skull=[])
+        return VisualReferences(body=[])
     return VisualReferences(
         body=[
             VisualRef(
@@ -80,15 +78,6 @@ def _build_visual_references(refs: RefsFile | None) -> VisualReferences:
                 score=c.realism_score * c.quality_score / 10,
             )
             for c in refs.body
-        ],
-        skull=[
-            VisualRef(
-                path=c.path,
-                credit=c.credit,
-                license=c.license,
-                score=c.realism_score * c.quality_score / 10,
-            )
-            for c in refs.skull
         ],
     )
 

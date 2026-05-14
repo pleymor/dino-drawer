@@ -11,15 +11,15 @@ class VLMError(RuntimeError):
 
 
 _CLASSIFY_PROMPT = """\
-Tu analyses une image candidate pour servir de référence à la génération
-d'illustration scientifique de {species}.
+You analyse a candidate image meant to serve as a reference for the
+scientific illustration of {species} (full body).
 
-Réponds en JSON strict, sans markdown :
+Respond in strict JSON, no markdown. The enum values below are stable
+identifiers (kept in French for cache continuity); pick the closest match:
 {{
   "type": "paleoart_realiste" | "rendu_3d" | "photo_squelette" | "fossile" | "schema_anatomique" | "cladogramme" | "illustration_enfant" | "photo_specimen_vivant" | "carte_distribution" | "autre",
-  "view": "profil_corps" | "trois_quarts_corps" | "face_corps" | "crane_profil" | "crane_face" | "detail" | "scene_groupe" | "autre",
+  "view": "profil_corps" | "trois_quarts_corps" | "face_corps" | "detail" | "scene_groupe" | "autre",
   "usable_for_body_generation": true|false,
-  "usable_for_skull_generation": true|false,
   "realism_score": 0-10,
   "quality_score": 0-10,
   "description_courte": "string"
@@ -67,8 +67,8 @@ class VLMClient:
                     data = self._client.chat_json(prompt, images=[image_path], model=self.model)
                 else:
                     retry_prompt = (
-                        f"{prompt}\n\nPrécédente tentative invalide ({last_err}). "
-                        "Renvoie uniquement le JSON."
+                        f"{prompt}\n\nPrevious attempt was invalid ({last_err}). "
+                        "Return ONLY the JSON."
                     )
                     data = self._client.chat_json(retry_prompt, images=[image_path], model=self.model)
             except GeminiError as exc:

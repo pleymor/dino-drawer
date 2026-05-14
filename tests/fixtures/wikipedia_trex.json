@@ -1,5 +1,11 @@
 {
-  "title": "Tyrannosaurus",
-  "extract": "Tyrannosaurus is a genus of large theropod dinosaur. The species T. rex lived throughout western North America in the late Maastrichtian.",
-  "content_urls": {"desktop": {"page": "https://en.wikipedia.org/wiki/Tyrannosaurus"}}
+  "query": {
+    "pages": [
+      {
+        "pageid": 1234,
+        "title": "Tyrannosaurus",
+        "extract": "Tyrannosaurus is a genus of large theropod dinosaur. The species T. rex lived throughout western North America in the late Maastrichtian.\n\n== Description ==\nTyrannosaurus rex was one of the largest land predators, reaching ~12-13 m in length."
+      }
+    ]
+  }
 }

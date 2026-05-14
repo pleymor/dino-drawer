@@ -59,7 +59,6 @@ class ClassifiedImage(BaseModel):
     type: str
     view: str
     usable_for_body_generation: bool
-    usable_for_skull_generation: bool
     realism_score: float
     quality_score: float
     description_courte: str
@@ -68,33 +67,58 @@ class ClassifiedImage(BaseModel):
 
 
 class RefsFile(BaseModel):
-    """Collection of classified reference images for a species."""
+    """Collection of classified body reference images for a species."""
     species: str
     body: list[ClassifiedImage] = Field(default_factory=list)
-    skull: list[ClassifiedImage] = Field(default_factory=list)
     rejected_count: int = 0
 
 
 # --- Step 4: factsheet ---
+#
+# The factsheet is structured around mandatory "must-have" blocks that drive
+# the hero illustration. Every block has its own ``source_ids`` list so the
+# validator can verify each block is grounded in the corpus (or explicitly
+# marked "no data in corpus" inside the text).
 
-class Annotation(BaseModel):
-    """An annotated anatomical region with facts sourced from references."""
-    region: str  # tête | peau_et_couverture | membres_anterieurs | membres_posterieurs | queue
-    facts: list[str]
+class Dimensions(BaseModel):
+    """Physical dimensions of the species. Free-text fields with caveats/ranges."""
+    body_length: str        # snout-to-tail
+    hip_height: str
+    skull_length: str
+    forelimb_length: str    # distinctive for some clades (T. rex tiny arms)
+    tail_length: str
+    body_mass: str
     source_ids: list[str]
 
 
-class SkullView(BaseModel):
-    """Details about the skull with facts sourced from references."""
-    facts: list[str]
-    scale_cm: float
+class Integument(BaseModel):
+    """Skin / feathers / coloration / keratinous structures."""
+    integument_type: str            # scaly | feathered | mixed (+ distribution)
+    coloration: str                 # dorsal/ventral palette + patterns
+    keratinous_structures: str      # horns, crests, beaks, claws, plates
+    ontogenetic_variation: str      # juvenile vs adult differences
     source_ids: list[str]
 
 
-class Size(BaseModel):
-    """Size measurements (length and hip height) sourced from references."""
-    length_m: list[float]  # [min, max]
-    hip_height_m: list[float]  # [min, max]
+class Posture(BaseModel):
+    """Stance, posture and locomotion mode."""
+    stance: str             # bipedal | quadrupedal | facultative
+    typical_posture: str    # horizontal spine, upright, sprawling…
+    locomotion_mode: str    # cursorial | ambulatory | arboreal | aquatic
+    source_ids: list[str]
+
+
+class Habitat(BaseModel):
+    """Geological context and biome — drives the image background."""
+    geological_period: str          # "Late Cretaceous (Maastrichtian), 68-66 Ma"
+    biome: str                      # forest | plain | coast | swamp | desert
+    region_or_formation: str        # "Hell Creek Formation, Laramidia"
+    source_ids: list[str]
+
+
+class SignatureTraits(BaseModel):
+    """Free-form description of the visually distinctive features of the species."""
+    text: str
     source_ids: list[str]
 
 
@@ -115,32 +139,37 @@ class VisualRef(BaseModel):
 
 
 class VisualReferences(BaseModel):
-    """Collection of visual references for body and skull."""
+    """Body reference images used to condition the hero generation."""
     body: list[VisualRef] = Field(default_factory=list)
-    skull: list[VisualRef] = Field(default_factory=list)
 
 
 class FactSheet(BaseModel):
-    """Complete factsheet for a species with annotations, references, and visual aids."""
+    """Complete factsheet for a species with mandatory blocks and references."""
     species: str
     subtitle: str
-    annotations: list[Annotation]
-    skull_view: SkullView
-    size: Size
+    dimensions: Dimensions
+    integument: Integument
+    posture: Posture
+    habitat: Habitat
+    signature_traits: SignatureTraits
     conclusion: str
     references: list[Reference]
     visual_references: VisualReferences
     image_prompt: str
 
     @model_validator(mode="after")
-    def _every_fact_must_have_a_known_source(self) -> FactSheet:
-        """Validate that every fact references an existing source by id."""
+    def _every_block_must_have_known_sources(self) -> FactSheet:
+        """Every block's source_ids must match a Reference id."""
         known = {r.id for r in self.references}
-        for ann in self.annotations:
-            for sid in ann.source_ids:
+        blocks: list[tuple[str, list[str]]] = [
+            ("dimensions", self.dimensions.source_ids),
+            ("integument", self.integument.source_ids),
+            ("posture", self.posture.source_ids),
+            ("habitat", self.habitat.source_ids),
+            ("signature_traits", self.signature_traits.source_ids),
+        ]
+        for name, sids in blocks:
+            for sid in sids:
                 if sid not in known:
-                    raise ValueError(f"Annotation '{ann.region}' references unknown source {sid!r}")
-        for sid in self.skull_view.source_ids + self.size.source_ids:
-            if sid not in known:
-                raise ValueError(f"Unknown source id {sid!r}")
+                    raise ValueError(f"Block '{name}' references unknown source {sid!r}")
         return self

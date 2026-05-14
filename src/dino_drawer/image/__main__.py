@@ -9,9 +9,8 @@ from .diffusion import generate_assets
 def main() -> int:
     """Entry point for the image generation module.
 
-    Reads ``factsheet.json`` from the given species output directory,
-    runs the full diffusion pipeline, and writes ``hero.png``,
-    ``skull.png``, and ``silhouette.svg`` to the same directory.
+    Reads ``factsheet.json`` from the given species output directory and
+    writes ``hero.png`` to the same directory.
 
     Returns:
         0 on success, 1 if no output directory was provided.
@@ -22,7 +21,7 @@ def main() -> int:
     out_dir = Path(sys.argv[1])
     fs = FactSheet.model_validate_json((out_dir / "factsheet.json").read_text())
     generate_assets(factsheet=fs, out_dir=out_dir)
-    print(f"Wrote {out_dir}/hero.png, skull.png, silhouette.svg")
+    print(f"Wrote {out_dir}/hero.png")
     return 0
 
 

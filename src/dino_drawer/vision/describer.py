@@ -5,9 +5,9 @@ from dino_drawer.models import RefsFile
 from .vlm_client import VLMClient
 
 _DESCRIBE_PROMPT = (
-    "Décris cette image en 2 phrases : couleurs et motifs de la peau, "
-    "présence et localisation des plumes/poils/écailles, posture, environnement visible. "
-    "Ne mentionne pas l'espèce."
+    "Describe this image in 2 sentences: skin colours and patterns, "
+    "presence and location of feathers/hair/scales, posture, visible environment. "
+    "Do not name the species."
 )
 
 

@@ -1,6 +1,5 @@
 {
   "species": "Tyrannosaurus rex",
-  "body": [{"id":0,"path":"refs/body_0.jpg","type":"paleoart_realiste","view":"profil_corps","usable_for_body_generation":true,"usable_for_skull_generation":false,"realism_score":9,"quality_score":9,"description_courte":"trex","credit":"x","license":"CC0"}],
-  "skull": [],
+  "body": [{"id":0,"path":"refs/body_0.jpg","type":"paleoart_realiste","view":"profil_corps","usable_for_body_generation":true,"realism_score":9,"quality_score":9,"description_courte":"trex","credit":"x","license":"CC0"}],
   "rejected_count": 0
 }

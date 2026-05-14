@@ -28,12 +28,15 @@ def _now_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def build_species_entry(factsheet: FactSheet, image_url: str) -> dict:
-    """Combine factsheet text with the R2 image URL into one species entry.
+def build_species_entry(
+    factsheet: FactSheet, image_url: str, thumbnail_url: str
+) -> dict:
+    """Combine factsheet text with the R2 image URLs into one species entry.
 
     Args:
         factsheet: Validated FactSheet for the species.
-        image_url: Public R2 URL of the uploaded final ``.webp``.
+        image_url: Public R2 URL of the uploaded full-resolution ``.webp``.
+        thumbnail_url: Public R2 URL of the uploaded thumbnail ``.webp``.
 
     Returns:
         Plain dict suitable for inclusion in ``catalog.json``.
@@ -42,13 +45,16 @@ def build_species_entry(factsheet: FactSheet, image_url: str) -> dict:
         "slug": factsheet.species.lower().replace(" ", "-"),
         "species": factsheet.species,
         "subtitle": factsheet.subtitle,
-        "annotations": [a.model_dump() for a in factsheet.annotations],
-        "skull_view": factsheet.skull_view.model_dump(),
-        "size": factsheet.size.model_dump(),
+        "dimensions": factsheet.dimensions.model_dump(),
+        "integument": factsheet.integument.model_dump(),
+        "posture": factsheet.posture.model_dump(),
+        "habitat": factsheet.habitat.model_dump(),
+        "signature_traits": factsheet.signature_traits.model_dump(),
         "conclusion": factsheet.conclusion,
         "references": [r.model_dump() for r in factsheet.references],
         "image_prompt": factsheet.image_prompt,
         "image_url": image_url,
+        "thumbnail_url": thumbnail_url,
         "generated_at": _now_iso(),
     }
 

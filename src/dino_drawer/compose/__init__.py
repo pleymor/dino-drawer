@@ -1,1 +1,1 @@
-"""Compose module: HTML+CSS template + Playwright screenshot."""
+"""Compose module: produce ``final.png`` from the Gemini hero image."""
