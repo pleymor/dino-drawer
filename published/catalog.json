@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T18:19:10Z",
+  "generated_at": "2026-05-15T19:16:19Z",
   "count": 36,
   "species": [
     {
@@ -523,11 +523,11 @@
           "title": "Peer Review #2 of \"A new giant sauropod, Australotitan cooperensis gen. et sp. nov., from the mid-Cretaceous of Australia (v0.1)\"."
         }
       ],
-      "image_prompt": "Late Cretaceous, Huincul Formation, Argentina. A warm and humid terrestrial environment, perhaps a floodplain or open woodland, with lush green vegetation under a soft morning light. The Argentinosaurus has thick, heavily scaled hide. The skin is a mottled brownish-grey, with subtle darker olive-green patches along the flanks and back for camouflage amidst the vegetation. It is a colossal sauropod, incredibly long neck reaching high into the trees, and an equally immense, tapering tail that balances its immense body. Its sheer scale makes other dinosaurs appear small in comparison. Approximately 30-35 meters long. The Argentinosaurus is calmly browsing, its head raised to strip leaves from tall conifers, a serene expression on its face.",
+      "image_prompt": "Late Cretaceous, Huincul Formation, Argentina. Open floodplain with LOW SCRUB only — small conifers and cycads max 6-8 m, scattered tree ferns, ground brush. Open sky horizon. NO tall trees. Thick scaly hide, completely SMOOTH back — NO dorsal spines, NO scutes. Mottled brownish-grey skin with darker olive-green patches. RIGID NUMERICAL PROPORTIONS — render these EXACTLY, the dinosaur looks WRONG if any of these is off:\n  - TORSO length (shoulders to hips) = 6 m. The torso is COMPACT, SLENDER,     SHORT, NOT a giant barrel. Think of an elongated Diplodocus body, NOT a     tank-like Brachiosaurus.\n  - NECK length = 12 m = STRICTLY DOUBLE the torso. The neck VISUALLY DOMINATES     THE FRAME. From the side, the neck takes up about 40% of the entire body     silhouette, the torso only 20%, the tail another 40%. The neck is     extremely long, arched up in an elegant S-curve, head at ~12 m height.\n  - TAIL length = 12 m = STRICTLY DOUBLE the torso. Tail VERY long, tapering     elegantly to a thin whip tip behind the body.\n  - TOTAL LENGTH (snout to tail tip following the spine) = 30 m, of which the     NECK + TAIL together are 24 m = 80% of total length, torso only 20%.\n  - HIP HEIGHT = ONLY 5 m (low — body close to the ground). LIMBS are SHORT     and SLENDER pillars (NOT thick elephant legs). Forelimbs slightly shorter     than hindlimbs. Body hangs LOW between the legs.\n  - NECK THICKNESS at base ~1.2 m (muscular but not huge).\nSILHOUETTE SHAPE: imagine a very elongated capital letter 'M' lying sideways — long arched neck on the left, compact body in the middle, long tail on the right; legs short underneath. The animal should look ELONGATE and ELEGANT, NOT chunky.\nThe dinosaur DOMINATES THE SCENE: small 6-8 m trees reach only to the dino's BELLY or KNEE. The back of the dinosaur is HIGHER than every tree in frame. Head soars high into open sky. CAMERA: human photographer at 1.7 m, telephoto from 30-40 m away, moderate low-angle ~25° upward. Whole silhouette in frame, horizon in lower third. Head raised, mouth cropping leaves from a small conifer below shoulder height.",
       "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/argentinosaurus-huinculensis.webp",
       "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/argentinosaurus-huinculensis_thumbnail.webp",
-      "image_model": "gemini-3.1-flash-image-preview",
-      "generated_at": "2026-05-15T18:18:19Z"
+      "image_model": "user-provided",
+      "generated_at": "2026-05-15T19:16:19Z"
     },
     {
       "slug": "barosaurus-lentus",
