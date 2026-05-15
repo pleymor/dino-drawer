@@ -153,30 +153,40 @@ _CLADE_THEROPODA = (
 
 _CLADE_SAUROPODA = (
     # Pose & framing — HIGH BROWSING is the default for most large sauropods.
-    "The animal stands in three-quarter side view, its long neck stretched UPWARD into "
-    "the tree canopy, head reaching among the upper branches of MATURE tall trees "
-    "(15-30 m) to crop foliage — large sauropods are primarily high-browsers, like "
-    "modern giraffes feeding from the treetops. Pillar-like front and hind limbs "
-    "support the massive trunk. The long whip-like tail extends horizontally behind "
-    "the body. The animal is calm and browsing, not aggressive. The trees in the "
-    "frame must be ADULT-SIZED, tall enough that the canopy is at the head's height "
-    "— giving an instant scale reference. "
-    "Exceptions: a few sauropod lineages are LOW or mid-height grazers and the "
-    "species-specific block will explicitly say so (notably Nigersaurus / "
-    "Rebbachisauridae with their square ground-grazing mouths, and Diplodocidae which "
-    "are commonly reconstructed with horizontal necks). When the species block "
-    "specifies low grazing, follow it; otherwise default to canopy reach. "
-    # Posture & body plan
-    "Quadrupedal stance, columnar legs like an elephant or larger, ribcage barrel-shaped, "
-    "spine nearly horizontal between the shoulders and hips. Neck and tail are the two "
-    "long extensions that dominate the silhouette. "
+    "The animal stands in three-quarter side view, calmly browsing — not aggressive. "
+    "Pillar-like front and hind limbs support the massive trunk. The long whip-like "
+    "tail extends horizontally behind the body. The trees in the frame must be "
+    "ADULT-SIZED, tall enough to dwarf the dinosaur and give an instant scale reference. "
+    # Sub-family silhouette — critical, brachiosaurids and diplodocids look DIFFERENT.
+    "Silhouette must match the species' family:\n"
+    "  - Brachiosauridae (Brachiosaurus, Giraffatitan, Abydosaurus, Lusotitan): "
+    "FRONT LIMBS ARE NOTABLY LONGER THAN HIND LIMBS — the withers sit HIGH, the hips "
+    "sit LOW, the back SLOPES DOWN from shoulders to hips (giraffe-like). The neck is "
+    "held NEARLY VERTICAL, reaching straight up into the high canopy (head 12-15 m up). "
+    "Body more slender than rotund, NOT barrel-shaped.\n"
+    "  - Diplodocidae (Diplodocus, Apatosaurus, Brontosaurus, Barosaurus, Supersaurus, "
+    "Amphicoelias) and Dicraeosauridae: FRONT AND HIND LIMBS ARE ROUGHLY EQUAL "
+    "LENGTH; back is HORIZONTAL or slightly arched over the hips. Neck held nearly "
+    "HORIZONTAL, parallel to the ground — feeding at low-to-mid height. Body long, "
+    "deep, more cylindrical.\n"
+    "  - Rebbachisauridae (Nigersaurus): low ground-grazer, neck held low and "
+    "horizontal, wide square-tipped snout cropping at ground level.\n"
+    "  - Titanosauria (Argentinosaurus, Patagotitan, Nagatitan): variable but "
+    "typically robust, broad chest, slightly upturned neck (less extreme than "
+    "brachiosaurids), moderate proportions.\n"
+    "Adapt the high-browse pose to match the family above. Brachiosaurids reach "
+    "STRAIGHT UP; diplodocids/dicraeosaurids reach FORWARD or down. "
     # Skull & head
-    "Skull is proportionally tiny relative to the body, mounted on the very end of the "
-    "long neck. Eyes laterally placed (not forward-binocular). Mouth holds peg-like or "
+    "Skull is proportionally tiny relative to the body, mounted on the end of the long "
+    "neck. Eyes laterally placed (not forward-binocular). Mouth holds peg-like or "
     "spatulate teeth; no fangs. Mouth closed or gently chewing leaves — NEVER snarling. "
-    # Integument
-    "Thick scaly hide across the entire body; no feathers, no plumage, no dorsal mane. "
-    "Skin texture similar to a modern elephant or crocodile. "
+    # Integument — IMPORTANT: smooth hide is the default, no spines.
+    "Thick scaly hide across the entire body, similar to a modern elephant or "
+    "crocodile. NO feathers, NO plumage, NO dorsal mane. By DEFAULT the back is SMOOTH "
+    "— NO dorsal spines, NO triangular scutes, NO continuous ridge of osteoderms along "
+    "the back. ONLY add dorsal armature if the species-specific block EXPLICITLY "
+    "documents it from fossil evidence (e.g. some titanosaurs had isolated osteoderms; "
+    "Amargasaurus had bifid neural spines). "
 )
 
 _CLADE_STEGOSAURIA = (

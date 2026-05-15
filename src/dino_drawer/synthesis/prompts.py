@@ -122,10 +122,19 @@ Your `image_prompt` must describe EXCLUSIVELY:
      base`. Cf. Bell et al. 2017 + Xu et al. 2012.
    * **Small theropods / maniraptorans** (< 100 kg): dense plumage,
      pennaceous feathers on arms and tail.
-   * **Sauropods, stegosaurs, ankylosaurs, ceratopsians, ornithopods,
+   * **Sauropods (clade=sauropoda)**: thick scaly hide, smooth back by
+     default. DO NOT claim dorsal spines, scutes, ridges, or osteoderms
+     UNLESS the scientific sources (papers/Wikipedia) explicitly document
+     them for that species. Many artistic reconstructions show small spines
+     but most lack fossil evidence — write `keratinous_structures` as
+     `"no data in corpus"` if no documented evidence; do NOT invent them
+     from visual_brief alone (artists' interpretations are not data).
+     Documented exceptions include: some titanosaurs (small isolated
+     osteoderms), Amargasaurus (bifid neural spines on neck).
+   * **Stegosaurs, ankylosaurs, ceratopsians, ornithopods,
      pachycephalosaurs**: thick scaly hide with osteoderms/keratinous
-     structures as appropriate per the species; NEVER feathers (these clades
-     have no evidence of plumage).
+     structures (plates, spikes, frill, dome, beak) as appropriate per
+     the species; NEVER feathers (these clades have no evidence of plumage).
 
 3. **Color and pattern** (1 sentence): species-specific palette. Derived from
    `integument.coloration`.
