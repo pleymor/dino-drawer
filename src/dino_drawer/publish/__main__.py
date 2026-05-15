@@ -85,6 +85,17 @@ def _read_image_model(out_dir: Path) -> str:
         return "unknown"
 
 
+def _read_video_model(out_dir: Path) -> str:
+    """Read ``video_meta.json`` written by the video step. Falls back to 'unknown'."""
+    meta_path = out_dir / "video_meta.json"
+    if not meta_path.exists():
+        return "unknown"
+    try:
+        return json.loads(meta_path.read_text()).get("video_model", "unknown")
+    except (json.JSONDecodeError, OSError):
+        return "unknown"
+
+
 def _write_local_catalog(catalog: dict) -> None:
     """Write the catalog dict to ``published/catalog.json``."""
     _CATALOG_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -117,17 +128,39 @@ def _publish(out_dir: Path, slug: str, client: R2Client) -> None:
     thumbnail_url = client.upload_file(thumb_webp, thumb_key, content_type="image/webp")
     print(f"    → {thumbnail_url}")
 
+    # Optional video — upload hero.mp4 if present.
+    video_url: str | None = None
+    video_model: str | None = None
+    hero_mp4 = out_dir / "hero.mp4"
+    if hero_mp4.exists():
+        mp4_key = f"{slug}.mp4"
+        print(f"  Uploading {mp4_key} → R2 …")
+        video_url = client.upload_file(hero_mp4, mp4_key, content_type="video/mp4")
+        video_model = _read_video_model(out_dir)
+        print(f"    → {video_url}")
+
     image_model = _read_image_model(out_dir)
-    entry = build_species_entry(factsheet, image_url, thumbnail_url, image_model=image_model)
+    entry = build_species_entry(
+        factsheet,
+        image_url,
+        thumbnail_url,
+        image_model=image_model,
+        video_url=video_url,
+        video_model=video_model,
+    )
     catalog = upsert_catalog(_load_local_catalog(), entry)
     _write_local_catalog(catalog)
-    print(f"  Catalog updated → {_CATALOG_PATH} ({catalog['count']} species, image_model={image_model})")
+    video_info = f", video_model={video_model}" if video_url else ""
+    print(
+        f"  Catalog updated → {_CATALOG_PATH} ({catalog['count']} species, "
+        f"image_model={image_model}{video_info})"
+    )
 
 
 def _unpublish(slug: str, client: R2Client) -> None:
     """Delete the slug's image + thumbnail from R2 and remove from the local catalog."""
     total = 0
-    for key in (f"{slug}.webp", f"{slug}_thumbnail.webp"):
+    for key in (f"{slug}.webp", f"{slug}_thumbnail.webp", f"{slug}.mp4"):
         print(f"  Deleting {key} from R2 …")
         total += client.delete_prefix(key)
     print(f"  Deleted {total} object(s).")

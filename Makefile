@@ -4,7 +4,7 @@ SLUG := $(shell echo "$(SPECIES)" | tr '[:upper:] ' '[:lower:]-')
 OUT := out/$(SLUG)
 ARGS ?=
 
-.PHONY: help install test run run-batch papers images vision synthesis image regen regen-all publish publish-all unpublish clean clean-cache
+.PHONY: help install test run run-batch papers images vision synthesis image video regen regen-all publish publish-all unpublish clean clean-cache
 
 help:
 	@echo "Targets:"
@@ -17,6 +17,7 @@ help:
 	@echo "  vision         — only VLM filtering"
 	@echo "  synthesis      — only LLM synthesis"
 	@echo "  image          — only diffusion (hero.png)"
+	@echo "  video          — generate hero.mp4 from hero.png via Veo 3.1 (SPECIES=…)"
 	@echo "  clean          — remove out/<slug>/ artifacts (keeps papers + raw refs)"
 	@echo "  clean-cache    — also remove HF cache (~14 GB)"
 	@echo ""
@@ -31,6 +32,7 @@ help:
 	@echo "  make run ARGS='--force-step synthesis'"
 	@echo "  make run SPECIES='Smilodon fatalis' ARGS='--skip-refs --lang en'"
 	@echo "  make regen SPECIES='Tyrannosaurus rex'"
+	@echo "  make video SPECIES='Tyrannosaurus rex'"
 	@echo "  make run-batch SPECIES_LIST='Allosaurus fragilis|Carnotaurus sastrei|Triceratops horridus'"
 
 install:
@@ -72,6 +74,9 @@ synthesis:
 
 image:
 	$(PY) -m dino_drawer.image "$(OUT)"
+
+video:
+	$(PY) -m dino_drawer.video "$(OUT)"
 
 regen: image publish
 

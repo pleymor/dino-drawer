@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T14:48:05Z",
+  "generated_at": "2026-05-15T17:06:24Z",
   "count": 26,
   "species": [
     {
@@ -1888,7 +1888,9 @@
       "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/tyrannosaurus-rex.webp",
       "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/tyrannosaurus-rex_thumbnail.webp",
       "image_model": "gemini-3.1-flash-image-preview",
-      "generated_at": "2026-05-15T14:02:11Z"
+      "generated_at": "2026-05-15T17:06:24Z",
+      "video_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/tyrannosaurus-rex.mp4",
+      "video_model": "veo-3.1-fast-generate-preview"
     },
     {
       "slug": "velociraptor-mongoliensis",

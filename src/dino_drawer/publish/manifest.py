@@ -33,8 +33,10 @@ def build_species_entry(
     image_url: str,
     thumbnail_url: str,
     image_model: str = "unknown",
+    video_url: str | None = None,
+    video_model: str | None = None,
 ) -> dict:
-    """Combine factsheet text with the R2 image URLs into one species entry.
+    """Combine factsheet text with the R2 asset URLs into one species entry.
 
     Args:
         factsheet: Validated FactSheet for the species.
@@ -44,11 +46,17 @@ def build_species_entry(
             (e.g. ``gemini-3.1-flash-image-preview``). Read from
             ``out/<slug>/image_meta.json`` by the publisher; defaults to
             ``"unknown"`` if not provided.
+        video_url: Public R2 URL of the optional ``.mp4`` clip. None when no
+            video was generated for this species.
+        video_model: Identifier of the Veo model that produced the clip
+            (e.g. ``veo-3.1-fast-generate-preview``). Read from
+            ``out/<slug>/video_meta.json`` by the publisher.
 
     Returns:
-        Plain dict suitable for inclusion in ``catalog.json``.
+        Plain dict suitable for inclusion in ``catalog.json``. ``video_url`` and
+        ``video_model`` keys are included only when a video is published.
     """
-    return {
+    entry = {
         "slug": factsheet.species.lower().replace(" ", "-"),
         "species": factsheet.species,
         "subtitle": factsheet.subtitle,
@@ -65,6 +73,10 @@ def build_species_entry(
         "image_model": image_model,
         "generated_at": _now_iso(),
     }
+    if video_url is not None:
+        entry["video_url"] = video_url
+        entry["video_model"] = video_model or "unknown"
+    return entry
 
 
 def upsert_catalog(existing: dict | None, entry: dict) -> dict:

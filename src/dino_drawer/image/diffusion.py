@@ -121,8 +121,9 @@ _CLADE_THEROPODA = (
     "The animal is moving briskly toward the camera in a three-quarter front view, "
     "head thrust forward and pointed at the viewer, muscles bunched, claws splayed, "
     "body weight on the front leg, focused predatory stare locked on the camera. "
-    "Mouth only slightly parted — NOT a wide-open snarling roar, NOT a gaping jaw; "
-    "lips remain compressed, jaw barely separated. "
+    "Mouth FULLY CLOSED, jaws firmly shut — NOT parted, NOT a snarl, NOT a roar, "
+    "NOT a pant; the lips meet along their entire length forming a clean continuous "
+    "scaly seam from snout tip to jaw corner. "
     # Posture
     "Body held horizontally, spine roughly parallel to the ground, "
     "massive head and long muscular tail balance each other around the hips like a seesaw, "
@@ -132,19 +133,22 @@ _CLADE_THEROPODA = (
     "Skull anatomy based on modern CT scans of the most complete specimens: "
     "forward-facing eyes producing strong binocular overlap, external nares on the rostrum "
     "near the snout tip, deep boxy skull profile. "
-    # Lips (Cullen et al. 2023)
+    # Lips (Cullen et al. 2023) — closed-mouth rule: ZERO teeth visible.
     "Theropod lips: the skull is sheathed in scaly extra-oral tissue (lips) that FULLY "
-    "covers the dental row, like a modern monitor lizard. Because the mouth is only "
-    "slightly parted, the lips stay in contact along most of their length; at most the "
-    "very tips of TWO OR THREE front teeth peek out at the front of the upper and lower "
-    "jaw — the rest stays completely hidden behind the lip seal. The lip line forms a "
-    "continuous scaly seam from the snout tip to the jaw corner. NEVER show the side "
-    "teeth; NEVER show teeth root-to-tip; NEVER a wide Jurassic-Park grin. "
-    # Dental anatomy
-    "Dental anatomy: upper teeth are SHORT relative to snout depth and DO NOT extend "
-    "below the lower jaw lip line. Front of both jaws has a COMPLETE row of teeth — "
-    "never gaps, never missing front teeth, never a toothless snout tip. Visible tooth "
-    "tips appear as small uniform points at the front, not oversized hanging fangs. "
+    "covers the dental row, like a modern monitor lizard or Komodo dragon at rest. "
+    "Because the jaws are shut, the lips are in contact along their ENTIRE length and "
+    "ABSOLUTELY ZERO TEETH ARE VISIBLE anywhere on the face. No tooth tips, no fangs, "
+    "no premaxillary points peeking out, no enamel glint, no white spot on the mouth "
+    "line, no tooth showing through a gap in the lips. The mouth must read visually as "
+    "a clean unbroken scaly seam — indistinguishable in silhouette from a closed-mouth "
+    "monitor lizard. NEVER show side teeth; NEVER show front teeth; NEVER show ANY "
+    "tooth root-to-tip; NEVER a Jurassic-Park grin. "
+    # Dental anatomy (concealed but anatomically present)
+    "Dental anatomy (hidden under the lips but anatomically correct underneath): upper "
+    "teeth are SHORT relative to snout depth and DO NOT extend below the lower jaw lip "
+    "line. Both jaws carry a COMPLETE row of teeth — never gaps, never missing front "
+    "teeth, never a toothless snout tip — but the entire dental row stays fully "
+    "concealed behind the lip seal in this view. "
 )
 
 _CLADE_SAUROPODA = (
