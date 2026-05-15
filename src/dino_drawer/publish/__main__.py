@@ -74,6 +74,17 @@ def _load_local_catalog() -> dict | None:
     return json.loads(_CATALOG_PATH.read_text())
 
 
+def _read_image_model(out_dir: Path) -> str:
+    """Read ``image_meta.json`` written by diffusion. Falls back to 'unknown'."""
+    meta_path = out_dir / "image_meta.json"
+    if not meta_path.exists():
+        return "unknown"
+    try:
+        return json.loads(meta_path.read_text()).get("image_model", "unknown")
+    except (json.JSONDecodeError, OSError):
+        return "unknown"
+
+
 def _write_local_catalog(catalog: dict) -> None:
     """Write the catalog dict to ``published/catalog.json``."""
     _CATALOG_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -81,20 +92,20 @@ def _write_local_catalog(catalog: dict) -> None:
 
 
 def _publish(out_dir: Path, slug: str, client: R2Client) -> None:
-    """Optimise the final image, upload to R2, refresh the local catalog."""
-    final_png = out_dir / "final.png"
-    if not final_png.exists():
-        raise SystemExit(f"Required file missing: {final_png}")
+    """Optimise the hero image, upload to R2, refresh the local catalog."""
+    hero_png = out_dir / "hero.png"
+    if not hero_png.exists():
+        raise SystemExit(f"Required file missing: {hero_png}")
 
     factsheet = _load_factsheet(out_dir)
 
     webp = out_dir / "_publish" / f"{slug}.webp"
-    print(f"  Converting {final_png.name} → {webp.name} …")
-    _png_to_webp(final_png, webp)
+    print(f"  Converting {hero_png.name} → {webp.name} …")
+    _png_to_webp(hero_png, webp)
 
     thumb_webp = out_dir / "_publish" / f"{slug}_thumbnail.webp"
     print(f"  Generating thumbnail → {thumb_webp.name} (max {_THUMBNAIL_MAX_DIM}px) …")
-    _png_to_webp_thumbnail(final_png, thumb_webp)
+    _png_to_webp_thumbnail(hero_png, thumb_webp)
 
     key = f"{slug}.webp"
     print(f"  Uploading {key} → R2 …")
@@ -106,10 +117,11 @@ def _publish(out_dir: Path, slug: str, client: R2Client) -> None:
     thumbnail_url = client.upload_file(thumb_webp, thumb_key, content_type="image/webp")
     print(f"    → {thumbnail_url}")
 
-    entry = build_species_entry(factsheet, image_url, thumbnail_url)
+    image_model = _read_image_model(out_dir)
+    entry = build_species_entry(factsheet, image_url, thumbnail_url, image_model=image_model)
     catalog = upsert_catalog(_load_local_catalog(), entry)
     _write_local_catalog(catalog)
-    print(f"  Catalog updated → {_CATALOG_PATH} ({catalog['count']} species)")
+    print(f"  Catalog updated → {_CATALOG_PATH} ({catalog['count']} species, image_model={image_model})")
 
 
 def _unpublish(slug: str, client: R2Client) -> None:

@@ -73,8 +73,19 @@ class TestBuildSpeciesEntry:
             "slug", "species", "subtitle",
             "dimensions", "integument", "posture", "habitat", "signature_traits",
             "conclusion", "references", "image_prompt",
-            "image_url", "thumbnail_url", "generated_at",
+            "image_url", "thumbnail_url", "image_model", "generated_at",
         }
+
+    def test_image_model_defaults_to_unknown(self) -> None:
+        entry = build_species_entry(_make_factsheet(), _IMAGE_URL, _THUMB_URL)
+        assert entry["image_model"] == "unknown"
+
+    def test_image_model_passed_through(self) -> None:
+        entry = build_species_entry(
+            _make_factsheet(), _IMAGE_URL, _THUMB_URL,
+            image_model="gemini-3.1-flash-image-preview",
+        )
+        assert entry["image_model"] == "gemini-3.1-flash-image-preview"
 
     def test_slug_derived_from_species(self) -> None:
         entry = build_species_entry(

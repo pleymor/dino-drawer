@@ -58,17 +58,15 @@ async def test_agent_runs_full_pipeline(tmp_path):
          patch("dino_drawer.agent.images_aggregator", AsyncMock(return_value=_refs_raw())) as mi, \
          patch("dino_drawer.agent.classify_and_select", return_value=_refs()) as mc, \
          patch("dino_drawer.agent.synthesize", return_value=_factsheet()) as ms, \
-         patch("dino_drawer.agent.generate_assets") as mg, \
-         patch("dino_drawer.agent.screenshot", return_value=tmp_path / "final.png") as msc:
+         patch("dino_drawer.agent.generate_assets") as mg:
         agent = DinoDrawerAgent(out_root=tmp_path)
         out = await agent.run("Tyrannosaurus rex")
-    assert out.name == "final.png"
+    assert out.name == "hero.png"
     mp.assert_awaited_once()
     mi.assert_awaited_once()
     mc.assert_called_once()
     ms.assert_called_once()
     mg.assert_called_once()
-    msc.assert_called_once()
 
 
 @pytest.mark.asyncio
@@ -81,8 +79,7 @@ async def test_agent_skips_existing_steps(tmp_path):
          patch("dino_drawer.agent.images_aggregator", AsyncMock(return_value=_refs_raw())) as mi, \
          patch("dino_drawer.agent.classify_and_select", return_value=_refs()), \
          patch("dino_drawer.agent.synthesize", return_value=_factsheet()), \
-         patch("dino_drawer.agent.generate_assets"), \
-         patch("dino_drawer.agent.screenshot", return_value=species_dir / "final.png"):
+         patch("dino_drawer.agent.generate_assets"):
         agent = DinoDrawerAgent(out_root=tmp_path)
         await agent.run("Tyrannosaurus rex")
     mp.assert_not_awaited()

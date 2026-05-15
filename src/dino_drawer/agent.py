@@ -17,10 +17,9 @@ from .research.images.aggregator import fetch_all as images_aggregator
 from .vision.classifier import classify_and_select
 from .synthesis.main import synthesize
 from .image.diffusion import generate_assets
-from .compose.render import screenshot
 
 #: Canonical pipeline order used for *force_step* comparisons.
-_STEP_ORDER = ["papers", "images", "filter", "synthesis", "diffusion", "compose"]
+_STEP_ORDER = ["papers", "images", "filter", "synthesis", "diffusion"]
 
 
 def _slug(species: str) -> str:
@@ -97,14 +96,13 @@ class DinoDrawerAgent:
     async def run(self, species: str) -> Path:
         """Execute the full dino-drawer pipeline for *species*.
 
-        The six steps run in order:
+        The five steps run in order:
 
         1. **papers** — aggregate research papers (parallel with images).
         2. **images** — download reference photos (parallel with papers).
         3. **filter** — classify and select reference images.
         4. **synthesis** — build the fact-sheet from papers + descriptions.
         5. **diffusion** — generate the hero illustration.
-        6. **compose** — produce ``final.png`` from the hero image.
 
         Parameters
         ----------
@@ -114,7 +112,7 @@ class DinoDrawerAgent:
         Returns
         -------
         Path
-            Path to the final rendered PNG (``<out_dir>/final.png``).
+            Path to the rendered hero PNG (``<out_dir>/hero.png``).
         """
         out_dir = self.out_root / _slug(species)
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -164,7 +162,4 @@ class DinoDrawerAgent:
         if self._step_should_run("diffusion", out_dir / "hero.png"):
             generate_assets(factsheet=fs, out_dir=out_dir, model=self.model_image)
 
-        # Step 6: produce final.png from hero.png.
-        if self._step_should_run("compose", out_dir / "final.png"):
-            return await asyncio.to_thread(screenshot, out_dir)
-        return out_dir / "final.png"
+        return out_dir / "hero.png"

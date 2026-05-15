@@ -2,9 +2,9 @@
 
 Pipeline that produces a single scientific dinosaur photo-illustration per species, optimises it, and publishes to Cloudflare R2 with a thumbnail. Output consumed by a static site via `published/catalog.json`.
 
-## Pipeline (6 steps)
+## Pipeline (5 steps)
 
-`papers → images → vision → synthesis → diffusion → compose → publish`
+`papers → images → vision → synthesis → diffusion → publish`
 
 | Step | Module | Input | Output | Cost |
 |------|--------|-------|--------|------|
@@ -13,8 +13,7 @@ Pipeline that produces a single scientific dinosaur photo-illustration per speci
 | vision | `vision.classifier` | raw images | `out/<slug>/refs.json` (top-N **body** refs only) | Gemini VLM (parallel, ~4 concurrent) |
 | synthesis | `synthesis` | papers + body refs | `out/<slug>/factsheet.json` | 1 Gemini text call |
 | diffusion | `image` | factsheet | `out/<slug>/hero.png` | 1 Gemini image call |
-| compose | `compose` | `hero.png` | `out/<slug>/final.png` (PIL resize + black canvas) | free |
-| publish | `publish` | `final.png` + factsheet | R2 upload (full + thumbnail) + `published/catalog.json` | free (R2 bandwidth) |
+| publish | `publish` | `hero.png` + factsheet | R2 upload (full webp + thumbnail) + `published/catalog.json` | free (R2 bandwidth) |
 
 Everything is Gemini-backed. The `synthesis/ollama_client.py` module name is legacy — it's Gemini under the hood.
 
@@ -74,9 +73,8 @@ src/dino_drawer/
   research/          papers + images scrapers (Wikipedia full article)
   vision/            Gemini VLM-based body-ref classification + description
   synthesis/         prompts.py (LLM input with mandatory-block schema) + ollama_client.py + main.py
-  image/             diffusion.py — single hero gen, no skull, no silhouette
-  compose/           render.py::screenshot — PIL resize + black canvas → final.png
-  publish/           r2.py (boto3 S3-compat) + manifest.py (catalog) + __main__.py
+  image/             diffusion.py — single hero gen (universal preamble + clade-specific block + species block)
+  publish/           r2.py (boto3 S3-compat) + manifest.py (catalog) + __main__.py — reads hero.png directly
 ```
 
 ## Conventions

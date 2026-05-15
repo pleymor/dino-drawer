@@ -217,7 +217,7 @@ class TestGenerateImage:
             client.generate_image("draw")
 
         call_kwargs = mock_models.generate_content.call_args
-        assert "gemini-2.5-flash-image" in str(call_kwargs)
+        assert "gemini-3.1-flash-image-preview" in str(call_kwargs)
 
     def test_raises_gemini_error_when_no_image_in_response(self):
         """generate_image() raises GeminiError if no inline_data part is found."""

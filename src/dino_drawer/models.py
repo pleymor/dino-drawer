@@ -147,6 +147,12 @@ class FactSheet(BaseModel):
     """Complete factsheet for a species with mandatory blocks and references."""
     species: str
     subtitle: str
+    #: Coarse morphological clade — drives which clade-specific block of the
+    #: common hero prompt gets injected at image-gen time. Expected values:
+    #: theropoda, sauropoda, stegosauria, ankylosauria, ceratopsia,
+    #: ornithopoda, pachycephalosauria, other. Defaults to "other" for
+    #: backward compat with old factsheets generated before this field existed.
+    clade: str = "other"
     dimensions: Dimensions
     integument: Integument
     posture: Posture

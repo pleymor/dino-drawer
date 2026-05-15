@@ -18,7 +18,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--force", action="store_true", help="Re-run all steps")
     parser.add_argument(
         "--force-step",
-        choices=["papers", "images", "filter", "synthesis", "diffusion", "compose"],
+        choices=["papers", "images", "filter", "synthesis", "diffusion"],
         help="Re-run this step and everything after",
     )
     parser.add_argument("--skip-refs", action="store_true", help="Skip image scraping + VLM filtering")

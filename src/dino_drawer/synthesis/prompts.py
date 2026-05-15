@@ -18,6 +18,7 @@ You respond in strict JSON with EXACTLY these fields and types:
 {
   "species": "string",
   "subtitle": "string",
+  "clade": "theropoda" | "sauropoda" | "stegosauria" | "ankylosauria" | "ceratopsia" | "ornithopoda" | "pachycephalosauria" | "other",
   "dimensions": {
     "body_length": "string",
     "hip_height": "string",
@@ -57,6 +58,31 @@ You respond in strict JSON with EXACTLY these fields and types:
 
 General constraints:
 
+- The `clade` field is MANDATORY and selects which clade-specific block of
+  the common hero prompt is used at image-gen time. Choose the closest
+  morphological clade from the enum above:
+    * `theropoda`         — bipedal predators with grasping hands (T. rex,
+                            Allosaurus, Velociraptor, Carnotaurus, Spinosaurus,
+                            Microraptor, etc.). DOES include feathered
+                            maniraptorans (raptors, troodontids).
+    * `sauropoda`         — gigantic quadrupedal long-neck herbivores
+                            (Diplodocus, Brachiosaurus, Apatosaurus,
+                            Argentinosaurus, Patagotitan, Nigersaurus, etc.).
+    * `stegosauria`       — quadrupedal armoured herbivores with dorsal
+                            plates and tail spikes (Stegosaurus, Kentrosaurus).
+    * `ankylosauria`      — heavy quadrupedal "tank" herbivores with bony
+                            armour plating, often a tail club (Ankylosaurus,
+                            Euoplocephalus).
+    * `ceratopsia`        — quadrupedal herbivores with frills and horns
+                            (Triceratops, Styracosaurus, Protoceratops).
+    * `ornithopoda`       — facultative bipedal herbivores with beak / duck
+                            bill (Iguanodon, Parasaurolophus, Edmontosaurus,
+                            Hypsilophodon).
+    * `pachycephalosauria` — bipedal dome-headed herbivores
+                            (Pachycephalosaurus).
+    * `other`             — fallback for anything that does not cleanly fit
+                            one of the above (very basal forms, ambiguous, or
+                            non-dinosaur species).
 - Every text field of the mandatory blocks (dimensions, integument, posture,
   habitat, signature_traits) must be **factual and sourced**. If a value is
   not findable in the provided corpus (Wikipedia + papers), write the literal
@@ -73,58 +99,58 @@ General constraints:
 
 Constraints on `image_prompt` (English) — ONLY species-specific content.
 
-A common universal prompt (wildlife photo style, head-on charge framing/pose,
-theropod horizontal posture with counterweight tail, theropod skull anatomy
-including scaly lips covering the teeth, camera settings, no-text footer) is
-concatenated automatically at image-generation time. DO NOT REPEAT IT: no
-directives about style, framing, pose, general posture, generic skull anatomy,
-lips, camera, nor "no text".
+A common universal prompt is concatenated automatically at image-generation
+time. It contains: wildlife photo style, framing, camera settings, no-text
+footer, AND a clade-specific block (posture, anatomy, lips/beak, predator
+or browser state) chosen from the `clade` field. DO NOT REPEAT this block:
+no directives about photo style, framing, camera, generic anatomy by clade,
+lips/beak, or "no text".
 
 Your `image_prompt` must describe EXCLUSIVELY:
 
 1. **Paleoenvironment** (1 sentence): specific natural and geological setting,
    period, biome, time of day and light. E.g. `Late Cretaceous Laramidia
    conifer forest at dawn, mist drifting between trunks, sandy substrate with
-   fallen needles`. Derived from the factsheet `habitat` block.
+   fallen needles`. Derived from the `habitat` block.
 
-2. **Integument** by body mass (1-2 sentences, MANDATORY for non-avian
-   theropods). Derived from the `integument` block:
-   * Adults > 1 tonne (Tyrannosaurus, Allosaurus, Carnotaurus, etc.):
+2. **Integument** (1-2 sentences). Derived from the `integument` block:
+   * **Large theropods** (> 1 t, `clade=theropoda` and adult mass big):
      `predominantly scaly skin across most of the body — dense pebbly small
-     scales like a monitor lizard or crocodilian on flanks, belly, limbs and
-     tail; a sparse mane-like ridge of filamentous protofeathers (hair-like
-     quills, NEVER pennaceous flight feathers) runs along the dorsal midline
-     from the nape to the upper tail base, visibly thin but present; NEVER a
-     full downy coat; NEVER feathers covering the entire body`. Cf. Bell et
-     al. 2017 (most skin is scaly) + Xu et al. 2012 (Yutyrannus, related
-     tyrannosauroid with filaments).
-   * < 100 kg or maniraptorans (Velociraptor, Microraptor, etc.): dense
-     plumage, pennaceous feathers on arms and tail.
-   * Intermediate sizes: mixed, justify from the papers.
+     scales like a monitor lizard on flanks, belly, limbs and tail; sparse
+     mane-like ridge of filamentous protofeathers (hair-like quills, never
+     pennaceous) along the dorsal midline from the nape to the upper tail
+     base`. Cf. Bell et al. 2017 + Xu et al. 2012.
+   * **Small theropods / maniraptorans** (< 100 kg): dense plumage,
+     pennaceous feathers on arms and tail.
+   * **Sauropods, stegosaurs, ankylosaurs, ceratopsians, ornithopods,
+     pachycephalosaurs**: thick scaly hide with osteoderms/keratinous
+     structures as appropriate per the species; NEVER feathers (these clades
+     have no evidence of plumage).
 
-3. **Color and pattern** (1 sentence): species-specific palette (markings,
-   dorsal/ventral contrast, distinctive marks). Derived from
+3. **Color and pattern** (1 sentence): species-specific palette. Derived from
    `integument.coloration`.
 
-4. **Unique anatomical features** (1-2 sentences): horns, sails, crests, arm
-   length, unusual proportions. Derived from `signature_traits` + salient
-   features in `dimensions` (e.g. T. rex tiny `forelimb_length`).
+4. **Unique anatomical features** (1-2 sentences): horns, sails, crests,
+   plates, spikes, tail club, frill, dome, beak shape, arm length, unusual
+   proportions. Derived from `signature_traits` + salient `dimensions`.
 
 5. **Size** (short): approximate body length in meters, from
    `dimensions.body_length`.
 
-6. **Predator state** (ONLY for active carnivorous theropods — NEVER for
-   herbivores or omnivores): append a short sentence such as `a thin glistening
-   trail of saliva at the corner of the slightly parted lips, faint dark blood
-   smudges on the lower lip and chin (NOT on the teeth), as if the animal just
-   made a kill seconds ago`. Adds the visual credibility of a super-predator
-   mid-action while keeping the mouth nearly closed and the teeth hidden behind
-   the lips.
+6. **State cue** (1 short sentence):
+   * For active carnivorous theropods only: `a thin glistening trail of
+     saliva at the corner of the slightly parted lips, faint dark blood
+     smudges on the lower lip and chin (NOT on the teeth), as if the animal
+     just made a kill seconds ago`.
+   * For herbivores (sauropods, stegosaurs, ankylosaurs, ceratopsians,
+     ornithopods, pachycephalosaurs): describe a calm browsing state, e.g.
+     `head lowered to crop foliage` or `head raised, chewing on a branch`,
+     with no aggressive cues.
 
-Adapt if the species is NOT a non-avian theropod (bird, cetacean, mammal,
-etc.): just describe the integument, coloration, and distinctive traits
-without applying the rules above. Point 6 (saliva/blood) then applies only to
-active mammalian/avian predators.
+Adapt if the species is NOT a non-avian dinosaur (bird, cetacean, mammal,
+etc.): describe integument/coloration/distinctive traits freely; the clade
+should be `other` so the image-gen prompt skips the dinosaur-specific anatomy
+block.
 
 Length: 60-140 words.
 """

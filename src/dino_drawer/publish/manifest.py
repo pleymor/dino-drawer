@@ -29,7 +29,10 @@ def _now_iso() -> str:
 
 
 def build_species_entry(
-    factsheet: FactSheet, image_url: str, thumbnail_url: str
+    factsheet: FactSheet,
+    image_url: str,
+    thumbnail_url: str,
+    image_model: str = "unknown",
 ) -> dict:
     """Combine factsheet text with the R2 image URLs into one species entry.
 
@@ -37,6 +40,10 @@ def build_species_entry(
         factsheet: Validated FactSheet for the species.
         image_url: Public R2 URL of the uploaded full-resolution ``.webp``.
         thumbnail_url: Public R2 URL of the uploaded thumbnail ``.webp``.
+        image_model: Identifier of the Gemini image model that produced the hero
+            (e.g. ``gemini-3.1-flash-image-preview``). Read from
+            ``out/<slug>/image_meta.json`` by the publisher; defaults to
+            ``"unknown"`` if not provided.
 
     Returns:
         Plain dict suitable for inclusion in ``catalog.json``.
@@ -55,6 +62,7 @@ def build_species_entry(
         "image_prompt": factsheet.image_prompt,
         "image_url": image_url,
         "thumbnail_url": thumbnail_url,
+        "image_model": image_model,
         "generated_at": _now_iso(),
     }
 
