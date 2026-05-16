@@ -38,7 +38,7 @@ class RawImage(BaseModel):
     source_url: str
     source: str  # "wikimedia_commons" | "wikipedia" | "phylopic" | "inaturalist"
     credit: str
-    license: str
+    license: str | None = None
     width: int
     height: int
     search_query: str
@@ -63,7 +63,7 @@ class ClassifiedImage(BaseModel):
     quality_score: float
     description_courte: str
     credit: str
-    license: str
+    license: str | None = None
 
 
 class RefsFile(BaseModel):
@@ -134,7 +134,7 @@ class VisualRef(BaseModel):
     """A visual reference image with metadata."""
     path: str
     credit: str
-    license: str
+    license: str | None = None
     score: float
 
 

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-15T19:16:19Z",
-  "count": 36,
+  "generated_at": "2026-05-16T06:17:01Z",
+  "count": 60,
   "species": [
     {
       "slug": "abydosaurus-mcintoshi",
@@ -65,6 +65,161 @@
       "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/abydosaurus-mcintoshi_thumbnail.webp",
       "image_model": "gemini-3.1-flash-image-preview",
       "generated_at": "2026-05-15T18:18:08Z"
+    },
+    {
+      "slug": "albertosaurus-sarcophagus",
+      "species": "Albertosaurus sarcophagus",
+      "subtitle": "Le lézard d'Alberta, un prédateur tyrannosauridé du Crétacé supérieur.",
+      "dimensions": {
+        "body_length": "8–9 mètres (26–30 pieds) de long",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "entre 1,7 et 3,0 tonnes métriques (1,9 et 3,3 tonnes courtes)",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "no data in corpus",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "no data in corpus",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": []
+      },
+      "posture": {
+        "stance": "prédateur bipède",
+        "typical_posture": "équilibrait sa grande et lourde tête et son torse avec une longue queue musclée",
+        "locomotion_mode": "bipède",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "début à la mi-Maastrichtien du Crétacé supérieur, il y a environ 71 millions d'années",
+        "biome": "no data in corpus",
+        "region_or_formation": "province canadienne moderne de l'Alberta, formation de Horseshoe Canyon. Des spécimens indéterminés ont été découverts dans les formations Corral de Enmedio et Packard du Mexique. Des restes ont également été trouvés dans le gisement d'os de Danek à Edmonton, Alberta, Canada.",
+        "source_ids": [
+          "wikipedia",
+          "paper:1"
+        ]
+      },
+      "signature_traits": {
+        "text": "Grand prédateur tyrannosauridé bipède caractérisé par des bras courts, des mains à deux doigts, et une tête massive ornée de dizaines de grandes dents acérées. Il possédait un odorat puissant, une vision binoculaire efficace et une force de morsure capable de broyer les os. Sa taille, bien que grande pour un théropode, était inférieure à celle du Tyrannosaurus rex. Un trait unique est la présence d'une ouverture pneumatique élargie dans le bord arrière du côté de l'os palatin. La région symphysaire de ses mâchoires était plus résistante à la flexion, suggérant un rôle important de l'avant des mâchoires dans la capture des proies. Plus de 30 spécimens sont connus, dont un gisement d'os de 26 individus, suggérant un comportement grégaire et permettant des études détaillées de l'ontogénie et de la biologie des populations. L'analyse des profils de force mandibulaire et de la morphologie dentaire des albertosaurinés indique un changement de régime alimentaire au cours de leur ontogénie.",
+        "source_ids": [
+          "wikipedia",
+          "paper:0",
+          "paper:25"
+        ]
+      },
+      "conclusion": "Albertosaurus sarcophagus était un grand théropode tyrannosauridé, prédateur dominant en Alberta au Crétacé supérieur, il y a environ 71 millions d'années. Sa connaissance approfondie grâce à de nombreux fossiles, y compris des gisements d'os, a permis des études uniques sur son ontogénie, son comportement social possible et sa biomécanique alimentaire.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Albertosaurus",
+          "doi": null,
+          "title": "Albertosaurus"
+        },
+        {
+          "id": "paper:0",
+          "citation_short": "Therrien et al. 2021",
+          "doi": "10.1139/CJES-2020-0177",
+          "title": "Mandibular force profiles and tooth morphology in growth series of Albertosaurus sarcophagus and Gorgosaurus libratus (Tyrannosauridae: Albertosaurinae) provide evidence for an ontogenetic dietary shift in tyrannosaurids."
+        },
+        {
+          "id": "paper:1",
+          "citation_short": "Coppock & Currie 2023",
+          "doi": "10.1139/cjes-2023-0055",
+          "title": "ADDITIONAL ALBERTOSAURUS SARCOPHAGUS (TYRANNOSAURIDAE, ALBERTOSAURINAE) MATERIAL FROM THE DANEK BONEBED OF EDMONTON, ALBERTA, CANADA WITH EVIDENCE OF CANNIBALISM."
+        },
+        {
+          "id": "paper:25",
+          "citation_short": "Therrien et al. 2023",
+          "doi": "10.1126/sciadv.adi0505",
+          "title": "Exceptionally preserved stomach contents of a young tyrannosaurid reveal an ontogenetic dietary shift in an iconic extinct predator."
+        }
+      ],
+      "image_prompt": "Late Cretaceous Albertan riverine forest at sunset, with tall conifers and a shallow, meandering river, soft golden light filtering through the trees. It has predominantly scaly skin across most of its body, with dense pebbly small scales like a monitor lizard on its flanks, belly, limbs, and tail, and a sparse mane-like ridge of filamentous protofeathers (hair-like quills, never pennaceous) along the dorsal midline from its nape to the upper tail base. Its hide is predominantly dark brown on its back and tail, transitioning to a lighter reddish-brown on its head, throat, and underbelly, with subtle darker brown splotches and stripes visible on its torso and limbs. Its body is robust, but notably smaller than a T. rex, featuring very short, two-fingered forelimbs tucked close to its massive head. The dinosaur is 8-9 meters long. A thin glistening trail of saliva is visible at the corner of its slightly parted lips, with faint dark blood smudges on its lower lip and chin, as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/albertosaurus-sarcophagus.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/albertosaurus-sarcophagus_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:44Z"
+    },
+    {
+      "slug": "allosaurus-fragilis",
+      "species": "Allosaurus fragilis",
+      "subtitle": "Dinosaurien théropode du Jurassique supérieur",
+      "dimensions": {
+        "body_length": "En moyenne 8,5 mètres (28 ft), les plus grands spécimens étant estimés à 9,7 mètres (32 ft) de long [wikipedia]. Des individus ont été trouvés allant de moins de 1 mètre (3,3 pieds) à 12 mètres (39 pieds) de long [wikipedia].",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "no data in corpus",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "Les cornes lacrymales pointues ou arrondies étaient une caractéristique notable du crâne, leur forme variant potentiellement entre les espèces ou les individus [wikipedia].",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède [wikipedia].",
+        "typical_posture": "Prédateur bipède, équilibré par une longue queue musclée. Les mains à trois doigts sont petites par rapport aux jambes grandes et puissantes [wikipedia].",
+        "locomotion_mode": "Bipède [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Jurassique supérieur (étages Kimméridgien à Tithonien tardif) [wikipedia].",
+        "biome": "no data in corpus",
+        "region_or_formation": "Formation de Morrison en Amérique du Nord, ainsi que les formations d'Alcobaça, de Bombarral et de Lourinhã au Portugal [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Le nom « Allosaurus » signifie « lézard différent », en allusion à ses vertèbres légères que Marsh croyait uniques. C'était un grand prédateur bipède, au crâne léger et robuste, équipé de dizaines de dents acérées et dentelées. Ses mains avaient trois doigts. En tant que prédateur dominant de la Formation de Morrison, il était au sommet de la chaîne alimentaire et chassait probablement de grands herbivores. Les scientifiques débattent de son comportement social (chasse en meute ou solitaire en congrégations). Le spécimen USNM 4734 sert de néotype pour l'espèce, remplaçant l'holotype original inadéquat [wikipedia][paper:3]. Des études sur l'anatomie endocranienne soutiennent les tendances neurales observées chez les dinosaures théropodes non aviens [paper:11].",
+        "source_ids": [
+          "wikipedia",
+          "paper:3",
+          "paper:11"
+        ]
+      },
+      "conclusion": "Allosaurus fragilis est un théropode emblématique du Jurassique supérieur, bien connu pour sa présence en Amérique du Nord et au Portugal. Son anatomie de prédateur et son rôle écologique en font un sujet d'étude fascinant en paléontologie.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Allosaurus"
+        },
+        {
+          "id": "paper:3",
+          "citation_short": "Anon, 2023",
+          "doi": "10.21805/bzn.v80.a015",
+          "title": "Opinion 2486 (Case 3506) – Allosaurus Marsh, 1877 (Dinosauria, Theropoda): usage conserved by designation of a neotype for its type species Allosaurus fragilis Marsh, 1877"
+        },
+        {
+          "id": "paper:11",
+          "citation_short": "Lessner et al., 2023",
+          "doi": "10.1080/02724634.2023.2236161",
+          "title": "Endocranial anatomy of Allosaurus supports neural trends among non-avian theropod dinosaurs"
+        }
+      ],
+      "image_prompt": "Late Jurassic period (Kimmeridgian to late Tithonian ages) in a North American semi-arid floodplain environment with sparse conifer trees and low-lying vegetation under a clear, warm afternoon sky. Predominantly scaly skin across the body, with fine, pebbly scales. No feathers or hair. Upper body light brownish-orange to reddish-brown or sandy beige, fading to a lighter greyish-white underside, with some green-brown mottling and darker blotches. The tail's distal half features distinctive dark grey and white horizontal stripes. Prominent reddish crests above its eyes. A light, robust skull equipped with dozens of sharp, serrated teeth. Small three-fingered hands relative to powerful legs, balanced by a long, muscular tail. Approximately 8.5 to 9.7 meters long. A thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin, as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/allosaurus-fragilis.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/allosaurus-fragilis_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:36Z"
     },
     {
       "slug": "amargasaurus-cazaui",
@@ -337,6 +492,167 @@
       "generated_at": "2026-05-15T18:18:16Z"
     },
     {
+      "slug": "anzu-wyliei",
+      "species": "Anzu wyliei",
+      "subtitle": "Dinosaure oviraptorosaure du Crétacé supérieur",
+      "dimensions": {
+        "body_length": "environ 3,5–3,75 mètres [wikipedia]",
+        "hip_height": "jusqu'à 1,5 mètre aux hanches [wikipedia]",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "200–300 kilogrammes. Des études plus approfondies ont également cherché à affiner l'estimation de sa masse corporelle [wikipedia][paper:0]",
+        "source_ids": [
+          "wikipedia",
+          "paper:0"
+        ]
+      },
+      "integument": {
+        "integument_type": "Le corps est couvert de plumes denses, incluant des plumes pennées sur les bras et la queue, lui donnant une apparence très aviaire [wikipedia]",
+        "coloration": "Pas de données dans le corpus scientifique. Les interprétations artistiques suggèrent un plumage gris clair, plus foncé sur le cou et le dessous des membres antérieurs et de la queue, ou un corps principalement brun-rougeâtre avec le dessous jaune-vert, une peau verte sur le visage, et une crête jaune vif. Les pattes inférieures et les pieds sont écailleux et verts [visual_brief]",
+        "keratinous_structures": "Une grande crête proéminente en forme de croissant sur le crâne, faite d'os très fin. Un bec édenté [wikipedia]",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia",
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède [visual_brief]",
+        "typical_posture": "no data in corpus",
+        "locomotion_mode": "Coureur rapide [wikipedia]",
+        "source_ids": [
+          "wikipedia",
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé supérieur (étage Maastrichtien supérieur, 67,2-66,0 millions d'années) [wikipedia]",
+        "biome": "Plaines inondables anciennes [wikipedia]",
+        "region_or_formation": "Formation de Hell Creek, Dakota du Nord, Dakota du Sud et Montana, États-Unis [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Se caractérise par un bec édenté (une caractéristique étudiée dans le contexte de la spécialisation crânienne des oviraptorosaures), une crête proéminente et délicate sur le crâne, de longs bras se terminant par de grandes griffes courbées, de longues pattes puissantes avec des orteils élancés et une queue relativement courte [wikipedia][paper:10]. Parmi ses autapomorphies distinctives figurent une crête cranienne élevée en forme de croissant, une partie antérieure de la mâchoire inférieure avec une bride proéminente sur son côté externe, et un processus rétroarticulaire de la mâchoire inférieure allongé [wikipedia]. Surnommé le « poulet de l'enfer » en raison de son apparence aviaire et de sa découverte dans la Formation de Hell Creek [wikipedia]. C'est le premier oviraptorosaure nord-américain bien conservé à être découvert [wikipedia].",
+        "source_ids": [
+          "wikipedia",
+          "paper:10"
+        ]
+      },
+      "conclusion": "Anzu wyliei est une espèce clé, offrant un aperçu sans précédent de l'apparence et de la biologie des oviraptorosaures nord-américains. Son apparence mosaïque, mêlant des traits de dinosaures et d'oiseaux modernes, a permis de mieux comprendre les liens évolutifs. Vivant dans un environnement de plaines inondables, son mode de vie d'omnivore ou d'herbivore généraliste le distinguait de ses cousins asiatiques. Bien que doté de caractéristiques aviaires, Anzu n'était pas un dinosaure avien et a disparu lors de l'événement d'extinction Crétacé-Paléogène il y a 66 millions d'années [wikipedia].",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Anzu wyliei"
+        },
+        {
+          "id": "paper:0",
+          "citation_short": "Atkins‐Weltman et al., 2021",
+          "doi": "10.18435/vamp29375",
+          "title": "Constraining the body mass range of Anzu wyliei using volumetric and extant-scaling methods"
+        },
+        {
+          "id": "paper:1",
+          "citation_short": "Tsujimura et al., 2021",
+          "doi": "10.1139/cjes-2020-0171",
+          "title": "Metatarsals of a large caenagnathid cf. Anzu wyliei (Theropoda: Oviraptorosauria) from the Hell Creek Formation in South Dakota, USA"
+        },
+        {
+          "id": "paper:2",
+          "citation_short": "Atkins‐Weltman et al., 2024",
+          "doi": "10.1371/journal.pone.0294901",
+          "title": "A new oviraptorosaur (Dinosauria: Theropoda) from the end-Maastrichtian Hell Creek Formation of North America"
+        },
+        {
+          "id": "paper:3",
+          "citation_short": "Funston, 2020",
+          "doi": "10.18435/vamp29362",
+          "title": "Caenagnathids of the Dinosaur Park Formation (Campanian) of Alberta, Canada: anatomy, osteohistology, taxonomy, and evolution"
+        },
+        {
+          "id": "paper:4",
+          "citation_short": "Cullen et al., 2020",
+          "doi": "10.1002/spp2.1302",
+          "title": "Morphology and osteohistology of a large‐bodied caenagnathid (Theropoda, Oviraptorosauria) from the Hell Creek Formation (Montana): implications for size‐based classifications and growth reconstruction in theropods"
+        },
+        {
+          "id": "paper:5",
+          "citation_short": "Funston et al., 2021",
+          "doi": "10.1371/journal.pone.0254564",
+          "title": "A partial oviraptorosaur skeleton suggests low caenagnathid diversity in the Late Cretaceous Nemegt Formation of Mongolia"
+        },
+        {
+          "id": "paper:6",
+          "citation_short": "Yun & Funston, 2021",
+          "doi": "10.18435/vamp29376",
+          "title": "A caenagnathid oviraptorosaur metatarsal from the Mesaverde Formation (Campanian), Wyoming"
+        },
+        {
+          "id": "paper:7",
+          "citation_short": "Romilio & Xing, 2025",
+          "doi": "10.3390/geosciences15050165",
+          "title": "A Digital Analysis of the ‘Phoenix Trackway’ at the Hanxi Cretaceous Dinosaur Tracksite, China"
+        },
+        {
+          "id": "paper:8",
+          "citation_short": "Galván & Gómez-Vicioso, 2025",
+          "doi": "10.1098/rsbl.2025.0299",
+          "title": "Pigment contribution to feather mass depends on melanin form and is restricted to approximately 25%"
+        },
+        {
+          "id": "paper:9",
+          "citation_short": "Krumenacker et al., 2022",
+          "doi": "10.1017/jpa.2022.42",
+          "title": "A partial tyrannosauroid femur from the mid-Cretaceous Wayan Formation of eastern Idaho, USA"
+        },
+        {
+          "id": "paper:10",
+          "citation_short": "Meade et al., 2024",
+          "doi": "10.1038/s42003-024-06137-1",
+          "title": "Cranial functional specialisation for strength precedes morphological evolution in Oviraptorosauria"
+        },
+        {
+          "id": "paper:11",
+          "citation_short": "Chinzorig et al., 2022",
+          "doi": "10.1371/journal.pone.0266648",
+          "title": "Large-bodied ornithomimosaurs inhabited Appalachia during the Late Cretaceous of North America"
+        },
+        {
+          "id": "paper:12",
+          "citation_short": "Murray et al., 2020",
+          "doi": "10.18435/vamp29365",
+          "title": "CSVP Abstracts 2020"
+        },
+        {
+          "id": "paper:13",
+          "citation_short": "Chinzorig et al., 2022",
+          "doi": "10.1101/2022.03.25.485782",
+          "title": "Large-bodied ornithomimosaurs inhabited Appalachia during the Late Cretaceous of North America"
+        },
+        {
+          "id": "paper:14",
+          "citation_short": "Lentink, 2022",
+          "doi": "10.7554/elife.76086.sa0",
+          "title": "Editor's evaluation: Digital restoration of the pectoral girdles of two Early Cretaceous birds and implications for early-flight evolution"
+        },
+        {
+          "id": "paper:15",
+          "citation_short": "O’Connor & Novas, 2022",
+          "doi": "10.7554/elife.76086.sa1",
+          "title": "Decision letter: Digital restoration of the pectoral girdles of two Early Cretaceous birds and implications for early-flight evolution"
+        }
+      ],
+      "image_prompt": "Late Cretaceous Hell Creek Formation floodplains at dawn, lush vegetation and muddy ground. The body is covered in dense plumage, with pennaceous feathers on its arms and tail. Its plumage is primarily reddish-brown on the body, transitioning to yellowish-green on the underside. Its face exhibits vibrant green skin, topped by a prominent yellow crest. Its lower legs and clawed feet are covered in green scales. It features a prominent crescent-like crest on its skull, a toothless beak, long arms ending in large curved claws, long powerful legs with slender toes, and a relatively short tail. The creature is about 3.5 to 3.75 meters long. The animal is an omnivore/herbivore, with its head lowered, searching for food among the vegetation.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/anzu-wyliei.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/anzu-wyliei_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:51Z"
+    },
+    {
       "slug": "apatosaurus-louisae",
       "species": "Apatosaurus louisae",
       "subtitle": "Un grand dinosaure sauropode herbivore du Jurassique supérieur d'Amérique du Nord, connu pour sa constitution robuste et son long cou.",
@@ -589,6 +905,178 @@
       "generated_at": "2026-05-15T18:18:21Z"
     },
     {
+      "slug": "baryonyx-walkeri",
+      "species": "Baryonyx walkeri",
+      "subtitle": "Dinosaurien théropode semi-aquatique",
+      "dimensions": {
+        "body_length": "Entre 7,5 et 10 mètres (25 et 33 pieds) [wikipedia]",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "Entre 1,2 et 2 tonnes métriques (1,3 et 2,2 tonnes courtes ; 1,2 et 2,0 tonnes longues) [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "Peau à fines écailles granuleuses [visual_brief]",
+        "coloration": "Motifs tachetés allant du vert foncé au vert olive sur les surfaces supérieures, la tête, le cou et la queue ; dessous gris-beige plus clair avec des taches irrégulières blanc cassé sur les flancs. Peut aussi présenter des motifs de camouflage vert foncé et noir, avec un dessous plus clair [visual_brief]",
+        "keratinous_structures": "Une crête ou une arête proéminente et dentelée le long du centre du dos, due à des épines neurales allongées [wikipedia][visual_brief]",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia",
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède, corps porté horizontalement [visual_brief]",
+        "typical_posture": "Se tient penché en avant sur des pattes arrière puissantes, avec la queue étendue pour l'équilibre. Le cou incurvé vers le haut porte une tête longue et étroite [visual_brief]",
+        "locomotion_mode": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé inférieur (étage Barrémien), il y a environ 130 à 125 millions d'années [wikipedia]",
+        "biome": "Environnement fluvial [wikipedia][paper:4][paper:5]",
+        "region_or_formation": "Formation Weald Clay, Surrey, Angleterre ; également des fossiles en Ibérie (bien que de nombreux spécimens y soient désormais réassignés à d'autres genres) [wikipedia]",
+        "source_ids": [
+          "wikipedia",
+          "paper:4",
+          "paper:5"
+        ]
+      },
+      "signature_traits": {
+        "text": "Possédait une très grande griffe sur le premier doigt, mesurant environ 31 centimètres (12 pouces) de long. Le museau était long, bas et étroit, comparé à celui d'un gavial, avec l'extrémité élargie en forme de rosette. Une encoche sur la mâchoire supérieure correspondait à une courbure de la mâchoire inférieure. Une crête triangulaire était présente sur les os nasaux. Les dents, nombreuses, étaient coniques et finement serrées, les plus grandes étant à l'avant. Ses membres antérieurs étaient robustes. Le régime alimentaire était piscivore (mangeur de poissons), comme en témoignent les écailles de poisson retrouvées dans la région de l'estomac du spécimen holotype, mais il pouvait aussi être un prédateur actif de proies plus grandes et un charognard [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "Baryonyx walkeri est un dinosaure théropode du Crétacé inférieur, remarquable par ses adaptations à un mode de vie semi-aquatique et piscivore, caractérisé par son museau de gavial et sa griffe emblématique.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Baryonyx"
+        },
+        {
+          "id": "paper:0",
+          "citation_short": "Mateus & Estraviz‐López, 2022",
+          "doi": "10.1371/journal.pone.0262614",
+          "title": "A new theropod dinosaur from the early cretaceous (Barremian) of Cabo Espichel, Portugal: Implications for spinosaurid evolution."
+        },
+        {
+          "id": "paper:1",
+          "citation_short": "Lacerda et al., 2021",
+          "doi": "10.1080/08912963.2021.2000974",
+          "title": "Rostral morphology of Spinosauridae (Theropoda, Megalosauroidea): premaxilla shape variation and a new phylogenetic inference."
+        },
+        {
+          "id": "paper:2",
+          "citation_short": "Barker et al., 2023",
+          "doi": "10.1111/joa.13837",
+          "title": "Modified skulls but conservative brains? The palaeoneurology and endocranial anatomy of baryonychine dinosaurs (Theropoda: Spinosauridae)."
+        },
+        {
+          "id": "paper:3",
+          "citation_short": "Myhrvold et al., 2024",
+          "doi": "10.1371/journal.pone.0298957",
+          "title": "Diving dinosaurs? Caveats on the use of bone compactness and pFDA for inferring lifestyle."
+        },
+        {
+          "id": "paper:4",
+          "citation_short": "Hu, 2025",
+          "doi": "10.20944/preprints202407.2205.v2",
+          "title": "The Influence of Habitat on the Hunting Strategies of <em>Baryonyx walkeri</em>."
+        },
+        {
+          "id": "paper:5",
+          "citation_short": "Hu, 2024",
+          "doi": "10.20944/preprints202407.2205.v1",
+          "title": "The Influence of Habitat on the Hunting Strategies of <em>Baryonyx walkeri</em>."
+        },
+        {
+          "id": "paper:6",
+          "citation_short": "Myhrvold et al., 2023",
+          "doi": "10.1101/2023.05.04.539484",
+          "title": "Diving dinosaurs? Caveats on the use of bone compactness and pFDA for inferring lifestyle."
+        },
+        {
+          "id": "paper:7",
+          "citation_short": "Barker et al., 2021",
+          "doi": "10.1038/s41598-021-97870-8",
+          "title": "New spinosaurids from the Wessex Formation (Early Cretaceous, UK) and the European origins of Spinosauridae."
+        },
+        {
+          "id": "paper:8",
+          "citation_short": "Heckeberg & Rauhut, 2020",
+          "doi": "10.26879/1041",
+          "title": "Histology of spinosaurid dinosaur teeth from the Albian-Cenomanian of Morocco: Implications for tooth replacement and ecology."
+        },
+        {
+          "id": "paper:9",
+          "citation_short": "Hone & Holtz, 2021",
+          "doi": "10.26879/1110",
+          "title": "Evaluating the ecology of Spinosaurus: shoreline generalist or aquatic pursuit specialist?"
+        },
+        {
+          "id": "paper:10",
+          "citation_short": "Schade et al., 2020",
+          "doi": "10.1038/s41598-020-66261-w",
+          "title": "Neuroanatomy of the spinosaurid Irritator challengeri (Dinosauria: Theropoda) indicates potential adaptations for piscivory."
+        },
+        {
+          "id": "paper:11",
+          "citation_short": "Birch et al., 2020",
+          "doi": "10.1038/s41598-020-57667-7",
+          "title": "Noasaurids are a component of the Australian ‘mid’-Cretaceous theropod fauna."
+        },
+        {
+          "id": "paper:12",
+          "citation_short": "Dai et al., 2020",
+          "doi": "10.1038/s41598-019-56959-x",
+          "title": "A new possible megalosauroid theropod from the Middle Jurassic Xintiangou Formation of Chongqing, People’s Republic of China and its implication for early tetanuran evolution."
+        },
+        {
+          "id": "paper:13",
+          "citation_short": "Santos Cubedo et al., 2023",
+          "doi": "10.1038/s41598-023-33418-2",
+          "title": "A new spinosaurid dinosaur species from the Early Cretaceous of Cinctorres (Spain)."
+        },
+        {
+          "id": "paper:14",
+          "citation_short": "Navarro-Lorbés et al., 2023",
+          "doi": "10.1016/j.cretres.2023.105516",
+          "title": "Dinosaur swim tracks from the Lower Cretaceous of La Rioja, Spain: An ichnological approach to non-common behaviours."
+        },
+        {
+          "id": "paper:15",
+          "citation_short": "Figueiredo et al., 2021",
+          "doi": "10.4236/gep.2021.91007",
+          "title": "New Dinosaur Tracks from the Lower Barremian of Portugal (Areia do Mastro Formation, Cape Espichel)."
+        },
+        {
+          "id": "paper:16",
+          "citation_short": "Hoffmann et al., 2020",
+          "doi": "10.1038/s41598-020-57731-2",
+          "title": "Pterosaurs ate soft-bodied cephalopods (Coleoidea)."
+        },
+        {
+          "id": "paper:17",
+          "citation_short": "Navarro-Lorbés et al., 2021",
+          "doi": "10.41598/s41598-021-02557-9",
+          "title": "Fast-running theropods tracks from the Early Cretaceous of La Rioja, Spain."
+        }
+      ],
+      "image_prompt": "Early Cretaceous fluvial environment in Europe, specifically the Weald Clay Formation in Surrey, England. Early morning light filtering through sparse riverside vegetation, water gently flowing. Predominantly scaly skin across most of the body, with dense pebbly small scales like a monitor lizard on flanks, belly, limbs and tail. A prominent serrated crest runs along the dorsal midline from the nape to the upper tail base, supported by elongated neural spines. Mottled dark green to olive green across its upper surfaces, head, neck, and tail, with a lighter grayish-tan on its underside and irregular patches of off-white spots on its flanks. Elongated, narrow snout resembling a gharial, with an expanded rosette-shaped tip. Robust forelimbs each bearing an iconic, very large claw on the first finger, approximately 31 centimeters long. A triangular crest is visible on its nasal bones. A large theropod, approximately 7.5 to 10 meters long. A thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin, as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/baryonyx-walkeri.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/baryonyx-walkeri_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:32Z"
+    },
+    {
       "slug": "brachiosaurus-altithorax",
       "species": "Brachiosaurus altithorax",
       "subtitle": "Un sauropode géant du Jurassique supérieur",
@@ -829,6 +1317,65 @@
       "generated_at": "2026-05-15T18:18:24Z"
     },
     {
+      "slug": "carcharodontosaurus-saharicus",
+      "species": "Carcharodontosaurus saharicus",
+      "subtitle": "Fiche d'information structurée",
+      "dimensions": {
+        "body_length": "environ 12 m (39 ft) [wikipedia]",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "environ 5–7 tonnes métriques (5,5–7,7 tonnes courtes) [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "no data in corpus",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "no data in corpus",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": []
+      },
+      "posture": {
+        "stance": "bipède [wikipedia]",
+        "typical_posture": "penché légèrement en avant, avec des pattes postérieures puissantes et une longue queue assurant l'équilibre [wikipedia]",
+        "locomotion_mode": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Cénomanien (Crétacé), il y a environ 100 à 94 millions d'années [wikipedia]",
+        "biome": "forêts de mangroves et zones humides [wikipedia]",
+        "region_or_formation": "Nord-Ouest de l'Afrique (Algérie, Égypte, Maroc, Niger, Tunisie) ; Formations de Kem Kem, Bahariya, Farak, Continental intercalaire [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Carcharodontosaurus saharicus est l'un des plus grands dinosaures théropodes connus. Il possédait un grand crâne légèrement construit avec un rostre triangulaire et des mâchoires garnies de dents aiguisées, recourbées et dentelées, ressemblant à celles du grand requin blanc, ce qui a inspiré son nom. Son crâne était allégé par des fosses et des fenêtres étendues, mais cela le rendait fragile, lui conférant une force de morsure relativement faible par rapport à d'autres grands théropodes. Il avait de petits membres antérieurs, des membres postérieurs puissants et une longue queue pour l'équilibre [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "Carcharodontosaurus saharicus était un grand prédateur du Crétacé en Afrique du Nord, caractérisé par son crâne léger et ses dents inspirées du requin.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia, Carcharodontosaurus",
+          "doi": null,
+          "title": "Carcharodontosaurus"
+        }
+      ],
+      "image_prompt": "Late Cretaceous (Cenomanian) Northwest African mangrove wetlands at dusk, sunlight filtering through dense vegetation. Predominantly scaly skin across most of the body — dense pebbly small scales like a monitor lizard on flanks, belly, limbs and tail; sparse mane-like ridge of filamentous protofeathers (hair-like quills, never pennaceous) along the dorsal midline from the nape to the upper tail base. Approximately 12 meters long. Large, lightly built skull, triangular rostrum, shark-like serrated teeth. Fragile cranium with expanded fossae/fenestrae. Small forelimbs, powerful hindlimbs, long balancing tail. A thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin, as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/carcharodontosaurus-saharicus.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/carcharodontosaurus-saharicus_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:40Z"
+    },
+    {
       "slug": "carnotaurus-sastrei",
       "species": "Carnotaurus sastrei",
       "subtitle": "Le « taureau carnivore » à cornes d'Amérique du Sud",
@@ -975,6 +1522,143 @@
       "generated_at": "2026-05-15T18:18:26Z"
     },
     {
+      "slug": "citipati-osmolskae",
+      "species": "Citipati osmolskae",
+      "subtitle": "Seigneur du bûcher funéraire",
+      "dimensions": {
+        "body_length": "environ 2,5–2,9 m (8,2–9,5 pi) [wikipedia]",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "environ 75–110 kg (165–243 lb) [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "Plumage dense avec de grandes plumes sur les bras et la queue, la présence d'un pygostyle indiquant de grandes plumes de queue [wikipedia].",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "Un bec corné et édenté [wikipedia].",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède [wikipedia].",
+        "typical_posture": "Positions de couvaison avec les membres antérieurs repliés et les membres postérieurs accroupis sur des nids d'œufs [wikipedia].",
+        "locomotion_mode": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé supérieur, il y a environ 75 à 71 millions d'années [wikipedia].",
+        "biome": "désert (Désert de Gobi) [wikipedia].",
+        "region_or_formation": "Formation de Djadochta, localité d'Ukhaa Tolgod, Asie (Désert de Gobi) [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "L'un des plus grands oviraptoridés. Crâne court et fortement pneumatisé avec une crête distinctive formée par les os prémaxillaires et nasaux. Mâchoires supérieures et inférieures édentées, développant un bec corné. Queue se terminant par un pygostyle. Des spécimens ont été trouvés en position de couvaison sur des nids d'œufs, solidifiant le lien entre les dinosaures non aviens et les oiseaux. Possède une force de morsure très forte, estimée entre 349.3 N et 499.0 N [paper:1].",
+        "source_ids": [
+          "wikipedia",
+          "paper:1"
+        ]
+      },
+      "conclusion": "Citipati osmolskae est un oviraptoridé du Crétacé supérieur d'Asie, remarquable pour sa taille imposante, son crâne distinctif avec une crête et un bec édenté, et ses preuves fossiles de comportement de couvaison, essentielles pour comprendre l'évolution avienne et ses capacités de morsure puissantes.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia: Citipati",
+          "doi": null,
+          "title": "Citipati"
+        },
+        {
+          "id": "paper:1",
+          "citation_short": "Meade & Ma, 2022",
+          "doi": "10.1038/s41598-022-06910-4",
+          "title": "Cranial muscle reconstructions quantify adaptation for high bite forces in Oviraptorosauria"
+        }
+      ],
+      "image_prompt": "Late Cretaceous Gobi Desert at dusk, sparse scrub vegetation and sandy dunes, faint twilight glow. The dinosaur has dense plumage, with pennaceous feathers on its arms and tail. Bare, peach-toned skin covers its upper head, face, and throat, contrasting with light grey neck feathers that blend into mottled brownish-grey on its body and long tail. Its lower legs and feet are covered in dark grey scales. It features a distinctive low crest on its short, pneumatized skull, formed by the premaxilla and nasal bones, and a robust toothless horny beak. Its tail ends in a pygostyle. Approximately 2.5–2.9 meters long. The animal stands in a calm, vigilant posture, head held high with beak slightly open.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/citipati-osmolskae.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/citipati-osmolskae_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:48Z"
+    },
+    {
+      "slug": "deinonychus-antirrhopus",
+      "species": "Deinonychus antirrhopus",
+      "subtitle": "Le « terrible à la griffe » du Crétacé",
+      "dimensions": {
+        "body_length": "3,3–3,4 mètres (10 ft 10 in – 11 ft 2 in) pour les spécimens matures",
+        "hip_height": "0,87 mètre (2.9 ft)",
+        "skull_length": "410 millimètres (16 in)",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "60–73 kg (132–161 lb) ; une estimation plus élevée de 100 kg (220 lb) a été proposée",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "Probablement couvert de plumes. Des preuves fossiles de plumes de style aviaire moderne existent pour des dromaeosauridés apparentés comme Velociraptor et Microraptor, bien qu'aucune preuve directe ne soit connue pour Deinonychus lui-même.",
+        "coloration": "Basé sur les références visuelles, il présentait un motif tacheté de marrons, beiges et crèmes sur le corps, avec des plumes de vol plus foncées et proéminentes sur les membres antérieurs et une longue queue emplumée. Son museau, le pourtour des yeux et ses pattes musculaires, menant à des pieds robustes et griffus, affichaient un teint de peau gris-verdâtre pâle.",
+        "keratinous_structures": "no data in corpus",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède, avec une posture horizontale élancée.",
+        "typical_posture": "Prédateur actif et agile, souvent représenté dans une posture dynamique et alerte, penché vers l'avant.",
+        "locomotion_mode": "Course (gait de course) ; la queue jouait un rôle dynamique crucial pour réguler le moment angulaire et améliorer l'économie locomotrice [paper:4].",
+        "source_ids": [
+          "wikipedia",
+          "paper:4"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé inférieur et supérieur, il y a environ 115 à 93,9 millions d'années (stades Aptien moyen à Cénomanien). Plus spécifiquement, le Crétacé inférieur, fin de l'Aptien jusqu'au début de l'Albien, environ 115 à 108 millions d'années.",
+        "biome": "no data in corpus",
+        "region_or_formation": "Amérique du Nord, notamment dans les états américains du Montana, de l'Utah, du Wyoming et de l'Oklahoma. Fossiles récupérés dans les formations de Cloverly et d'Antlers. Des dents possibles ont été trouvées plus à l'est dans le Maryland.",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Caractérisé par une griffe « terrible » (Deinonychus signifie 'terrible griffe') en forme de faucille, exceptionnellement grande, sur le deuxième doigt de chaque pied postérieur, utilisée pour la prédation. La queue était dotée de tendons ossifiés et de processus osseux super-allongés, la rendant initialement considérée comme un contrepoids rigide, mais des études ultérieures suggèrent qu'elle était flexible latéralement et jouait un rôle dynamique dans la locomotion [paper:4]. L'étude de Deinonychus a révolutionné la perception scientifique des dinosaures, initiant la « renaissance des dinosaures » et stimulant le débat sur la régulation thermique. Ses similitudes anatomiques avec les oiseaux ont renforcé l'hypothèse de la descendance des oiseaux des dinosaures. Des restes ont été trouvés associés à ceux de Tenontosaurus, suggérant qu'il le chassait ou le charognardait, et indiquant potentiellement un comportement grégaire. Des preuves suggèrent également une possible couvaison des œufs par transfert de chaleur corporelle, impliquant une endothermie.",
+        "source_ids": [
+          "wikipedia",
+          "paper:4"
+        ]
+      },
+      "conclusion": "Le Deinonychus antirrhopus était un dromaeosauridé théropode agile du Crétacé inférieur et supérieur d'Amérique du Nord, célèbre pour sa « griffe terrible » en forme de faucille et sa queue dynamique. Son étude par John Ostrom a transformé notre compréhension des dinosaures, les dépeignant comme des prédateurs actifs et endothermiques, et a fortement soutenu le lien évolutif entre les dinosaures et les oiseaux. Il chassait probablement en groupe le Tenontosaurus.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Deinonychus - Wikipedia"
+        },
+        {
+          "id": "paper:4",
+          "citation_short": "Bishop et al. (2021)",
+          "doi": "10.1126/sciadv.abi7348",
+          "title": "Predictive simulations of running gait reveal a critical dynamic role for the tail in bipedal dinosaur locomotion"
+        }
+      ],
+      "image_prompt": "Early Cretaceous North American conifer forest at dawn, with a slight mist drifting between trunks. Sandy substrate with fallen needles. Densely covered in plumage with pennaceous feathers on its forelimbs and a long, feathered tail. Mottled patterns of browns, tans, and creams across its body, with darker, barred flight feathers. Its unfeathered snout, around the eyes, and muscular legs display a pale grayish-green skin tone. Features a prominent, sickle-shaped \"terrible claw\" on the second digit of each hind foot, robust clawed feet, and powerful jaws lined with curved blade-like teeth. Approximately 3.4 meters long. A thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin (NOT on the teeth), as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/deinonychus-antirrhopus.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/deinonychus-antirrhopus_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:57Z"
+    },
+    {
       "slug": "dicraeosaurus-hansemanni",
       "species": "Dicraeosaurus hansemanni",
       "subtitle": "Sauropode diplodocoïde du Jurassique supérieur",
@@ -1041,6 +1725,73 @@
       "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/dicraeosaurus-hansemanni_thumbnail.webp",
       "image_model": "gemini-3.1-flash-image-preview",
       "generated_at": "2026-05-15T18:18:28Z"
+    },
+    {
+      "slug": "dilong-paradoxus",
+      "species": "Dilong paradoxus",
+      "subtitle": "Petit dinosaure tyrannosauroïde basal",
+      "dimensions": {
+        "body_length": "environ 1,6 m (spécimen holotype, juvénile) ; pourrait avoir dépassé 2 m à l'âge adulte [wikipedia]",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "un individu de 1,3 m est estimé à 6 kg [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "Le Dilong paradoxus possédait une couverture de plumes simples ou de protoplumes, visibles sous forme d'impressions fossilisées près de la mâchoire et de la queue. Ces plumes n'étaient pas identiques à celles des oiseaux modernes, manquant d'un rachis central, et étaient probablement utilisées pour l'isolation thermique plutôt que pour le vol [wikipedia].",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "Protoplumes [wikipedia]",
+        "ontogenetic_variation": "Il est spéculé que les tyrannosauroïdes, y compris Dilong, auraient pu avoir des revêtements cutanés différents sur différentes parties de leur corps (mélange d'écailles et de plumes) ou que les jeunes individus auraient pu être entièrement recouverts de plumes, puis les auraient perdues en grandissant pour développer des écailles, n'ayant plus besoin d'isolation thermique supplémentaire [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède [wikipedia]",
+        "typical_posture": "Le Dilong était agile et avait un bon équilibre, suggérant une posture dynamique et adaptée au mouvement [wikipedia].",
+        "locomotion_mode": "Terrestre, bipède. Sa large flocculus indique qu'il était agile et bien équilibré [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé inférieur (entre 125,8 et 126 millions d'années) [wikipedia]",
+        "biome": "no data in corpus",
+        "region_or_formation": "Formation d'Yixian, unité de Lujiatun, près de Lujiatun, Beipiao, province du Liaoning occidental, Chine [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Dilong paradoxus est significatif car il a fourni la première preuve de plumes chez les tyrannosaures, une caractéristique qui avait été suspectée auparavant. C'est un petit tyrannosauroïde basal, suggérant une agilité et un bon équilibre. Ses petits tractus olfactifs indiquent que son odorat n'était pas aussi développé que celui de Tyrannosaurus [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "Dilong paradoxus est une espèce de petit dinosaure tyrannosauroïde basal du Crétacé inférieur de Chine, notoire pour être le premier tyrannosaure découvert avec des preuves de plumes. Initialement décrit en 2004, il a révélé des détails importants sur l'évolution de l'integument chez les tyrannosaures, notamment l'hypothèse d'une variation ontogénétique des plumes et des écailles. Sa neuroanatomie indique une agilité notable mais un sens de l'odorat moins développé que ses grands cousins ultérieurs.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipédia",
+          "doi": null,
+          "title": "Dilong paradoxus"
+        },
+        {
+          "id": "paper:5",
+          "citation_short": "Han et al. 2023",
+          "doi": "10.1038/s41598-023-37545-8",
+          "title": "An extraordinary fossil captures the struggle for existence during the Mesozoic"
+        }
+      ],
+      "image_prompt": "Lower Cretaceous Yixian Formation of China, temperate forest at dawn, mist drifting between trees, rich undergrowth, muddy ground. This small basal tyrannosauroid is covered in simple filamentous protofeathers, akin to bristly hair-like filaments, across its body. Its body is dark brownish-grey with a pattern of brown and numerous yellow-green spots, complemented by bright blue on its lower face and neck, and some yellowish-tan plumage on its underbelly, neck, and chest. This agile creature is a juvenile, measuring about 1.6 meters long, with an S-shaped brain. It stands alert, its head slightly raised, looking for prey.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/dilong-paradoxus.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/dilong-paradoxus_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:45Z"
     },
     {
       "slug": "diplodocus-carnegii",
@@ -1115,6 +1866,72 @@
       "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/diplodocus-carnegii_thumbnail.webp",
       "image_model": "gemini-3.1-flash-image-preview",
       "generated_at": "2026-05-15T18:18:29Z"
+    },
+    {
+      "slug": "dromaeosaurus-albertensis",
+      "species": "Dromaeosaurus albertensis",
+      "subtitle": "« lézard coureur »",
+      "dimensions": {
+        "body_length": "environ 2 m (6 ft 7 in) [wikipedia]",
+        "hip_height": "no data in corpus",
+        "skull_length": "24 cm (9+1⁄2 in) pour l'holotype AMNH 5356 [wikipedia]",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "16 kg (35 lb) [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "no data in corpus",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "no data in corpus",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": []
+      },
+      "posture": {
+        "stance": "Bipède (impliqué par le nom générique « lézard coureur ») [wikipedia]",
+        "typical_posture": "no data in corpus",
+        "locomotion_mode": "Coureur agile [wikipedia, paper:2]",
+        "source_ids": [
+          "wikipedia",
+          "paper:2"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé supérieur (Campanien moyen à supérieur et Maastrichtien), il y a environ 80 à 69 millions d'années [wikipedia]",
+        "biome": "no data in corpus",
+        "region_or_formation": "Province canadienne de l'Alberta et ouest des États-Unis. Fossiles trouvés dans la formation de Hell Creek, la formation de Horseshoe Canyon et la formation de Dinosaur Park. Des dents attribuées à ce genre ont été trouvées dans la formation de Prince Creek et la formation d'Aguja [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Le Dromaeosaurus était un carnivore de taille moyenne, plus robuste que d'autres droméosauridés de taille similaire comme le Velociraptor. Il possédait un crâne relativement robuste avec un museau profond et neuf dents par maxillaire, grandes et en forme de cône courbe avec un émail épais. Ses dents présentaient des motifs d'usure suggérant une alimentation comprenant des os et une adaptation à des proies plus grandes que les troodontidés. On estime que sa morsure était près de trois fois plus puissante que celle du Velociraptor et qu'il se fiait davantage à ses mâchoires qu'à sa griffe en faucille pour tuer sa proie [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "Le Dromaeosaurus albertensis, un droméosauridé du Crétacé supérieur connu pour sa construction robuste et sa morsure puissante, était un prédateur bipède agile. Bien que rarement trouvé, il a joué un rôle clé dans la classification des droméosauridés et nous éclaire sur les stratégies de chasse diversifiées des théropodes.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Dromaeosaurus"
+        },
+        {
+          "id": "paper:2",
+          "citation_short": "Jasinski et al. (2020)",
+          "doi": "10.1038/s41598-020-61480-7",
+          "title": "New Dromaeosaurid Dinosaur (Theropoda, Dromaeosauridae) from New Mexico and Biodiversity of Dromaeosaurids at the end of the Cretaceous."
+        }
+      ],
+      "image_prompt": "Late Cretaceous period in Alberta, Canada or western United States. A conifer forest at dawn, mist drifting between trunks, sandy substrate with fallen needles. Dense plumage, pennaceous feathers on arms and tail, consistent with small theropods. The body is covered in a mottled pattern of light grey, beige, and brown, with long, striped flight-like feathers on its forelimbs and tail. The exposed snout, skin around the eyes, lower legs, and feet are dark grey/black. A robust skull with a deep snout, relatively large teeth, and a sharply curved 'sickle claw' on each foot. Its body is heavily built compared to other dromaeosaurids of similar size. Approximately 2 meters long. A thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin, as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/dromaeosaurus-albertensis.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/dromaeosaurus-albertensis_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:17:01Z"
     },
     {
       "slug": "edmontosaurus-regalis",
@@ -1264,6 +2081,128 @@
       "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/euoplocephalus-tutus_thumbnail.webp",
       "image_model": "gemini-3.1-flash-image-preview",
       "generated_at": "2026-05-15T18:18:32Z"
+    },
+    {
+      "slug": "giganotosaurus-carolinii",
+      "species": "Giganotosaurus carolinii",
+      "subtitle": "Le lézard géant du sud",
+      "dimensions": {
+        "body_length": "Les estimations varient de 12 à 13 m pour le spécimen le plus complet, avec des extrapolations atteignant 13,2 m, et d'autres estimations jusqu'à 13,7 à 14,3 m pour des individus plus grands [wikipedia].",
+        "hip_height": "no data in corpus",
+        "skull_length": "Les estimations pour le crâne du spécimen holotype varient de 1,53 à 1,80 m, avec une estimation jusqu'à 1,95 m pour un spécimen supposé plus grand [wikipedia].",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "Les estimations de poids vont de 4,2 à 13,8 tonnes. Des estimations spécifiques incluent 6 à 8 tonnes, 6,6 tonnes, 8 tonnes pour l'holotype, et 10 à 13,8 tonnes pour les spécimens plus grands [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "La peau est principalement écailleuse. Le Giganotosaurus présentait des os nasaux rugueux (rudes et ridés) [wikipedia].",
+        "coloration": "principalement gris-brun avec des taches ovales brun foncé dispersées sur les flancs et la queue, complété par des marques brun-rougeâtre autour de la tête.",
+        "keratinous_structures": "Une crête en forme de crête sur l'os lacrymal, devant l'œil [wikipedia].",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède [wikipedia].",
+        "typical_posture": "Le corps était maintenu à l'horizontale, avec la tête légèrement abaissée et une queue robuste étendue vers l'arrière pour l'équilibre [wikipedia].",
+        "locomotion_mode": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Début du Cénomanien de la période du Crétacé supérieur, il y a environ 99,6 à 95 millions d'années [wikipedia].",
+        "biome": "no data in corpus",
+        "region_or_formation": "Argentine, Formation de Candeleros en Patagonie, province de Neuquén [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Le Giganotosaurus était l'un des plus grands carnivores terrestres connus, se distinguant par son crâne bas, ses os nasaux rugueux et une crête en forme de crête sur l'os lacrymal. L'avant de sa mâchoire inférieure était aplati et portait un processus saillant vers le bas (un « menton ») à l'extrémité. Ses dents étaient comprimées latéralement et dentelées. Il possédait un cou fort et une ceinture pectorale proportionnellement petite. On pense qu'il était homéotherme et le prédateur apex de son écosystème, capable d'abattre des proies par de puissantes morsures [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "Le Giganotosaurus carolinii est un theropode emblématique du Crétacé supérieur d'Argentine, reconnu pour sa taille colossale et sa morphologie unique, notamment son crâne distinctif et son rôle de superprédateur. Sa découverte a relancé le débat sur le plus grand des dinosaures carnivores.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Giganotosaurus (GIG-ə-NOH-tə-SOR-əs)"
+        }
+      ],
+      "image_prompt": "Late Cretaceous Argentina, Candeleros Formation, badlands landscape at sunrise. The Giganotosaurus features predominantly scaly skin across most of the body — dense pebbly small scales like a monitor lizard on flanks, belly, limbs and tail; sparse mane-like ridge of filamentous protofeathers (hair-like quills, never pennaceous) along the dorsal midline from the nape to the upper tail base. Its coloration is primarily greyish-brown with scattered darker brown oval spots across its flanks and tail, complemented by reddish-brown markings around its head. It presents a low skull, rugose nasal bones, a ridge-like crest on the lacrimal bone, the front of the lower jaw flattened with a downward-projecting 'chin', and sideways compressed serrated teeth. This large predator is approximately 12 to 13 meters long. There is a thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin (NOT on the teeth), as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/giganotosaurus-carolinii.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/giganotosaurus-carolinii_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:38Z"
+    },
+    {
+      "slug": "gigantoraptor-erlianensis",
+      "species": "Gigantoraptor erlianensis",
+      "subtitle": "Le plus grand oviraptorosaure connu, caractérisé par sa taille massive, son corps bipède et son régime alimentaire omnivore.",
+      "dimensions": {
+        "body_length": "Estimé à 8 m (26,2 pi) à 8,6 m (28,2 pi) de long [wikipedia]",
+        "hip_height": "Estimé à 3,5 m (11,5 pi) aux hanches [wikipedia]",
+        "skull_length": "Les mâchoires inférieures mesurent 46 cm (460 mm) ; le crâne inconnu était probablement de plus d'un demi-mètre de long [wikipedia]",
+        "forelimb_length": "L'humérus mesure 73,5 cm (2,41 pi) de long ; les membres antérieurs sont plutôt longs en raison de l'humérus allongé et des manus minces [wikipedia]",
+        "tail_length": "La queue est relativement courte [wikipedia]",
+        "body_mass": "Estimé à 1,4–2 tonnes métriques (1,5–2,2 tonnes courtes) [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "Probablement emplumé, mais en raison de sa taille massive, il aurait pu être partiellement 'nu'. Des plumes sur les bras étaient probablement présentes [wikipedia]",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "Un bec kératineux (rhamphothèque) édenté [wikipedia]",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède, terrestre [wikipedia]",
+        "typical_posture": "Corps bipedal avec une colonne vertébrale pneumatisée et des membres postérieurs allongés [wikipedia]",
+        "locomotion_mode": "Cursorial (adapté à la course) [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé supérieur [wikipedia]",
+        "biome": "no data in corpus",
+        "region_or_formation": "Formation d'Iren Dabasu, Mongolie intérieure, bassin d'Erlian [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Le plus grand oviraptorosaure connu. Il possédait une colonne vertébrale fortement pneumatisée et des bras et des pattes allongés, avec le fémur et le tibia mesurant plus d'un mètre. Ses mâchoires inférieures étaient édentées et se terminaient par un bec kératineux. Le bec était le plus profond parmi les caenagnathidés et suggérait un mouvement de mâchoire propalinal pour une morsure cisaillante, indiquant un régime généraliste avec une potentielle carnivorie occasionnelle. Il présentait un taux de croissance accéléré [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "Le Gigantoraptor erlianensis était un oviraptorosaure géant et unique du Crétacé supérieur d'Asie, se distinguant par sa taille impressionnante, ses caractéristiques squelettiques adaptées à la course et son régime alimentaire polyvalent.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Gigantoraptor - Wikipedia",
+          "doi": null,
+          "title": "Gigantoraptor (lit. 'giant thief') is a genus of large oviraptorosaurian dinosaur that lived in Asia during the Late Cretaceous period."
+        }
+      ],
+      "image_prompt": "Late Cretaceous Iren Dabasu Formation, Mongolia — a semi-arid floodplain with scattered conifer trees and sparse ground vegetation, soft afternoon light. Gigantoraptor is a GIANT OVIRAPTOROSAUR — NOT a tyrannosaur, NOT a raptor with fangs. FOLLOW THE PROVIDED REFERENCE IMAGE FAITHFULLY for body plan. ANATOMY (mandatory):\n- BEAK, not jaws full of teeth — the head has a PARROT-LIKE TOOTHLESS BEAK,   small head, large eyes, NO dental row, NO lips, NO predator fangs.\n- DENSELY FEATHERED body — soft contour plumage covering the trunk, neck, and   thighs, NOT scales. Despite the 1.4-tonne adult mass, feathers are documented   for oviraptorosaurs and Gigantoraptor is reconstructed feathered. NO downy   coat on the lower legs and feet (those are scaly and bird-like).\n- LONG PENNACEOUS WING-LIKE FEATHERS on the arms (forming a 'wing-flag' along   the forelimb) and at the TIP OF THE TAIL (a fan-like rectricial array).   These are vestigial display feathers, NOT functional flight feathers.\n- Long neck held S-curved, head poised forward.\n- TALL CURSORIAL legs (the tallest among oviraptorosaurs), four-toed feet with   three forward toes ending in slender curved claws. Bipedal stance.\n- Body length ~8 m, hip height ~3.5 m. The animal is the size of a small   Tyrannosaurus but with a body plan closer to a giant ostrich/cassowary.\nPOSE: standing or walking on two legs, alert, head turned slightly, mouth open to vocalise (beak open showing the tongue — NOT teeth). COLORATION: mottled earthy brown and grey-tan plumage with a subtle iridescent head crest, brighter colours around the face (greens, blues, oranges) as common in display-oriented theropods. Lower legs and beak more orange/yellow. CAMERA: human eye-height (1.7 m), telephoto 200 mm, mild low-angle (the animal is large but bird-like, so a slight tilt up is enough), whole body in frame, deep focus throughout, golden-hour side light.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/gigantoraptor-erlianensis.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/gigantoraptor-erlianensis_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:50Z"
     },
     {
       "slug": "giraffatitan-brancai",
@@ -1717,6 +2656,260 @@
       "generated_at": "2026-05-15T18:18:41Z"
     },
     {
+      "slug": "mapusaurus-roseae",
+      "species": "Mapusaurus roseae",
+      "subtitle": "Feuille d'informations structurée",
+      "dimensions": {
+        "body_length": "10,2 m (33 pieds) à 12,6 mètres (41 pieds) [wikipedia]",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "3 t (6 600 lb) à 6–8 t (13 000–18 000 lb) [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "no data in corpus",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "Os nasaux très rugueux, surface maxillaire et lacrymale rugueuses et une corne robuste au-dessus de l'œil (sur l'os postorbitaire) [wikipedia]",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède [wikipedia]",
+        "typical_posture": "no data in corpus",
+        "locomotion_mode": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé supérieur, âges Cénomanien-Turonien [wikipedia]",
+        "biome": "no data in corpus",
+        "region_or_formation": "Formation Huincul, Cañadón del Gato, Province de Neuquén, Argentine [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Grand carcharodontosauridé carnosaure. Connu à partir d'un lit d'os contenant entre sept et neuf spécimens. Possède un crâne plus profond, un maxillaire plus rugueux et un os lacrymal plus rugueux que Giganotosaurus. Ses vertèbres cervicales sont proportionnellement plus courtes et plus minces, ressemblant à celles des abélisauridés. Les bras sont très petits. La fenestra maxillaire disparaît avec la croissance. Présence d'une corne sourcilière robuste et d'os lacrymaux et préfrontaux fusionnés. Dents plates, étroites et en forme de lame, avec 10 à 12 denticules par 5 mm. La mâchoire inférieure présente une bride ventrale distinctive au niveau de la symphyse mandibulaire [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "Mapusaurus roseae était un grand dinosaure théropode carcharodontosauridé du Crétacé supérieur d'Argentine. Il est remarquable pour avoir été découvert dans un lit d'os de plusieurs individus, suggérant des comportements de groupe potentiels. Sa taille impressionnante et ses caractéristiques crâniennes distinctives en font un prédateur emblématique de son époque.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipédia",
+          "doi": null,
+          "title": "Mapusaurus"
+        }
+      ],
+      "image_prompt": "Late Cretaceous South American riverine plain at dusk, warm golden light, sparse vegetation and sandy ground. The creature displays predominantly scaly skin across most of the body, textured and scale-like, on flanks, belly, limbs and tail; it is entirely devoid of feathers or hair. Its body is dark gray to medium brown with darker reddish-brown vertical stripes or subtle dorsal striping on its flanks, while its underbelly and chin are a lighter, desaturated tan. It possesses a deeper, narrower skull with very rugose nasal, maxillary, and lacrimal bones, and a robust brow horn over each eye. Its arms are notably small. Approximately 10.2 to 12.6 meters long. A thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin, as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/mapusaurus-roseae.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/mapusaurus-roseae_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:41Z"
+    },
+    {
+      "slug": "megalosaurus-bucklandii",
+      "species": "Megalosaurus bucklandii",
+      "subtitle": "Megalosaurus (signifiant « grand lézard ») est un genre éteint de grands dinosaures théropodes carnivores du Jurassique moyen (étage Bathonien, il y a 166 millions d'années) du sud de l'Angleterre. Il fut le premier genre de dinosaure à être nommé validement [wikipedia].",
+      "dimensions": {
+        "body_length": "Environ 6 mètres (20 pieds) [wikipedia]",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "Environ 700 kilogrammes (1 500 livres) [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "no data in corpus",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "no data in corpus",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": []
+      },
+      "posture": {
+        "stance": "Bipède [wikipedia]",
+        "typical_posture": "Torse horizontal équilibré par une queue horizontale [wikipedia]",
+        "locomotion_mode": "Bipède, marchant sur de robustes membres postérieurs [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Jurassique moyen (étage Bathonien, il y a 166 millions d'années) [wikipedia]",
+        "biome": "Archipel insulaire (l'Europe formait alors un archipel insulaire) ; probablement un prédateur au sommet de son écosystème [wikipedia]",
+        "region_or_formation": "Sud de l'Angleterre, notamment l'Oxfordshire et la formation calcaire de Taynton [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Le premier genre de dinosaure à être nommé validement (en 1824 par William Buckland) [wikipedia]. Il possédait une tête assez grande équipée de longues dents courbes, des membres antérieurs courts mais très robustes, et un corps robuste et fortement musclé [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "Megalosaurus bucklandii détient la distinction historique d'être le premier genre de dinosaure non avien nommé scientifiquement en 1824. Malgré sa notoriété précoce et sa représentation publique (notamment un modèle au Crystal Palace), l'espèce reste mystérieuse car aucun squelette complet n'a jamais été découvert, ce qui laisse une grande partie de sa morphologie encore à préciser [wikipedia][paper:0][paper:15].",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Megalosaurus",
+          "doi": null,
+          "title": "Megalosaurus"
+        },
+        {
+          "id": "paper:0",
+          "citation_short": "Witton, M. (2025)",
+          "doi": "10.17704/1944-6187-44.1.202",
+          "title": "THE PAST, PRESENT AND FUTURE OF MEGALOSAURUS BUCKLANDII IN PALEOART"
+        },
+        {
+          "id": "paper:15",
+          "citation_short": "Laurence, A. (2020)",
+          "doi": "10.15180/191102",
+          "title": "A discourse with deep time: the extinct animals of Crystal Palace Park as heritage artefacts"
+        }
+      ],
+      "image_prompt": "Middle Jurassic subtropical island forest in southern England, mist hanging low over dense ferns and cycads on a humid, cloudy morning. Its body is covered in predominantly scaly skin, with dense pebbly scales like a monitor lizard on its flanks, belly, limbs, and tail, entirely devoid of feathers or hair. Its coloration is a mottled blend of earthy greens and browns, offering excellent camouflage within the dense foliage. It possesses a rather large head equipped with long, curved teeth, and its forelimbs are short yet very robust. This 6-meter long predator, with a thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin (NOT on the teeth), as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/megalosaurus-bucklandii.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/megalosaurus-bucklandii_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:30Z"
+    },
+    {
+      "slug": "mei-long",
+      "species": "Mei long",
+      "subtitle": "Dragon endormi",
+      "dimensions": {
+        "body_length": "environ 53 centimètres (pour le spécimen type juvénile) [wikipedia]",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "Plumage dense et pennacée, caractéristique des maniraptoriens aviformes [wikipedia]",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "no data in corpus",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède [wikipedia]",
+        "typical_posture": "La posture de repos est similaire à celle des oiseaux modernes, avec le museau niché sous une patte antérieure et les pattes repliées sous le corps [wikipedia]",
+        "locomotion_mode": "Coureur rapide [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé inférieur (étage Aptien inférieur), il y a environ 125,8 millions d'années [wikipedia]",
+        "biome": "Forêt de conifères avec un sous-bois de fougères, de grandes prêles, de ginkgos et d'araucarias. Présence de volcans, de rivières et de lacs [wikipedia]",
+        "region_or_formation": "Formation d'Yixian, Liaoning, Chine [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Troodontidé basal de la taille d'un canard, étroitement apparenté à Sinovenator. Caractérisé par des narines extrêmement grandes et une structure de hanche aviaire. Le spécimen type a été exceptionnellement bien conservé dans une posture de sommeil aviaire, suggérant une mort instantanée par ensevelissement dans des cendres volcaniques ou empoisonnement au monoxyde de carbone [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "Mei long est un petit dinosaure troodontidé du Crétacé inférieur, connu pour la conservation exceptionnelle de ses spécimens en posture de sommeil aviaire, un lien comportemental fort avec les oiseaux modernes. Il était un coureur rapide et un prédateur de petits lézards et insectes dans un environnement volcanique forestier en Chine.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Mei long - Wikipedia"
+        }
+      ],
+      "image_prompt": "Early Cretaceous Aptian, 125.8 million years ago, in a volcanic coniferous forest of Liaoning, China. The forest floor is covered with ferns and large horsetails, with ginkgos and araucarias, near a lake fed by volcanic rivers. Dense plumage covers the body, with pennaceous feathers on the arms and tail. Its feathers are predominantly light brown, featuring a dark grey cap on its head and distinct black and white striped patterns on its primary limb feathers, tail tip, and lower leg coverings. A duck-sized basal troodontid with extremely large nares and a bird-like hip structure. It exhibits a slender, bird-like build, approximately 0.53 meters long. The dinosaur is curled in a bird-like sleeping posture, with its snout nestled beneath one forelimb and legs folded under its body.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/mei-long.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/mei-long_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:54Z"
+    },
+    {
+      "slug": "microraptor-gui",
+      "species": "Microraptor gui",
+      "subtitle": "Un petit dinosaure dromaeosauridé à quatre ailes, doté de plumes pennacées sur les membres antérieurs, postérieurs et la queue, capable de vol plané et de vol battu.",
+      "dimensions": {
+        "body_length": "77 cm (holotype de M. gui) à au moins 80 cm pour des spécimens plus grands [wikipedia]",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "0,5–1,4 kg (holotype de M. gui); 1,25–1,88 kg pour des spécimens plus grands [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "Plumes pennacées formant des surfaces aérodynamiques sur les bras, la queue et les pattes ; corps couvert d'un épais plumage [wikipedia]",
+        "coloration": "Certains spécimens présentent des bandes sombres et claires ; au moins certains individus possédaient une coloration noire irisée [wikipedia]",
+        "keratinous_structures": "no data in corpus",
+        "ontogenetic_variation": "Des variations de caractéristiques pourraient correspondre à des différences d'âge au sein de l'espèce [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède [wikipedia]",
+        "typical_posture": "Animal arboricole, capable de vol plané et de vol battu, utilisant ses quatre membres pour la portance [wikipedia]",
+        "locomotion_mode": "Vol battu et vol plané (quadri-ailé) [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé inférieur (étage Aptien), il y a 125 à 120 millions d'années [wikipedia]",
+        "biome": "no data in corpus",
+        "region_or_formation": "Formation de Jiufotang, Liaoning, Chine [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Petit dinosaure dromaeosauridé, caractérisé par ses quatre ailes formées de longues plumes pennacées sur les bras, la queue et les pattes. Il était capable de vol plané et potentiellement de vol battu, utilisant ses quatre membres pour la portance [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "Les fossiles exceptionnellement bien conservés de Microraptor fournissent des preuves cruciales de la relation évolutive entre les oiseaux et les premiers dinosaures.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Microraptor - Wikipedia"
+        }
+      ],
+      "image_prompt": "Early Cretaceous Jiufotang Formation forest in Liaoning, China, at dawn, with filtered sunlight illuminating a moist forest floor. A dense plumage, with iridescent black pennaceous feathers forming aerodynamic surfaces on its four limbs and tail, showing subtle dark and light banding on some feathers. Small, four-winged dromaeosaurid with a diamond-shaped tail fan featuring long, narrow central feathers. Approximately 77 to 80 cm long. A thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin, as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/microraptor-gui.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/microraptor-gui_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:59Z"
+    },
+    {
       "slug": "nagatitan-chaiyaphumensis",
       "species": "Nagatitan chaiyaphumensis",
       "subtitle": "Grand sauropode du Crétacé inférieur",
@@ -1835,6 +3028,67 @@
       "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/nigersaurus-taqueti_thumbnail.webp",
       "image_model": "gemini-3.1-flash-image-preview",
       "generated_at": "2026-05-15T18:18:44Z"
+    },
+    {
+      "slug": "oviraptor-philoceratops",
+      "species": "Oviraptor philoceratops",
+      "subtitle": "Un petit théropode oviraptoridé du Crétacé supérieur, célèbre pour son association avec des nids d'œufs et son comportement de couvaison.",
+      "dimensions": {
+        "body_length": "Estimé à 1,6–2 m (5,2–6,6 pi) de long pour l'holotype.",
+        "hip_height": "no data in corpus",
+        "skull_length": "Environ 17,9 cm (7,03 po) de long tel que préservé pour le crâne de l'holotype.",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "Probablement pas très allongée et relativement réduite, se terminant par un pygostyle.",
+        "body_mass": "Poids estimé entre 33–40 kg (73–88 lb).",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "Oviraptor était un oviraptoridé à plumes. Les bras étaient couverts de plumes allongées et la queue se terminait par un pygostyle supportant un éventail de grandes plumes.",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "Le crâne avait probablement une crête bien développée et les mâchoires étaient édentées, formant un bec corné robuste (rhamphothèque). La queue se terminait par un pygostyle.",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède.",
+        "typical_posture": "Il a été démontré que l'Oviraptor couveait ses nids en s'y accroupissant, démontrant un comportement parental.",
+        "locomotion_mode": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé supérieur.",
+        "biome": "no data in corpus",
+        "region_or_formation": "Formation de Djadokhta en Mongolie, localité de Bayn Dzak (également connue sous le nom de Flaming Cliffs).",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Un petit théropode à plumes avec un crâne profond et raccourci, potentiellement doté d'une crête. Il possédait des mâchoires édentées se terminant par un bec corné robuste et une mâchoire inférieure large. Ses bras étaient bien développés et allongés, se terminant par trois doigts munis de griffes incurvées. Ses longs membres postérieurs avaient quatre orteils, le premier étant réduit. La furcula de l'Oviraptor est très distincte avec une quille médiane sur la surface antérieure de l'hypocléidium. Le palais est rigide et pourrait avoir eu des projections en forme de dents dirigées vers le bas.",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "L'Oviraptor philoceratops, initialement nommé 'voleur d'œufs' par Henry Fairfield Osborn en 1924 en raison de son association avec un nid d'œufs de dinosaures, est un oviraptoridé du Crétacé supérieur de Mongolie. Des découvertes ultérieures ont cependant révélé que l'Oviraptor ne volait pas les œufs, mais les couveait, illustrant un comportement de soin parental. Connu à partir d'un squelette partiel et d'un nid d'une quinzaine d'œufs, c'était un petit théropode à plumes caractérisé par un bec corné sans dents, des bras allongés et un crâne qui possédait probablement une crête.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Oviraptor"
+        }
+      ],
+      "image_prompt": "Late Cretaceous Djadokhta Formation in Mongolia, an arid desert landscape with reddish sandstone cliffs and sparse, drought-resistant vegetation at dusk, with warm, low-angle light. The body is covered in dense, fluffy dark brown feathers, transitioning to lighter reddish-brown or pale brown on the neck and body. Wing and tail feathers are darker reddish-brown with prominent yellow-gold stripes. The head and face are reddish-brown and unfeathered. Dark brown fluffy feathers on the body, neck, and tail; lighter reddish-brown or pale brown on parts of the body; darker reddish-brown wing and tail feathers with yellow-gold stripes. The head and face are reddish-brown, with a golden-yellow crest and upper beak. Legs and feet are scaly, brownish-orange or olive-green with dark claws. It has a robust toothless horny beak and a prominent golden-yellow crest. Its well-developed arms have three fingers with curved claws. The tail is relatively short and ends in a pygostyle supporting a fan of large feathers. This individual is approximately 1.8 meters long. Its head is gently lowered, observing a nearby clutch of eggs, reflecting its known brooding behavior.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/oviraptor-philoceratops.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/oviraptor-philoceratops_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:47Z"
     },
     {
       "slug": "pachycephalosaurus-wyomingensis",
@@ -2308,6 +3562,271 @@
       "generated_at": "2026-05-15T18:18:51Z"
     },
     {
+      "slug": "saurornithoides-mongoliensis",
+      "species": "Saurornithoides mongoliensis",
+      "subtitle": "Un théropode maniraptorien troodontidé du Crétacé supérieur de Mongolie, connu pour son allure aviaire, sa vision perçante et son intelligence.",
+      "dimensions": {
+        "body_length": "pas de données dans le corpus",
+        "hip_height": "pas de données dans le corpus",
+        "skull_length": "189 millimètres (spécimen type) [wikipedia]",
+        "forelimb_length": "pas de données dans le corpus",
+        "tail_length": "pas de données dans le corpus",
+        "body_mass": "pas de données dans le corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "Dense plumage de plumes couvrant la majeure partie du corps, à l'exception des pattes inférieures et des pieds écailleux, typique des petits maniraptoriens. [wikipedia]",
+        "coloration": "pas de données dans le corpus",
+        "keratinous_structures": "pas de données dans le corpus",
+        "ontogenetic_variation": "L'arrière-train très ossifié d'un spécimen juvénile suggère que les Saurornithoides et les autres troodontidés étaient bien développés à la naissance et nécessitaient probablement peu ou pas de soins parentaux. [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède [wikipedia]",
+        "typical_posture": "Se tenait droit, capable d'une posture penchée vers l'avant lors de la course. [wikipedia]",
+        "locomotion_mode": "Principalement cursoriel, capable de courir vite sur ses pattes arrière. [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé supérieur [wikipedia]",
+        "biome": "Désert de Gobi [wikipedia]",
+        "region_or_formation": "Formation de Djadochta, Mongolie [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Le Saurornithoides possédait un crâne et des os aviaires, des sens aiguisés, une excellente vue (y compris une bonne vision nocturne et stéréoscopique) et une ouïe fine. Il était caractérisé par une longue tête basse, un museau déprimé, des dents pointues, un cerveau relativement grand et une griffe rétractable élargie sur le deuxième orteil de chaque pied. [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "Le Saurornithoides mongoliensis était un troodontidé agile et intelligent du Crétacé supérieur de Mongolie, dont les caractéristiques physiques et sensorielles le désignaient comme un prédateur efficace, bien adapté à son environnement.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Saurornithoides"
+        }
+      ],
+      "image_prompt": "Late Cretaceous Mongolian Gobi Desert at sunrise, with sparse desert vegetation, rocky outcrops, and sand dunes. Dense plumage with pennaceous feathers on arms and tail. Dark grey and black feathers, rusty orange neck, white underparts with speckles. Vivid red crest, white stripe on neck/back, yellow eyes, grey-green beak. Dark grey scaly lower legs and feet. A long, low head with a depressed muzzle, sharp teeth, and large eye sockets. Enlarged retractable claw on the second toe. A small, agile dinosaur. A thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin, as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/saurornithoides-mongoliensis.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/saurornithoides-mongoliensis_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:56Z"
+    },
+    {
+      "slug": "sinornithoides-youngi",
+      "species": "Sinornithoides youngi",
+      "subtitle": "Troodontidé théropode",
+      "dimensions": {
+        "body_length": "environ 1 mètre (Wikipedia); estimé à 1,1 mètres par Gregory S. Paul en 2010 [wikipedia]",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "estimé à 2,5 kilogrammes par Gregory S. Paul en 2010 [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "no data in corpus",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "no data in corpus",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": []
+      },
+      "posture": {
+        "stance": "Bipède [wikipedia]",
+        "typical_posture": "Le fossile holotype est conservé dans une position de repos similaire à celle d'un autre troodontidé, Mei long, avec son museau rentré sous sa patte gauche [wikipedia].",
+        "locomotion_mode": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé inférieur (étage Aptien ou Albien), il y a environ 113 millions d'années [wikipedia]",
+        "biome": "no data in corpus",
+        "region_or_formation": "Mongolie intérieure, Chine (Bassin d'Ordos, près de Huamuxiao); Formation d'Ejinhoro du Crétacé inférieur [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Sinornithoides est un troodontidé, un groupe de petits maniraptoriens graciles ressemblant à des oiseaux. Il possède de nombreuses caractéristiques crâniennes uniques, telles que des dents très rapprochées dans la mâchoire inférieure et un grand nombre de dents. Il est doté de griffes en forme de faucille et de mains raptoriales, ainsi que de quotients d'encéphalisation non aviaires parmi les plus élevés. Le crâne est allongé et pointu, mais relativement court par rapport au corps. Il présente une fenestra promaxillaris, une petite ouverture à l'avant du côté du maxillaire, rare chez les troodontidés. Il y a quatre dents prémaxillaires et environ vingt-trois dents maxillaires. Les dents maxillaires n'ont pas de dentelures sur leur bord avant, et les denticules sur le bord arrière concave sont petits. Les dents de la mâchoire inférieure sont assez pointues et n'ont pas de denticules sur le bord avant. Les bras sont faiblement développés, avec un humérus et un cubitus grêles. La griffe en faucille du deuxième orteil est relativement grande et longue pour un troodontidé. L'holotype représente un individu subadulte [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "no data in corpus",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Sinornithoides"
+        }
+      ],
+      "image_prompt": "Early Cretaceous semi-arid landscape of Inner Mongolia, China, with sparse scrub and sandy terrain, under a clear morning sky. This small theropod has dense plumage covering its body, with pennaceous feathers forming wings on its arms and a fan-like tail. Its feathers are a subtle mix of earthy browns and greys, with a hint of dark banding on the tail feathers. It features an elongated and pointed skull with a unique fenestra promaxillaris, raptorial hands with slender limbs, and a notably large sickle claw on its second toe. This individual is approximately 1 meter long, with a thin glistening trail of saliva at the corner of its slightly parted lips, faint dark blood smudges on the lower lip and chin, as if it just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/sinornithoides-youngi.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/sinornithoides-youngi_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:55Z"
+    },
+    {
+      "slug": "spinosaurus-aegyptiacus",
+      "species": "Spinosaurus aegyptiacus",
+      "subtitle": "Lezard à épines",
+      "dimensions": {
+        "body_length": "Jusqu'à 14 m (46 ft) [wikipedia]",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "Jusqu'à 7,4 t (8,2 short tons) [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "Peau écailleuse ou coriace, sans plumes ni poils. Les épines neurales dorsales étaient probablement reliées par de la peau, formant une structure en forme de voile [wikipedia].",
+        "coloration": "De diverses teintes de marron et de vert olive au gris argenté et crème pâle, souvent avec des motifs de taches, de rayures ou de contre-ombrage. Des rayures verticales rouges distinctes sur la grande nageoire dorsale ont été imaginées, avec un corps majoritairement marron-rouge foncé à vert olive et des parties ventrales plus claires, présentant des taches ovales et des taches irrégulières plus foncées sur les flancs et des rayures sombres sur la queue.",
+        "keratinous_structures": "no data in corpus",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède facultatif",
+        "typical_posture": "Le Spinosaurus était un grand carnivore terrestre et semi-aquatique, capable de se tenir debout sur deux pattes ou d'adopter une posture de nage horizontale [wikipedia], bien que l'étendue de sa capacité de nage ait été fortement débattue [paper:3].",
+        "locomotion_mode": "Bipède terrestre et nageur semi-aquatique. Certaines études suggèrent un prédateur spécialisé des eaux profondes [paper:0], tandis que d'autres remettent en question sa capacité de poursuite aquatique et le considèrent comme un marcheur ou un vadeur [paper:3], ou semi-aquatique à entièrement aquatique [paper:15].",
+        "source_ids": [
+          "wikipedia",
+          "paper:0",
+          "paper:3",
+          "paper:15"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé supérieur, étage Cénomanien (il y a environ 100 à 94 millions d'années) [wikipedia].",
+        "biome": "Environnement humide de vasières et de forêts de mangroves [wikipedia]. Il a vécu dans un habitat riparien [paper:2] et des paléoenvironnements influencés par des variations saisonnières de l'eau [paper:1].",
+        "region_or_formation": "Principalement connu de la Formation de Bahariya en Égypte et des couches de Kem Kem au Maroc [wikipedia], avec des découvertes en Algérie [paper:19], au Niger et potentiellement au Brésil [wikipedia]. Des dents de Spinosaurus aegyptiacus ont été trouvées dans la formation de Kem Kem, Erfoud, Maroc [paper:22], [paper:23].",
+        "source_ids": [
+          "wikipedia",
+          "paper:1",
+          "paper:2",
+          "paper:19",
+          "paper:22",
+          "paper:23"
+        ]
+      },
+      "signature_traits": {
+        "text": "Le Spinosaurus est caractérisé par de grandes épines neurales distinctives, extensions des vertèbres, atteignant au moins 1,65 m de long, formant une structure en forme de voile dorsale dont les fonctions proposées incluent la thermorégulation et l'affichage [wikipedia], [paper:24], [paper:25], [paper:27]. Son crâne était long, bas et étroit, similaire à celui d'un crocodilien moderne, avec des dents coniques droites [wikipedia], [paper:8]. Il possédait de grands membres antérieurs robustes avec des mains à trois doigts, dont le premier avait une griffe agrandie [wikipedia]. Les os de la hanche étaient réduits, et les pattes très courtes par rapport au corps. Sa queue longue et étroite était approfondie par de hautes et fines épines neurales et des chevrons allongés, formant une structure en forme de pagaie. Les os des pattes présentaient une densité osseuse élevée, permettant un meilleur contrôle de la flottabilité [wikipedia]. Il est connu pour avoir consommé des proies aquatiques et terrestres [wikipedia].",
+        "source_ids": [
+          "wikipedia",
+          "paper:8",
+          "paper:24",
+          "paper:25",
+          "paper:27"
+        ]
+      },
+      "conclusion": "Spinosaurus aegyptiacus est un grand dinosaure théropode carnivore du Crétacé supérieur d'Afrique du Nord. Caractérisé par sa voile dorsale distinctive, son crâne crocodilien et sa queue en forme de pagaie, il représente un exemple fascinant de théropode semi-aquatique, capable de chasser dans les environnements de vasières et de mangroves.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Spinosaurus"
+        },
+        {
+          "id": "paper:0",
+          "citation_short": "Gimsa & Gimsa, 2021",
+          "doi": "10.3390/life11090889",
+          "title": "Contributions to a Discussion of Spinosaurus aegyptiacus as a Capable Swimmer and Deep-Water Predator"
+        },
+        {
+          "id": "paper:1",
+          "citation_short": "Liu et al., 2025",
+          "doi": "10.1016/j.palaeo.2025.112908",
+          "title": "The effectiveness of oxygen isotopes in Spinosaurus tooth dentine for high-resolution palaeoenvironmental reconstructions"
+        },
+        {
+          "id": "paper:2",
+          "citation_short": "Sereno et al., 2026",
+          "doi": "10.1126/science.adx5486",
+          "title": "Scimitar-crested Spinosaurus species from the Sahara caps stepwise spinosaurid radiation."
+        },
+        {
+          "id": "paper:3",
+          "citation_short": "Sereno et al., 2022",
+          "doi": "10.1101/2022.05.25.493395",
+          "title": "Spinosaurus is not an aquatic dinosaur"
+        },
+        {
+          "id": "paper:8",
+          "citation_short": "Lacerda et al., 2021",
+          "doi": "10.1080/08912963.2021.2000974",
+          "title": "Rostral morphology of Spinosauridae (Theropoda, Megalosauroidea): premaxilla shape variation and a new phylogenetic inference"
+        },
+        {
+          "id": "paper:15",
+          "citation_short": "Stembridge‐King & Wilkin, 2025",
+          "doi": "10.1111/gto.12516",
+          "title": "The lifestyle of Spinosaurus"
+        },
+        {
+          "id": "paper:19",
+          "citation_short": "Benyoucef et al., 2022",
+          "doi": "10.3389/feart.2022.927059",
+          "title": "The “mid”-Cretaceous (Lower Cenomanian) Continental Vertebrates of Gara Samani, Algeria. Sedimentological Framework and Palaeodiversity."
+        },
+        {
+          "id": "paper:22",
+          "citation_short": "MUVHN, 2022",
+          "doi": "10.5281/zenodo.10383021",
+          "title": "Teropod dinosaur tooth (Spinosaurus aegyptiacus)"
+        },
+        {
+          "id": "paper:23",
+          "citation_short": "MUVHN, 2022",
+          "doi": "10.5281/zenodo.10383022",
+          "title": "Teropod dinosaur tooth (Spinosaurus aegyptiacus)"
+        },
+        {
+          "id": "paper:24",
+          "citation_short": "Hu, 2024",
+          "doi": "10.20944/preprints202407.1688.v1",
+          "title": "Functional Morphology of Spinosaurus aegyptiacus' Sail: Thermoregulation, Display or Hydrodynamic?"
+        },
+        {
+          "id": "paper:25",
+          "citation_short": "Hu, 2024",
+          "doi": "10.31233/osf.io/2hsnf",
+          "title": "Functional Morphology of Spinosaurus aegyptiacus' Sail: Thermoregulation, Display or Hydrodynamic?"
+        },
+        {
+          "id": "paper:27",
+          "citation_short": "Hu, 2025",
+          "doi": "10.20944/preprints202407.1688.v2",
+          "title": "Functional Morphology of <em>Spinosaurus aegyptiacus</em>’ Sail: Thermoregulation, Display or Hydrodynamic?"
+        }
+      ],
+      "image_prompt": "Late Cretaceous North African Cenomanian stage, humid tidal flats and mangrove forests at dusk, warm glow from the setting sun filtering through dense foliage, water reflecting the sky. Predominantly scaly skin across most of the body; dense pebbly small scales like a monitor lizard on flanks, belly, limbs and tail; no filamentous protofeathers. Dark reddish-brown skin with fine scales and distinct red vertical stripes on its large dorsal fin; paler olive-green underside with lighter oval spots on darker areas and irregular darker blotches on lighter flanks; bold dark stripes on the tail. A prominent dorsal sail of neural spines covered with skin, at least 1.65 m tall. The skull is elongated, low, and narrow, resembling a crocodilian with straight conical teeth. Robust forelimbs bear three-fingered hands, with an enlarged claw on the first digit. A long, narrow tail is deepened by tall neural spines, forming a paddle-like structure. Approximately 14 meters long. A thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin, as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/spinosaurus-aegyptiacus.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/spinosaurus-aegyptiacus_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:29Z"
+    },
+    {
       "slug": "stegosaurus-stenops",
       "species": "Stegosaurus stenops",
       "subtitle": "Un genre de dinosaures herbivores quadrupèdes blindés du Jurassique supérieur, caractérisé par des plaques distinctives le long du dos et des épines sur la queue.",
@@ -2444,6 +3963,165 @@
       "generated_at": "2026-05-15T18:18:54Z"
     },
     {
+      "slug": "suchomimus-tenerensis",
+      "species": "Suchomimus tenerensis",
+      "subtitle": "Dinosaure Théropode du Crétacé Inférieur",
+      "dimensions": {
+        "body_length": "9,5–11 mètres (31–36 pieds) ; une estimation de 10,3 mètres (34 pieds) a été proposée par Therrien et Henderson, mais ils ont noté qu'ils auraient pu surestimer la taille des spinosauridés [wikipedia]",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "2,5–3,8 tonnes métriques (2,8–4,2 tonnes courtes) ; une estimation de plus de 5,2 tonnes métriques (5,7 tonnes courtes) a été proposée par Therrien et Henderson, mais ils ont noté qu'ils auraient pu surestimer la taille des spinosauridés [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "no data in corpus",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "no data in corpus",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": []
+      },
+      "posture": {
+        "stance": "no data in corpus",
+        "typical_posture": "no data in corpus",
+        "locomotion_mode": "no data in corpus",
+        "source_ids": []
+      },
+      "habitat": {
+        "geological_period": "Aptien à Albien du Crétacé inférieur, il y a 112 millions d'années [wikipedia]",
+        "biome": "environnement fluvial de vastes plaines inondables [wikipedia]",
+        "region_or_formation": "Niger, formation d'Elrhaz (site de Gadoufaoua, désert du Ténéré) [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Grand dinosaure théropode avec un crâne allongé, bas et étroit, ressemblant à celui des crocodiliens. L'extrémité de son museau s'évase latéralement en une « rosette » de dents plus longues. Ses mâchoires portent de nombreuses dents coniques finement dentelées. Le cou est relativement court, et les avant-bras puissamment bâtis possèdent une grande griffe incurvée sur chaque pouce. Une voile dorsale basse, soutenue par de longues épines neurales des vertèbres, parcourt la ligne médiane de son dos. Ses caractéristiques crâniennes et de ses membres indiquent qu'il était un prédateur principalement piscivore, adapté à la chasse en eaux peu profondes. Son nom générique signifie « mimique de crocodile » [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "Suchomimus tenerensis est un grand dinosaure théropode du Crétacé inférieur, mesurant environ 9,5 à 11 mètres de long et pesant entre 2,5 et 3,8 tonnes. Il est remarquable par son crâne allongé de type crocodilien, ses adaptations piscivores, ses puissantes griffes de pouce et sa basse voile dorsale. Ses fossiles ont été découverts dans la formation d'Elrhaz au Niger, où il évoluait dans un environnement fluvial de plaines inondables. Sa taxonomie a fait l'objet de débats, certains le considérant comme un synonyme potentiel de Cristatusaurus ou une espèce africaine de Baryonyx, bien que des études récentes le maintiennent comme un genre distinct.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Suchomimus"
+        },
+        {
+          "id": "paper:0",
+          "citation_short": "Lacerda et al. 2021",
+          "doi": "10.1080/08912963.2021.2000974",
+          "title": "Rostral morphology of Spinosauridae (Theropoda, Megalosauroidea): premaxilla shape variation and a new phylogenetic inference"
+        },
+        {
+          "id": "paper:1",
+          "citation_short": "Myhrvold et al. 2024",
+          "doi": "10.1371/journal.pone.0298957",
+          "title": "Diving dinosaurs? Caveats on the use of bone compactness and pFDA for inferring lifestyle."
+        },
+        {
+          "id": "paper:2",
+          "citation_short": "Myhrvold et al. 2023",
+          "doi": "10.1101/2023.05.04.539484",
+          "title": "Diving dinosaurs? Caveats on the use of bone compactness and pFDA for inferring lifestyle."
+        },
+        {
+          "id": "paper:3",
+          "citation_short": "Therrien et al. 2021",
+          "doi": "10.1139/cjes-2020-0177",
+          "title": "Mandibular force profiles and tooth morphology in growth series of Albertosaurus sarcophagus and Gorgosaurus libratus (Tyrannosauridae: Albertosaurinae) provide evidence for an ontogenetic dietary shift in tyrannosaurids1"
+        },
+        {
+          "id": "paper:4",
+          "citation_short": "Cau et al. 2021",
+          "doi": "10.1038/s41598-021-94285-3",
+          "title": "Unusual pectoral apparatus in a predatory dinosaur resolves avian wishbone homology"
+        },
+        {
+          "id": "paper:5",
+          "citation_short": "Holtz 2021",
+          "doi": "10.1139/cjes-2020-0174",
+          "title": "Theropod guild structure and the tyrannosaurid niche assimilation hypothesis: implications for predatory dinosaur macroecology and ontogeny in later Late Cretaceous Asiamerica1"
+        },
+        {
+          "id": "paper:6",
+          "citation_short": "Poust et al. 2020",
+          "doi": "10.1002/ar.24343",
+          "title": "A new microraptorine theropod from the Jehol Biota and growth in early dromaeosaurids"
+        },
+        {
+          "id": "paper:7",
+          "citation_short": "Santos Cubedo et al. 2023",
+          "doi": "10.1038/s41598-023-33418-2",
+          "title": "A new spinosaurid dinosaur species from the Early Cretaceous of Cinctorres (Spain)"
+        },
+        {
+          "id": "paper:8",
+          "citation_short": "Yun 2023",
+          "doi": "10.35463/j.apr.2024.01.02",
+          "title": "SPINOSAURS AS PHYTOSAUR MIMICS: A CASE OF CONVERGENT EVOLUTION BETWEEN TWO EXTINCT ARCHOSAURIFORM CLADES"
+        },
+        {
+          "id": "paper:9",
+          "citation_short": "McFeeters 2021",
+          "doi": "10.18435/vamp29370",
+          "title": "New mid-cervical vertebral morphotype of Spinosauridae from the Kem Kem Group of Morocco"
+        },
+        {
+          "id": "paper:10",
+          "citation_short": "Lacerda et al. 2023",
+          "doi": "10.1098/rsos.230481",
+          "title": "Macroevolutionary patterns in the pelvis, stylopodium and zeugopodium of megalosauroid theropod dinosaurs and their importance for locomotor function"
+        },
+        {
+          "id": "paper:11",
+          "citation_short": "Montealegre et al. 2024",
+          "doi": "10.1080/08912963.2024.2308220",
+          "title": "New theropod remains from the late Barremian (Early Cretaceous) of Eastern Iberian Peninsula"
+        },
+        {
+          "id": "paper:12",
+          "citation_short": "Mateus & Estraviz‐López 2022",
+          "doi": "10.1371/journal.pone.0262614",
+          "title": "A new theropod dinosaur from the early cretaceous (Barremian) of Cabo Espichel, Portugal: Implications for spinosaurid evolution"
+        },
+        {
+          "id": "paper:13",
+          "citation_short": "Taquet 2021",
+          "doi": "10.1590/0001-3765202120201514",
+          "title": "When Brazil was linked with Africa"
+        },
+        {
+          "id": "paper:14",
+          "citation_short": "Sereno et al. 2022",
+          "doi": "10.1101/2022.05.25.493395",
+          "title": "Spinosaurus is not an aquatic dinosaur."
+        },
+        {
+          "id": "paper:15",
+          "citation_short": "Sereno et al. 2022",
+          "doi": "10.7554/elife.80092.sa2",
+          "title": "Author response: Spinosaurus is not an aquatic dinosaur."
+        },
+        {
+          "id": "paper:16",
+          "citation_short": "Hu 2022",
+          "doi": "10.4236/ajc.2022.104030",
+          "title": "A Collection of Creature Restoration Inaccuracies in the Jurassic Park Franchise and Their Implications."
+        }
+      ],
+      "image_prompt": "Early Cretaceous, 112 million years ago, Elrhaz Formation, Niger, fluvial environment with vast floodplains at dusk, with shallow water bodies reflecting the sky. Predominantly scaly skin across most of the body — dense pebbly small scales like a monitor lizard on flanks, belly, limbs and tail; sparse mane-like ridge of filamentous protofeathers (hair-like quills, never pennaceous) along the dorsal midline from the nape to the upper tail base. Dark olive-green to grey skin adorned with lighter yellowish-green and pale grey vertical stripes and blotches along its back and tail, with a pale white underside. It has an elongated, low, and narrow, crocodilian-like skull with a flared snout tip forming a rosette, finely serrated conical teeth, a relatively short neck, powerful forelimbs with large curved thumb claws, and a low dorsal sail on its back. This large theropod measures approximately 9.5-11 meters in length. A thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin (NOT on the teeth), as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/suchomimus-tenerensis.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/suchomimus-tenerensis_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:34Z"
+    },
+    {
       "slug": "supersaurus-vivianae",
       "species": "Supersaurus vivianae",
       "subtitle": "Le super-lézard du Jurassique supérieur",
@@ -2503,6 +4181,86 @@
       "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/supersaurus-vivianae_thumbnail.webp",
       "image_model": "gemini-3.1-flash-image-preview",
       "generated_at": "2026-05-15T18:18:57Z"
+    },
+    {
+      "slug": "tarbosaurus-bataar",
+      "species": "Tarbosaurus bataar",
+      "subtitle": "Lézard alarmant",
+      "dimensions": {
+        "body_length": "environ 10 mètres (33 pieds) pour le spécimen type [wikipedia]",
+        "hip_height": "3 mètres (9,8 pieds) aux hanches pour le spécimen type [wikipedia]",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "Les bras les plus courts par rapport à la taille du corps de tous les tyrannosauridés [wikipedia]",
+        "tail_length": "no data in corpus",
+        "body_mass": "jusqu'à 4,5–5 tonnes métriques (4.4–4.9 tonnes longues; 5.0–5.5 tonnes courtes) [wikipedia]",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "no data in corpus",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "no data in corpus",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": []
+      },
+      "posture": {
+        "stance": "bipède [wikipedia]",
+        "typical_posture": "no data in corpus",
+        "locomotion_mode": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Maastrichtien du Crétacé supérieur [wikipedia]. L'âge de la Formation de Nemegt a été contraint à 66,7 ± 2,5 Ma [paper:1].",
+        "biome": "plaine inondable humide dominée par des déserts, des forêts et des plaines, sillonnée par des canaux fluviaux [wikipedia]",
+        "region_or_formation": "Formation de Nemegt en Mongolie, avec des restes fragmentaires trouvés dans la Formation de Subashi en Chine [wikipedia]",
+        "source_ids": [
+          "wikipedia",
+          "paper:1"
+        ]
+      },
+      "signature_traits": {
+        "text": "Grand prédateur tyrannosauridé bipède avec un mécanisme de verrouillage unique dans sa mâchoire, équipée d'environ soixante grandes dents. Il possédait les bras les plus courts par rapport à la taille du corps de tous les tyrannosauridés, connus pour leurs mains disproportionnellement petites à deux doigts [wikipedia]. Des études ont été menées sur sa phylogénie, la mécanique de son crâne et la structure de son cerveau [wikipedia]. La croissance allométrique des os frontaux [paper:0] et des os craniomandibulaires [paper:2] a été étudiée.",
+        "source_ids": [
+          "wikipedia",
+          "paper:0",
+          "paper:2"
+        ]
+      },
+      "conclusion": "Le Tarbosaurus bataar était un prédateur apex du Crétacé supérieur en Asie, caractérisé par sa taille imposante, ses mâchoires puissantes et ses bras étonnamment courts. Il est l'un des tyrannosauridés les mieux représentés, ce qui a permis des études détaillées sur son anatomie et son ontogénie.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia (n.d.)",
+          "doi": null,
+          "title": "Tarbosaurus"
+        },
+        {
+          "id": "paper:0",
+          "citation_short": "Yun et al. (2022)",
+          "doi": "10.4202/app.00947.2021",
+          "title": "Allometric growth in the frontals of the Mongolian Dinosaur Tarbosaurus bataar (Theropoda, Tyrannosauridae)"
+        },
+        {
+          "id": "paper:1",
+          "citation_short": "Tanabe et al. (2023)",
+          "doi": "10.1111/iar.12488",
+          "title": "Apatite U–Pb dating of dinosaur teeth from the Upper Cretaceous Nemegt Formation in the Gobi Desert, Mongolia: Contribution to depositional age constraints"
+        },
+        {
+          "id": "paper:2",
+          "citation_short": "Yun et al. (2025)",
+          "doi": "10.18261/let.58.4.6",
+          "title": "Allometric growth and intraspecific variation of the craniomandibular bones of Tarbosaurus bataar (Theropoda, Tyrannosauridae): a geometric morphometric approach"
+        }
+      ],
+      "image_prompt": "Late Cretaceous Maastrichtian Nemegt Formation humid floodplain at dusk, with desert, forest, and plain elements, criss-crossed by river channels. The soft light of a fading sun filters through the environment. Predominantly scaly skin across most of the body — dense pebbly small scales like a monitor lizard on flanks, belly, limbs and tail; sparse mane-like ridge of filamentous protofeathers (hair-like quills, never pennaceous) along the dorsal midline from the nape to the upper tail base. Its hide is dark olive-greenish brown along its back and upper body, marked with irregular darker mottled patterns, transitioning to a lighter yellowish-beige on its underside. This large bipedal predator features a robust skull with approximately sixty large teeth and remarkably short, two-fingered forelimbs, disproportionately tiny relative to its 10-meter body length. Approximately 10 meters long. A thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin (NOT on the teeth), as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/tarbosaurus-bataar.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/tarbosaurus-bataar_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:43Z"
     },
     {
       "slug": "triceratops-horridus",
@@ -2600,6 +4358,93 @@
       "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/triceratops-horridus_thumbnail.webp",
       "image_model": "gemini-3.1-flash-image-preview",
       "generated_at": "2026-05-15T18:18:59Z"
+    },
+    {
+      "slug": "troodon-formosus",
+      "species": "Troodon formosus",
+      "subtitle": "Dinosaure théropode avien controversé",
+      "dimensions": {
+        "body_length": "no data in corpus",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "no data in corpus",
+        "source_ids": []
+      },
+      "integument": {
+        "integument_type": "Plumage dense, avec des plumes pennées sur les membres antérieurs et la queue, caractéristique des théropodes aviens.",
+        "coloration": "Plumes principalement brun clair et duveteuses. Des taches distinctes de plumes bleu vif sont présentes sur les membres antérieurs, le bas des pattes arrière et l'extrémité évasée de la queue.",
+        "keratinous_structures": "Une queue en éventail est suggérée, et une crête peut être présente sur la tête.",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède.",
+        "typical_posture": "Généralement représenté dans une posture dynamique, penchée vers l'avant, la bouche ouverte, comme s'il courait ou sautait. Il peut également être représenté en posture horizontale, la tête légèrement relevée et les membres antérieurs près du corps.",
+        "locomotion_mode": "Course et saut.",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé supérieur (âge Campanien, il y a environ 77 millions d'années).",
+        "biome": "no data in corpus",
+        "region_or_formation": "Montana (Formation de Judith River, Formation de Two Medicine), Alberta (Formation de Dinosaur Park) et Alaska du Nord.",
+        "source_ids": [
+          "wikipedia",
+          "paper:0"
+        ]
+      },
+      "signature_traits": {
+        "text": "Le nom *Troodon*, signifiant « dent blessante », fait référence à ses dents distinctives, différentes de celles de la plupart des autres théropodes de l'époque de leur découverte. Ces dents présentent des dentelures proéminentes orientées apicalement, morphométriquement similaires à celles des reptiles herbivores, suggérant un régime omnivore possible. Le Troodon possédait également une griffe élargie sur le deuxième orteil, caractéristique des paraviens primitifs. Il est considéré comme l'un des membres les plus dérivés de sa famille. Des études suggèrent que les populations du nord de l'Alaska avaient une taille corporelle moyenne plus grande. Des preuves de pellets gastriques avec des restes de mammifères suggèrent un régime carnivore ou omnivore. Des nids avec des œufs partiellement enterrés ont été découverts, et les études indiquent une minéralisation lente des coquilles d'œufs, semblable à celle des reptiles.",
+        "source_ids": [
+          "wikipedia",
+          "paper:7",
+          "paper:2",
+          "paper:3"
+        ]
+      },
+      "conclusion": "Troodon formosus est un théropode avien controversé du Crétacé supérieur, connu pour ses dents uniques et sa griffe élargie. Malgré les débats sur sa classification, il est reconnu pour son comportement potentiellement omnivore et ses stratégies de nidification complexes, incluant une incubation de contact d'œufs partiellement enterrés avec une minéralisation lente, le rapprochant des reptiles.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Troodon"
+        },
+        {
+          "id": "paper:0",
+          "citation_short": "Varricchio et al., 2025",
+          "doi": "10.1017/jpa.2024.67",
+          "title": "Troodontid specimens from the Cretaceous Two Medicine Formation of Montana (USA) and the validity of Troodon formosus"
+        },
+        {
+          "id": "paper:2",
+          "citation_short": "Freimuth et al., 2021",
+          "doi": "10.1111/pala.12546",
+          "title": "Mammal‐bearing gastric pellets potentially attributable to Troodon formosus at the Cretaceous Egg Mountain locality, Two Medicine Formation, Montana, USA"
+        },
+        {
+          "id": "paper:3",
+          "citation_short": "Hogan & Varricchio, 2020",
+          "doi": "10.1017/pab.2020.49",
+          "title": "Do paleontologists dream of electric dinosaurs? Investigating the presumed inefficiency of dinosaurs contact incubating partially buried eggs"
+        },
+        {
+          "id": "paper:7",
+          "citation_short": "Tagliavento et al., 2023",
+          "doi": "10.1073/pnas.2213987120",
+          "title": "Evidence for heterothermic endothermy and reptile-like eggshell mineralization in Troodon, a non-avian maniraptoran theropod"
+        }
+      ],
+      "image_prompt": "Late Cretaceous Montana, dry badlands terrain with scattered low scrub and sparse vegetation, under a clear morning sky with soft, diffuse light. The dinosaur is covered in dense plumage, with pennaceous feathers on its arms and a prominent fan-like tail. Its body is predominantly light brown with downy feathers. Vibrant blue feathers appear on its forelimbs, lower hind legs, and the fanned tip of its tail. It possesses distinctive, apically serrated teeth, and an enlarged raptorial claw on its second toe. This relatively small theropod is caught in a dynamic, forward-striding posture, with a thin glistening trail of saliva at the corner of its slightly parted lips, and faint dark blood smudges on its lower lip and chin, as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/troodon-formosus.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/troodon-formosus_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:52Z"
     },
     {
       "slug": "tyrannosaurus-rex",
@@ -2723,6 +4568,74 @@
       "video_model": "veo-3.1-fast-generate-preview"
     },
     {
+      "slug": "utahraptor-ostrommaysi",
+      "species": "Utahraptor ostrommaysi",
+      "subtitle": "Un grand droméosauridé du Crétacé inférieur",
+      "dimensions": {
+        "body_length": "Le plus grand membre connu de la famille Dromaeosauridae, mesurant environ 6 à 7 mètres (20-23 pieds) de long selon les estimations originales de Kirkland et collègues. Des estimations ultérieures ont rapporté une longueur inférieure de 6 m (20 pieds) ou environ 5 m (16 pieds) selon d'autres auteurs. Le spécimen BYUVP 15465 est estimé à 4,9 m (16 pieds) [wikipedia].",
+        "hip_height": "no data in corpus",
+        "skull_length": "no data in corpus",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "Pesant généralement environ 500 kilogrammes (1 100 lb) selon les estimations originales. D'autres estimations placent le poids entre 250 et 350 kg (550-770 lb). En 2013, il a été estimé à environ 290 kg (640 lb). Des estimations plus récentes de 2024 ont rapporté des masses d'environ 391 kg (862 lb) pour BYUVP 2536, 481 kg (1 060 lb) pour BYUVP 1833, et jusqu'à 777 kg (1 713 lb) pour BYUVP 7510-18078 [wikipedia][paper:1].",
+        "source_ids": [
+          "wikipedia",
+          "paper:1"
+        ]
+      },
+      "integument": {
+        "integument_type": "Des preuves de filaments chez d'autres droméosauridés suggèrent que U. ostrommaysi était probablement couvert de plumes [wikipedia].",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "no data in corpus",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "posture": {
+        "stance": "Carnivore bipède, terrestre et de construction robuste [wikipedia].",
+        "typical_posture": "Le corps est tenu horizontalement avec la queue allongée, la tête légèrement levée et les bras repliés près du corps, en position dynamique comme en pleine foulée ou en saut [wikipedia].",
+        "locomotion_mode": "Les preuves de la physiologie des pattes suggèrent que l'Utahraptor était un prédateur à l'affût, contrairement à d'autres droméosauridés qui étaient des prédateurs de poursuite [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé inférieur, d'il y a environ 139 à 135 millions d'années [wikipedia].",
+        "biome": "no data in corpus",
+        "region_or_formation": "Formation de Cedar Mountain, Utah, États-Unis [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Utahraptor était le plus grand droméosauridé connu, se distinguant par une griffe de tueur de 24 cm sur son deuxième orteil et une mâchoire robuste avec une pointe tournée vers le bas et des dents antérieures procumbentes. Son crâne était carré et allongé. Il possédait des membres trapus, des parapophyses montées sur pédicules sur les vertèbres dorsales, et des vertèbres caudales avec des chevrons et des prézygapophyses raccourcis, ce qui augmentait la flexibilité de sa queue par rapport à d'autres droméosauridés. Il est décrit comme un carnivore lourdement bâti, terrestre et bipède [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "conclusion": "L'Utahraptor ostrommaysi est un droméosauridé imposant du Crétacé inférieur d'Amérique du Nord, caractérisé par sa taille exceptionnelle, sa puissante griffe de chasse, et des adaptations pour la chasse à l'affût, suggérant un comportement social et des soins post-nidification.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia",
+          "doi": null,
+          "title": "Utahraptor"
+        },
+        {
+          "id": "paper:1",
+          "citation_short": "Pintore et al., 2024",
+          "doi": "10.1017/pab.2024.6",
+          "title": "The evolution of femoral morphology in giant non-avian theropod dinosaurs."
+        }
+      ],
+      "image_prompt": "Early Cretaceous Cedar Mountain Formation, Utah, USA: arid scrubland with scattered conifers at midday, bright sunlight. Dense, shaggy brown to tan plumage covers its body. Larger pennaceous feathers form wing-like structures on forelimbs and a tail fan. Brown feathers, lighter sandy on head/neck, darker reddish-brown on torso/limbs, with pronounced dark wing/tail feathers. Unfeathered face, hands, and feet are greyish-brown. Prominent curved killing claw on its second toe; robust lower jaw with downturned tip and protruding anterior teeth; flexible tail. Approximately 6-7 meters long. Thin glistening saliva at lip corners, faint dark blood smudges on chin, suggesting a recent kill.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/utahraptor-ostrommaysi.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/utahraptor-ostrommaysi_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:58Z"
+    },
+    {
       "slug": "velociraptor-mongoliensis",
       "species": "Velociraptor mongoliensis",
       "subtitle": "Un petit dinosaure dromaeosauridé prédateur du Crétacé supérieur, connu pour sa rapidité et sa griffe en faucille.",
@@ -2791,6 +4704,75 @@
       "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/velociraptor-mongoliensis_thumbnail.webp",
       "image_model": "gemini-3.1-flash-image-preview",
       "generated_at": "2026-05-15T18:19:10Z"
+    },
+    {
+      "slug": "yutyrannus-huali",
+      "species": "Yutyrannus huali",
+      "subtitle": "Le Tyran Emplumée Géant",
+      "dimensions": {
+        "body_length": "Le spécimen holotype et le plus ancien connu a une longueur estimée de 10 mètres (32,8 ft) ; des estimations plus basses suggèrent 7,5 mètres (24,6 ft) pour les adultes [wikipedia].",
+        "hip_height": "no data in corpus",
+        "skull_length": "Le crâne holotype a une longueur estimée de 90,5 centimètres (35,6 in). Les crânes des paratypes mesurent 80 cm et 63 cm [wikipedia].",
+        "forelimb_length": "no data in corpus",
+        "tail_length": "no data in corpus",
+        "body_mass": "Le spécimen holotype adulte avait un poids estimé d'environ 1 414 kilogrammes (3 117 lb), avec des estimations plus basses à 1,1 tonne (1,2 short ton). Les paratypes avaient des poids estimés de 596 kg et 493 kg [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "integument": {
+        "integument_type": "Des preuves directes de plumes filamenteuses, longues de 20 centimètres (7,9 in), ont été trouvées sur diverses parties du corps, y compris le bassin, la queue, le cou et les membres antérieurs. Yutyrannus huali est le plus grand dinosaure connu avec des plumes [wikipedia][paper:10].",
+        "coloration": "no data in corpus",
+        "keratinous_structures": "Présence de crêtes médianes élevées et de crêtes \"ondulées\" sur le museau des spécimens adultes, probablement pour la parade [wikipedia].",
+        "ontogenetic_variation": "no data in corpus",
+        "source_ids": [
+          "wikipedia",
+          "paper:10"
+        ]
+      },
+      "posture": {
+        "stance": "Bipède [wikipedia].",
+        "typical_posture": "Prédateur bipède, avec des membres antérieurs relativement longs pour un tyrannosauroïde, dotés de trois doigts [wikipedia].",
+        "locomotion_mode": "Bipède [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "habitat": {
+        "geological_period": "Crétacé inférieur, Barrémien, il y a environ 125 millions d'années [wikipedia].",
+        "biome": "Forêts tempérées comparables à celles de la Colombie-Britannique actuelle, caractérisées par un climat plutôt froid (moyenne annuelle de 10 °C), des plantes conifères, et de nombreux plans d'eau. Les éruptions volcaniques et les feux de forêt étaient courants [wikipedia].",
+        "region_or_formation": "Nord-est de la Chine, province du Liaoning, probablement de la Formation d'Yixian [wikipedia].",
+        "source_ids": [
+          "wikipedia"
+        ]
+      },
+      "signature_traits": {
+        "text": "Yutyrannus huali est le plus grand dinosaure théropode connu avec des preuves fossiles directes de plumes filamenteuses [wikipedia][paper:10]. Il se distingue également par une crête médiane haute et des crêtes \"ondulées\" sur le museau [wikipedia]. Il est classé comme un proceratosauridé au sein des Tyrannosauroidea [wikipedia].",
+        "source_ids": [
+          "wikipedia",
+          "paper:10"
+        ]
+      },
+      "conclusion": "Le Yutyrannus huali est un tyrannosauroïde proceratosauridé du Crétacé inférieur de Chine, remarquable pour être le plus grand dinosaure à avoir conservé des preuves directes de plumes filamenteuses. Mesurant jusqu'à 10 mètres de long et pesant plus d'une tonne, ce prédateur bipède possédait également des crêtes nasales distinctives et des membres antérieurs relativement longs. Son habitat était une forêt pluviale tempérée caractérisée par un climat frais et une activité volcanique.",
+      "references": [
+        {
+          "id": "wikipedia",
+          "citation_short": "Wikipedia: Yutyrannus",
+          "doi": null,
+          "title": "Yutyrannus"
+        },
+        {
+          "id": "paper:10",
+          "citation_short": "Wiktoria Gornig (2020)",
+          "doi": "10.36921/kos.2019_2561",
+          "title": "CZY TYRANOZAUR MIAŁ SKRZYDŁA? PIÓRA U NIEPTASICH DINOZAURÓW."
+        }
+      ],
+      "image_prompt": "Early Cretaceous Yixian Formation temperate rainforests of northeastern China, with coniferous plants and volcanic ash, under a cool, misty sky at dawn. The entire body is covered in dense, filamentous protofeathers, up to 20 centimeters long. The snout, lower legs, and feet are covered in dark, scaly skin. Distinctive \"wavy\" crests are present on the snout. Its protofeathers are a blend of earthy browns and greys, with a hint of reddish-brown along the back and a lighter underside. The display crests are a deeper, contrasting red. It features a high midline crest formed by the nasals and premaxillae on its snout, alongside two \"wavy\" crests used for display. It possesses relatively long forelimbs with three distinct fingers. Approximately 10 meters long. A thin glistening trail of saliva at the corner of the slightly parted lips, faint dark blood smudges on the lower lip and chin, as if the animal just made a kill seconds ago.",
+      "image_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/yutyrannus-huali.webp",
+      "thumbnail_url": "https://pub-064bfea5f5dd47f28da3b17f3a256e93.r2.dev/yutyrannus-huali_thumbnail.webp",
+      "image_model": "gemini-3.1-flash-image-preview",
+      "generated_at": "2026-05-16T06:16:46Z"
     }
   ]
 }
